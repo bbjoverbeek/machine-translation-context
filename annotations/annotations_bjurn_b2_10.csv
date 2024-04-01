@@ -1,0 +1,59 @@
+doc_id,seg_id,translation,context
+1695,205,"{'en': 'What is it about you?', 'nl': 'Wat heb jij?'}","{'en': array(['CA: How cool is that?  Elon, how have you done this?',
+       ""These projects are so -- Paypal, SolarCity, Tesla, SpaceX, they're so spectacularly different, they're such ambitious projects at scale."",
+       'How on Earth has one person been able to innovate in this way?'],
+      dtype=object), 'nl': array(['CA: Hoe gaaf is data  Elon, hoe heb je dit gedaan?',
+       'Deze projecten zijn zo -- PayPal, SolarCity, Tesla, SpaceX, ze zijn zo spectaculair anders, het zijn zeer grote, ambitieuze projecten.',
+       'Hoe is het in hemelsnaam mogelijk, dat één persoon zó kan innoveren?'],
+      dtype=object)}"
+1706,93,"{'en': 'And I asked them, I said, ""How many of you now show up to work later than you used to?""', 'nl': 'Ik vroeg hen: ""Hoeveel van jullie komen nu later toe op het werk dan voorheen?""'}","{'en': array(['And the week before I showed up, the CEO of this big software company went to that group, 200 engineers, and canceled the project.',
+       ""And I stood there in front of 200 of the most depressed people I've ever talked to."",
+       'And I described to them some of these Lego experiments, and they said they felt like they had just been through that experiment.'],
+      dtype=object), 'nl': array(['De week voor ik opdook, vertelde de CEO van het softwarebedrijf aan de groep van 200 ingenieurs dat het project geannuleerd was.',
+       'Ik moest 200 van de meest depressieve mensen die ik ooit ontmoette, toespreken.',
+       ""Ik beschreef hen enkele van mijn Lego-experimenten en ze bevestigden dat ze zich voelden alsof ze net aan zo'n experiment deelnamen.""],
+      dtype=object)}"
+55,141,"{'en': ""[If you were not Abu Azzam's daughter ...]"", 'nl': ""Als jij niet Abu Azzam's dochter was geweest...""}","{'en': array(['[Woman: There is no Paradise! It only exists in your head!]',
+       '[Man: God forbid!]', '[May God forgive you.]'], dtype=object), 'nl': array(['Vrouw: Er is geen Paradijs! Het bestaat alleen in je hoofd!',
+       'Man: Alsjeblieft zeg!', 'Moge God je vergeven.'], dtype=object)}"
+924,19,"{'en': 'The American way, to quote Burger King, is to ""have it your way,"" because, as Starbucks says, ""happiness is in your choices.""', 'nl': 'De Amerikaanse manier, om Burger King te citeren, is ""zoals u het wilt"", want, zoals Starbucks zegt, ""geluk zit in je keuzes"".'}","{'en': array(['My failure to procure myself a cup of sweet, green tea was not due to a simple misunderstanding.',
+       'This was due to a fundamental difference in our ideas about choice.',
+       'From my American perspective, when a paying customer makes a reasonable request based on her preferences, she has every right to have that request met.'],
+      dtype=object), 'nl': array(['Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet zomaar een misverstand.',
+       'Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze.',
+       'Vanuit mijn Amerikaanse perspectief heeft een betalende klant die een redelijk verzoek doet, op basis van haar voorkeuren, het recht om te krijgen wat ze vraagt.'],
+      dtype=object)}"
+413,236,"{'en': ""Sure. We'll make you a big batch."", 'nl': 'Wij: ""Zeker. We maken jullie een heleboel.""'}","{'en': array([""They said they were going to beat us up if we didn't make some gunpowder for them."",
+       'We said, well, what are you going to do with it?',
+       ""They said, we're going to melt it down and make rocket fuel.""],
+      dtype=object), 'nl': array(['Ze gingen ons een pak rammel geven als we niet wat buskruit voor hen zouden maken.',
+       'Wij vroegen wat ze ermee wilden doen.',
+       'Zij zeiden: ""We gaan het smelten om er raketbrandstof van te maken.""'],
+      dtype=object)}"
+1391,56,"{'en': 'We\'d appreciate it if you wouldn\'t mention vulnerability or shame.""', 'nl': 'We zouden het op prijs stellen als u het niet over kwetsbaarheid of schaamte zou hebben.""'}","{'en': array([""One of the weird things that's happened is, after the TED explosion, I got a lot of offers to speak all over the country -- everyone from schools and parent meetings to Fortune 500 companies."",
+       'And so many of the calls went like this, ""Dr. Brown, we loved your TED talk.',
+       ""We'd like you to come in and speak.""], dtype=object), 'nl': array(['Eén van de rare dingen die gebeurden na de TED-explosie, is dat ik overal gevraagd werd om te spreken -- van scholen en ouderavonden tot Fortune 500-bedrijven.',
+       'Vele gesprekken verliepen als volgt: ""Hallo, Dr. Brown. We zijn dol op uw TEDTalk.',
+       'We willen u graag als spreker.'], dtype=object)}"
+1190,182,"{'en': ""And it turns out that you're right and I'm wrong."", 'nl': 'Het blijkt dat jullie gelijk hebben en dat ik verkeerd ben.'}","{'en': array(['And after the trial had been running for a little while, he gathered together all his colleagues around his table, and he said, ""Well, gentlemen, we have some preliminary results.',
+       ""They're not statistically significant."", 'But we have something.'],
+      dtype=object), 'nl': array([""Nadat de studie een tijdje bezig was, verzamelde hij al zijn collega's rond zijn tafel, en hij zei: “Nou, heren, we hebben een aantal voorlopige resultaten."",
+       'Ze zijn niet statistisch significant.', 'Maar we hebben iets.'],
+      dtype=object)}"
+2027,173,"{'en': 'because if we take a look at the first letters of your combinations, we get ""C-H-A-O-S"" for chaos and ""O-R-D-E-R"" for order.', 'nl': ""Want als we kijken naar de eerste letters van jouw combinaties krijgen we 'C-H-A-O-S' voor chaos en 'O-R-D-E-R' voor orde.""}","{'en': array([""there's one more thing,"",
+       ""there's one final piece of the puzzle."",
+       'Gwen, I am so grateful for your choices'], dtype=object), 'nl': array(['Nog één ding.', 'Het laatste puzzelstukje.',
+       'Gwen, ik ben zo dankbaar voor jouw keuzes.'], dtype=object)}"
+1042,202,"{'en': 'We just need you to be authentic and real and say ... ""We\'re sorry. We\'ll fix it."" But there\'s another way, and I\'ll leave you with this.', 'nl': 'We willen alleen maar dat jullie authentiek en echt zijn en zeggen: \'Het spijt ons. We repareren het.\'"" Maar er is een andere weg en ik wil daarmee eindigen.'}","{'en': array(['We do that in our personal lives.',
+       ""We do that corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like what we're doing doesn't have a huge impact on other people."",
+       'I would say to companies, this is not our first rodeo, people.'],
+      dtype=object), 'nl': array(['Dat doen we in ons persoonlijke leven.',
+       'We doen dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op andere mensen.',
+       'Ik wil tegen bedrijven zeggen: ""We zijn niet van gisteren, mensen.'],
+      dtype=object)}"
+673,107,"{'en': 'And the rich man -- oh, dear -- crestfallen. ""You mean God didn\'t want my bread?""', 'nl': 'En de rijke man -- oh, lieve hemel -- teneergeslagen: ""U bedoelt dat God mijn broden niet wilde hebben?""'}","{'en': array(['The rabbi came in and saw what was going on.',
+       'And he called the two of them to his office.',
+       'And he said, you know, ""This is what\'s happening.""'],
+      dtype=object), 'nl': array(['De rabbijn zag wat er aan de hand was.',
+       'En hij riep de beide mannen in zijn kantoor.',
+       'En hij zei: ""Weten jullie, dit is er aan de hand.""'], dtype=object)}"

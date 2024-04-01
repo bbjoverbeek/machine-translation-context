@@ -1,0 +1,42 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "doc_id": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "seg_id": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "translation": {
+      "en": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "nl": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    "context": {
+      "en": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "nl": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
