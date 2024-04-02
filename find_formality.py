@@ -14,7 +14,6 @@ def add_context_sentences(dataset: Dataset) -> Dataset:
     Note!: this function takes a sorted, unfiltered dataset as input.
     """
 
-    # context = [{'nl': [], 'en': []}] * len(dataset)
     context = []
 
     for idx, example in tqdm(
@@ -33,44 +32,53 @@ def add_context_sentences(dataset: Dataset) -> Dataset:
 
 
 def find_formality_dutch(
-    formality_words: list[str], example: dict[str, str | int | dict[str, str]]
+    formality_regex: str, example: dict[str, str | int | dict[str, str]]
 ) -> bool:
     """Use regular expressions to filter the dataset for formality in Dutch."""
 
-    word_boundary = r'\b'
-    formality_regex = fr'{"|".join([word_boundary + word + word_boundary for word in formality_words])}'
-
-    if re.search(formality_regex, example['translation']['nl']):
+    if re.search(formality_regex, example['translation']['nl'], re.IGNORECASE):
         return True
 
     return False
 
 
-def prompt_for_correct_examples(
-    formality_words: list[str], dataset: Dataset, examples_needed: int
-) -> Dataset:
-    """Ask the user if formality is clear from the context sentences."""
+def filter_examples(
+    formality_regex: str, example: dict[str, str | int | dict[str, str]]
+) -> bool:
+    """Filter for examples with enough context and one formality word"""
+    if (
+        len(re.findall(formality_regex, example['translation']['nl'], re.IGNORECASE))
+        != 1
+    ):
+        return False
 
-    word_boundary = r'\b'
-    formality_regex = fr'{"|".join([word_boundary + word + word_boundary for word in formality_words])}'
+    # check if the example has three context sentences
+    if len(example['context']['nl']) != 3:
+        return False
+
+    return True
+
+
+def prompt_examples(
+    formality_regex: str, dataset: Dataset, examples_needed: int | None
+) -> Dataset:
+    """Ask the user if formality is clear only from the context sentences."""
+
+    # change examples needed if not provided (so all examples will be prompted)
+    examples_needed = len(dataset) + 1 if not examples_needed else examples_needed
 
     good_examples_dataset = Dataset.from_dict({})
 
-    for example in dataset:
+    for idx, example in enumerate(dataset):
         # stop if enough examples are found
         if len(good_examples_dataset) >= examples_needed:
             break
-        # check if the example has exactly one formality word
-        if len(re.findall(formality_regex, example['translation']['nl'])) != 1:
-            continue
-        # check if the example has three context sentences
-        if len(example['context']['nl']) != 3:
-            continue
 
         # prompt the user to verify whether the formality is clear from the context
+        print(f'Example {idx + 1}/{len(dataset) + 1}\n')
         newline = '\n'
-        print(f'\ncontext:\n{newline.join(example["context"]["nl"])}')
-        match = re.search(formality_regex, example['translation']['nl'])
+        print(f'context:\n{newline.join(example["context"]["nl"])}')
+        match = re.search(formality_regex, example['translation']['nl'], re.IGNORECASE)
         formality_underlined = f"\033[4m{match.group()}\033[0m"
         print(
             '\nsentence:\n'
@@ -119,17 +127,22 @@ def main(argv: list[str]) -> None:
     dataset = add_context_sentences(dataset)
 
     # filter the dataset for formality
-    formality_words_dutch = ['u', 'je', 'jij', 'jou', 'jouw', 'uw', 'jullie']
-    dataset = dataset.filter(lambda x: find_formality_dutch(formality_words_dutch, x))
-    # print(f'Total amount of rows in filtered dataset: {len(dataset)}')
+    # formality_words_dutch = ['u', 'je', 'jij', 'jou', 'jouw', 'uw', 'jullie']
+    formality_words = ['u', 'jij', 'jou', 'jouw', 'uw', 'jullie']
+    word_boundary = r'\b'
+    formality_regex = fr'{"|".join([word_boundary + word + word_boundary for word in formality_words])}'
+
+    # filter the dataset on formality examples
+    dataset = dataset.filter(lambda x: find_formality_dutch(formality_regex, x))
+
+    # remove sentences without enough context or with multiple formality words
+    dataset = dataset.filter(lambda x: filter_examples(formality_regex, x))
 
     # shuffle the dataset
     shuffled_dataset = dataset.shuffle(seed=123)
 
     # prompt the user for correct examples (where formality is decided my context)
-    good_examples = prompt_for_correct_examples(
-        formality_words_dutch, shuffled_dataset, 20
-    )
+    good_examples = prompt_examples(formality_regex, shuffled_dataset, 10)
 
     # save the final dataset to disk
     save_path = 'good_examples'
