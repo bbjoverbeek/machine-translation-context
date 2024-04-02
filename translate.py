@@ -9,39 +9,13 @@ import argparse
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    # Type of annotation file to load
-    parser.add_argument("--use_csv", action="store_true", 
-                        help="Whether to load Dataset file or csv file. Default False.",)
     parser.add_argument("--lang", type=str,
                         help="Language to translate to.",)
+    parser.add_argument("--save_path", type=str,
+                        help="Path to save the annotated dataset.",)
 
     args = parser.parse_args()
     return args
-
-
-def str_to_dict(string_data):
-
-    # Replace 'array' with 'np.array' in the string
-    string_data = string_data.replace('array', 'np.array')
-
-    # Evaluate the string to dictionary
-    dictionary_data = eval(string_data, {'np': np})
-
-    # Convert array strings to numpy arrays using the defined function
-    for key, value in dictionary_data.items():
-        if isinstance(value, np.ndarray):
-            dictionary_data[key] = np.array(value)
-
-    return dictionary_data
-
-def read_en_context(filepath):
-
-    dataset = pd.read_csv(filepath)
-    context_data = dataset['context']
-    context_data = context_data.to_list()
-    dict_context_data = [str_to_dict(string_item) for string_item in context_data]
-
-    return dict_context_data
 
 
 def en_to_lang(model, tokenizer, en_sentence, lang):
@@ -74,16 +48,13 @@ def add_translations(row, model, tokenizer, lang):
 if __name__ == '__main__':
     args = create_arg_parser()
 
-    if args.use_csv:
-        #list of dicts
-        all_sentences = read_en_context('annotations/annotations_bjurn_b1_10.csv')
-    else:
-        all_sentences = load_dataset()
+    dataset = load_dataset()
     
     model = M2M100ForConditionalGeneration.from_pretrained("facebook/m2m100_418M")
     tokenizer = M2M100Tokenizer.from_pretrained("facebook/m2m100_418M")
     
-    all_sentences = all_sentences.map(add_translations, 
+    dataset = dataset.map(add_translations, 
                                       fn_kwargs={'model': model, 'tokenizer': tokenizer, 'lang': args.lang})
     
-    # pprint.pprint(all_sentences[0])
+    dataset.save_to_disk(f'{args.save_path}/')
+    dataset.to_csv(f'{args.save_path}.csv')
