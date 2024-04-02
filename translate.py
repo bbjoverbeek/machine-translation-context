@@ -41,8 +41,8 @@ def load_dataset():
 
 
 def add_translations(row, model, tokenizer, lang):
-    ru = [en_to_lang(model=model, tokenizer=tokenizer, en_sentence=s, lang=lang) for s in row['context']['en']] 
-    row['context']['ru'] = ru
+    translated_sentence = [en_to_lang(model=model, tokenizer=tokenizer, en_sentence=s, lang=lang) for s in row['context']['en']] 
+    row['context'][lang] = translated_sentence
     return row
 
 if __name__ == '__main__':
