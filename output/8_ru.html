@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span> 
+a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say to companies, 
+this is not our first rodeo, people.
+<span class="r2">Input current:</span> We just need you to be authentic and real and say <span class="r3">...</span> <span class="r6">&quot;We&#x27;re sorry. We&#x27;ll fix it.&quot;</span> But there&#x27;s 
+another way, and I&#x27;ll leave you with this.
+<span class="r2">Output context:</span> Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то спасение компании
+или разлив нефти<span class="r3">...</span> напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного влияния на других 
+людей. Я бы сказал компаниям: это не первое наше родео, ребята.
+<span class="r2">Output current:</span> Мы просто нуждаемся в том, чтобы вы были подлинными и настоящими и говорили<span class="r3">...</span> <span class="r6">&quot;Мы сожалеем. Мы это</span>
+<span class="r6">исправим.&quot;</span> Но есть другой способ, и я остану вас с этим.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span> <span class="r5"> Мы(</span><span class="r5">1.214</span><span class="r5">)</span> просто нуждаемся в том, чтобы вы были подлинными и настоящими и 
+говорили<span class="r3">...</span> <span class="r6">&quot;Мы сожалеем. Мы это исправим.&quot;</span> Но есть другой способ, и я остану вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our first rodeo, <span class="r7">people</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то 
+спасение компании или разлив нефти<span class="r3">...</span> напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного 
+влияния на других людей. Я бы сказал компаниям: это не первое наше родео,<span class="r1"> ребята(</span><span class="r1">0.015</span><span class="r1">).(</span><span class="r1">0.017</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span>  Мы просто нуждаемся в том, чтобы<span class="r5"> вы(</span><span class="r5">0.268</span><span class="r5">)</span> были подлинными и настоящими и 
+говорили<span class="r3">...</span> <span class="r6">&quot;Мы сожалеем. Мы это исправим.&quot;</span> Но есть другой способ, и я остану вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our first rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то 
+спасение компании или разлив нефти<span class="r3">...</span> напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного 
+влияния на других людей. Я бы сказал<span class="r1"> компания(</span><span class="r1">0.003</span><span class="r1">)</span>м: это не первое наше родео,<span class="r1"> ребята(</span><span class="r1">0.007</span><span class="r1">)</span>.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span>  Мы<span class="r5"> просто(</span><span class="r5">0.253</span><span class="r5">)</span> нуждаемся в том, чтобы вы были подлинными и настоящими и 
+говорили<span class="r3">...</span> <span class="r6">&quot;Мы сожалеем. Мы это исправим.&quot;</span> Но есть другой способ, и я остану вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our first rodeo, <span class="r7">people</span><span class="r1">.(</span><span class="r1">0.008</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то 
+спасение компании или разлив нефти<span class="r3">...</span> напоминаем. Мы<span class="r1"> притвор(</span><span class="r1">0.004</span><span class="r1">)</span>яемся, что то, что мы делаем, не оказывает 
+огромного влияния на других людей. Я бы сказал компаниям: это не первое наше родео,<span class="r1"> ребята(</span><span class="r1">0.007</span><span class="r1">).(</span><span class="r1">0.004</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span>  Мы просто нуждаемся в том, чтобы вы были подлинными и настоящими и говорили<span class="r3">...</span> 
+<span class="r6">&quot;</span><span class="r5">Мы(0.214)</span><span class="r6"> сожалеем. Мы это исправим.&quot;</span> Но есть другой способ, и я остану вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+<span class="r1">to(</span><span class="r1">0.003</span><span class="r1">)</span> companies, this is not our first rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то<span class="r1"> </span>
+<span class="r1">спасение(</span><span class="r1">0.003</span><span class="r1">)</span> компании или разлив нефти<span class="r3">...</span> напоминаем. Мы<span class="r1"> притвор(</span><span class="r1">0.003</span><span class="r1">)</span>яемся, что то, что мы делаем, не 
+оказывает огромного влияния на других людей. Я бы сказал компаниям: это не первое наше родео,<span class="r1"> ребята(</span><span class="r1">0.007</span><span class="r1">)</span>.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span>  Мы просто нуждаемся в том, чтобы вы были подлинными и настоящими и 
+<span class="r7">говорили</span><span class="r5">...(</span><span class="r5">0.118</span><span class="r5">)</span> <span class="r6">&quot;Мы сожалеем. Мы это исправим.&quot;</span> Но есть другой способ, и я остану вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil<span class="r1"> spill(</span><span class="r1">0.011</span><span class="r1">)</span> <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.007</span><span class="r1">)</span> recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other 
+people. I would say to companies, this is not our first rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>    Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то 
+спасение компании или разлив <span class="r7">нефти</span><span class="r1">...(</span><span class="r1">0.016</span><span class="r1">)</span> напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает 
+огромного влияния на других людей. Я бы сказал компаниям<span class="r1">:(</span><span class="r1">0.017</span><span class="r1">)</span> это не первое наше родео, ребята.
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span>  Мы просто нуждаемся в<span class="r5"> том(</span><span class="r5">0.112</span><span class="r5">)</span>, чтобы вы были подлинными и настоящими и 
+говорили<span class="r3">...</span> <span class="r6">&quot;Мы сожалеем. Мы это исправим.&quot;</span> Но есть другой способ, и я остану вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our<span class="r1"> first(</span><span class="r1">0.005</span><span class="r1">)</span> rodeo, <span class="r7">people</span><span class="r1">.(</span><span class="r1">0.005</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то 
+спасение компании или разлив нефти<span class="r3">...</span> напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного 
+влияния на других людей. Я бы сказал компаниям: это не первое наше родео,<span class="r1"> ребята(</span><span class="r1">0.012</span><span class="r1">)</span>.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span>  Мы просто нуждаемся в том, чтобы вы были подлинными и настоящими и говорили<span class="r3">...</span> <span class="r6">&quot;Мы</span>
+<span class="r6">сожалеем. Мы это исправим.&quot;</span><span class="r5"> Но(</span><span class="r5">0.103</span><span class="r5">)</span> есть другой способ, и я остану вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     We do that in our personal lives. We do that<span class="r1"> corporate(</span><span class="r1">0.001</span><span class="r1">)</span> -- whether it&#x27;s a 
+bailout,<span class="r1"> an(</span><span class="r1">0.001</span><span class="r1">)</span> oil spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.001</span><span class="r1">)</span> recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on 
+other<span class="r1"> people(</span><span class="r1">0.001</span><span class="r1">)</span>. I would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.001</span><span class="r1">)</span> rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>   <span class="r1"> Мы(</span><span class="r1">0.001</span><span class="r1">)</span> делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - 
+будь то спасение компании или разлив нефти<span class="r3">...</span> напоминаем. Мы<span class="r1"> притвор(</span><span class="r1">0.001</span><span class="r1">)</span>яемся, что то, что мы делаем, не 
+оказывает огромного влияния на других людей. Я бы сказал компаниям: это не первое наше родео,<span class="r1"> ребята(</span><span class="r1">0.001</span><span class="r1">)</span>.
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span>  Мы просто нуждаемся в том, чтобы вы были подлинными и настоящими и говорили<span class="r3">...</span> <span class="r6">&quot;Мы</span>
+<span class="r6">сожалеем. Мы это исправим.&quot;</span> Но есть другой способ, и я<span class="r5"> оста(</span><span class="r5">0.074</span><span class="r5">)</span>ну вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.002</span><span class="r1">)</span> recall.<span class="r1"> We(</span><span class="r1">0.001</span><span class="r1">)</span> pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other 
+people. I would say to companies, this is not our first rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то 
+спасение компании или разлив нефти<span class="r3">...</span> напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного 
+влияния на других людей. Я<span class="r1"> бы(</span><span class="r1">0.001</span><span class="r1">) сказал(</span><span class="r1">0.004</span><span class="r1">)</span> компаниям: это не первое наше родео, ребята.
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.069</span><span class="r2">):</span>  Мы просто нуждаемся в том, чтобы вы были подлинными и настоящими и говорили<span class="r3">...</span> <span class="r6">&quot;Мы</span>
+<span class="r5">со(0.069)</span><span class="r6">жалеем. Мы это исправим.&quot;</span> Но есть другой способ, и я остану вас с этим.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     We do that in our personal lives. We do<span class="r1"> that(</span><span class="r1">0.001</span><span class="r1">)</span> corporate -- whether it&#x27;s a 
+bailout, an<span class="r1"> oil(</span><span class="r1">0.001</span><span class="r1">)</span> spill <span class="r3">...</span> a recall.<span class="r1"> We(</span><span class="r1">0.001</span><span class="r1">)</span> pretend like what we&#x27;re doing doesn&#x27;t have a<span class="r1"> huge(</span><span class="r1">0.001</span><span class="r1">)</span> 
+impact on other people. I would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.002</span><span class="r1">)</span> rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными делами - будь то 
+спасение компании или разлив нефти<span class="r3">...</span> напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного 
+влияния на других людей. Я бы сказал компаниям: это не первое наше родео,<span class="r1"> ребята(</span><span class="r1">0.001</span><span class="r1">)</span>.
+
+</code></pre>
+</body>
+</html>

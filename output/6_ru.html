@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  And after the trial had been running for a little while, he gathered together all his colleagues 
+around his table, and he said, &quot;Well, gentlemen, we have some preliminary results. They&#x27;re not statistically 
+significant. But we have something.
+<span class="r2">Input current:</span> And it turns out that you&#x27;re right and I&#x27;m wrong.
+<span class="r2">Output context:</span> И после того, как судебный процесс продолжался некоторое время, он собрал всех своих коллег за 
+своим столом и сказал: &quot;Итак, джентльмены, у нас есть некоторые предварительные результаты. Они не являются 
+статистически значимыми. Но у нас есть что-то.
+<span class="r2">Output current:</span> И оказалось, что вы правы, а я ошибаюсь.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.113</span><span class="r2">):</span> <span class="r5"> И(</span><span class="r5">0.783</span><span class="r5">)</span> оказалось, что вы правы, а я ошибаюсь.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>     And after the trial had been running for a little while, he gathered together all 
+his colleagues around his table, and he said, &quot;Well, gentlemen, we have some preliminary results. They&#x27;re not 
+statistically significant. But we have <span class="r7">something</span><span class="r1">.(</span><span class="r1">0.008</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    И после того, как<span class="r1"> судебны(</span><span class="r1">0.011</span><span class="r1">)</span>й процесс продолжался некоторое время, он собрал 
+всех своих коллег за своим столом и сказал: &quot;Итак, джентльмены, у нас есть некоторые предварительные результаты. 
+Они не являются статистически значимыми. Но у нас есть что-<span class="r7">то</span><span class="r1">.(</span><span class="r1">0.018</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.113</span><span class="r2">):</span>  И оказалось, что<span class="r5"> вы(</span><span class="r5">0.254</span><span class="r5">)</span> правы, а я ошибаюсь.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     And after the trial had been running for a little while, he gathered together all 
+his colleagues around his table, and he said, &quot;Well, gentlemen, we have some preliminary results. They&#x27;re not 
+statistically significant. But we have something.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    И после того, как<span class="r1"> судебны(</span><span class="r1">0.006</span><span class="r1">)</span>й<span class="r1"> процесс(</span><span class="r1">0.002</span><span class="r1">)</span> продолжался некоторое время, он 
+собрал всех своих коллег за своим столом и сказал: &quot;Итак, джентльмены, у нас есть некоторые предварительные 
+результаты. Они не являются статистически значимыми. Но у нас есть что-то.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.113</span><span class="r2">):</span>  И<span class="r5"> оказалось(</span><span class="r5">0.172</span><span class="r5">)</span>, что вы правы, а я ошибаюсь.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     And after the trial had been running for a little while, he gathered together all 
+his colleagues around his table, and he said, &quot;Well, gentlemen, we have some preliminary results. They&#x27;re not 
+statistically significant. But we have something.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    И после того, как судебный процесс продолжался некоторое время, он собрал всех 
+своих коллег за своим столом и<span class="r1"> сказал(</span><span class="r1">0.002</span><span class="r1">)</span>: &quot;<span class="r1">И(</span><span class="r1">0.004</span><span class="r1">)так(</span><span class="r1">0.004</span><span class="r1">)</span>, джентльмены, у нас есть некоторые 
+предварительные результаты. Они не являются статистически значимыми. Но у нас<span class="r1"> есть(</span><span class="r1">0.003</span><span class="r1">)</span> что-<span class="r7">то</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

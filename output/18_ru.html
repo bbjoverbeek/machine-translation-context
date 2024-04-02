@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  And you know the reason why, of course. This is because of technology -- yeah. Any computer 
+designers in the room?
+<span class="r2">Input current:</span> Yeah well, you guys are making my life miserable because track pads used to be round, a nice round 
+shape.
+<span class="r2">Output context:</span> И вы, конечно, знаете причину этого. Это из-за технологий - да. Есть здесь компьютерные дизайнеры?
+<span class="r2">Output current:</span> Да, вы, ребята, делаете мою жизнь miserable, потому что track pads были круглыми, красивый круглый 
+вид.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.075</span><span class="r2">):</span> <span class="r5"> Да(</span><span class="r5">0.791</span><span class="r5">)</span>, вы, ребята, делаете мою жизнь miserable, потому что track pads были 
+круглыми, красивый круглый вид.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.012</span><span class="r2">):</span>     And you know the reason why, of course. This is because of technology -- yeah. Any
+computer designers in the room<span class="r1">?(</span><span class="r1">0.022</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.012</span><span class="r2">):</span>    И вы, конечно, знаете причину этого. Это из-за технологий -<span class="r1"> да(</span><span class="r1">0.020</span><span class="r1">)</span>. Есть здесь 
+компьютерные дизайнеры<span class="r1">?(</span><span class="r1">0.016</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.075</span><span class="r2">):</span>  Да, вы, ребята, делаете мою жизнь miserable, потому что track pads были круглыми, 
+<span class="r7">красив</span><span class="r5">ый(</span><span class="r5">0.188</span><span class="r5">)</span> круглый вид.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.019</span><span class="r2">):</span>     And you know the reason why, of course. This is because of technology -- yeah. Any
+computer designers in the room?
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.021</span><span class="r2">):</span>    И вы, конечно, знаете причину этого. Это из-за технологий - да.<span class="r1"> Есть(</span><span class="r1">0.026</span><span class="r1">) </span>
+<span class="r1">здесь(</span><span class="r1">0.034</span><span class="r1">)</span> компьютерные дизайнеры?
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.075</span><span class="r2">):</span>  Да,<span class="r5"> вы(</span><span class="r5">0.172</span><span class="r5">)</span>, ребята, делаете мою жизнь miserable, потому что track pads были 
+круглыми, красивый круглый вид.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.016</span><span class="r2">):</span>     And you know the reason why, of course. This is because of technology -- yeah. Any
+computer designers in the room<span class="r1">?(</span><span class="r1">0.036</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.014</span><span class="r2">):</span>    И вы, конечно, знаете причину этого. Это из-за технологий - да. Есть здесь 
+компьютерные дизайнеры?
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.075</span><span class="r2">):</span>  Да, вы, ребята,<span class="r5"> делает(</span><span class="r5">0.115</span><span class="r5">)</span>е мою жизнь miserable, потому что track pads были 
+круглыми, красивый круглый вид.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>     And you know the reason why, of course. This is because of technology -- yeah. Any
+computer designers in the room?
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>    И вы, конечно, знаете причину этого. Это из-за технологий - да.<span class="r1"> Есть(</span><span class="r1">0.009</span><span class="r1">) </span>
+<span class="r1">здесь(</span><span class="r1">0.014</span><span class="r1">)</span> компьютерные дизайнеры?
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.075</span><span class="r2">):</span>  Да, вы<span class="r5">,(</span><span class="r5">0.092</span><span class="r5">)</span> ребята, делаете мою жизнь miserable, потому что track pads были 
+круглыми, красивый круглый вид.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>     And you know the reason why, of course. This is because of technology -- yeah. Any
+computer designers in the room<span class="r1">?(</span><span class="r1">0.007</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    И вы<span class="r1">,(</span><span class="r1">0.007</span><span class="r1">) конечно(</span><span class="r1">0.008</span><span class="r1">)</span>, знаете причину этого. Это из-за технологий - да. Есть
+здесь компьютерные дизайнеры?
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.075</span><span class="r2">):</span>  Да<span class="r5">,(</span><span class="r5">0.087</span><span class="r5">)</span> вы, ребята, делаете мою жизнь miserable, потому что track pads были 
+круглыми, красивый круглый вид.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>     And you know the reason why, of course. This is because of technology -- yeah. Any
+computer designers in the room<span class="r1">?(</span><span class="r1">0.012</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    И вы, конечно, знаете причину этого. Это из-за технологий - да. Есть<span class="r1"> здесь(</span><span class="r1">0.006</span><span class="r1">)</span> 
+компьютерные дизайнеры?
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.075</span><span class="r2">):</span>  Да, вы, ребята, <span class="r7">делает</span><span class="r5">е(</span><span class="r5">0.083</span><span class="r5">)</span> мою жизнь miserable, потому что track pads были 
+круглыми, красивый круглый вид.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     And you know the reason why, of course. This is because of technology -- yeah. Any
+computer designers in the room?
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    И вы, конечно, знаете причину этого. Это из-за технологий - да.<span class="r1"> Есть(</span><span class="r1">0.003</span><span class="r1">) </span>
+<span class="r1">здесь(</span><span class="r1">0.002</span><span class="r1">)</span> компьютерные дизайнеры?
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.075</span><span class="r2">):</span>  Да, вы, ребята, делаете мою жизнь miserable, потому что<span class="r5"> track(</span><span class="r5">0.078</span><span class="r5">)</span> pads были 
+круглыми, красивый круглый вид.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     And you know the reason why, of course. This is because of technology -- yeah.<span class="r1"> </span>
+<span class="r1">Any(</span><span class="r1">0.008</span><span class="r1">) computer(</span><span class="r1">0.008</span><span class="r1">)</span> designers in the room?
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    И вы, конечно, знаете причину этого. Это из-за технологий - да. Есть<span class="r1"> здесь(</span><span class="r1">0.007</span><span class="r1">)</span> 
+компьютерные дизайнеры?
+
+</code></pre>
+</body>
+</html>
