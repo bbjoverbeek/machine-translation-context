@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  My failure to procure myself a cup of sweet, green tea was not due to a simple misunderstanding. 
+This was due to a fundamental difference in our ideas about choice. From my American perspective, when a paying 
+customer makes a reasonable request based on her preferences, she has every right to have that request met.
+<span class="r2">Input current:</span> The American way, to quote Burger King, is to <span class="r6">&quot;have it your way,&quot;</span> because, as Starbucks says, 
+<span class="r6">&quot;happiness is in your choices.&quot;</span>
+<span class="r2">Output context:</span> Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet zomaar een 
+misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse 
+perspectief heeft een betalende klant die een redelijk verzoek doet, op basis van haar voorkeuren, het recht om te 
+krijgen wat ze vraagt.
+<span class="r2">Output current:</span> De Amerikaanse manier, om Burger King te citeren, is om het op jouw manier te hebben, want zoals 
+Starbucks zegt, is geluk in je keuzes.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse manier, om Burger King te citeren, is om het op jouw manier te<span class="r5"> </span>
+<span class="r5">hebben(</span><span class="r5">0.355</span><span class="r5">)</span>, want zoals Starbucks zegt, is geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>     My failure<span class="r1"> to(</span><span class="r1">0.014</span><span class="r1">)</span> procure myself a cup of sweet, green tea was not due to a 
+simple <span class="r7">misunder</span><span class="r1">standing(</span><span class="r1">0.014</span><span class="r1">)</span>. This was due to a fundamental difference in our ideas about<span class="r1"> choice(</span><span class="r1">0.018</span><span class="r1">)</span>. From my 
+American perspective, when a<span class="r1"> paying(</span><span class="r1">0.012</span><span class="r1">)</span> customer makes a reasonable request based on her preferences, she has 
+every right to have that request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene thee te<span class="r1"> helpen(</span><span class="r1">0.026</span><span class="r1">)</span>, was 
+niet zomaar een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn
+Amerikaanse perspectief heeft een betalende klant die een redelijk verzoek doet, op basis van haar voorkeuren, het 
+recht om te<span class="r1"> krijgen(</span><span class="r1">0.019</span><span class="r1">)</span> wat ze vraagt.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse manier, om Burger King te citeren, is om het op<span class="r5"> jouw(</span><span class="r5">0.269</span><span class="r5">)</span> manier 
+te hebben, want zoals Starbucks zegt, is geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on<span class="r1"> her(</span><span class="r1">0.004</span><span class="r1">)</span> preferences, she has every right to have that
+request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet 
+zomaar een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn 
+Amerikaanse perspectief heeft een betalende<span class="r1"> klant(</span><span class="r1">0.007</span><span class="r1">)</span> die een redelijk<span class="r1"> verzoek(</span><span class="r1">0.006</span><span class="r1">)</span> doet, op basis van<span class="r1"> </span>
+<span class="r1">haar(</span><span class="r1">0.007</span><span class="r1">)</span> voorkeuren, het recht om te<span class="r1"> krijgen(</span><span class="r1">0.004</span><span class="r1">)</span> wat ze vraagt.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse manier, om Burger King te citeren, is<span class="r5"> om(</span><span class="r5">0.215</span><span class="r5">)</span> het op jouw manier 
+te hebben, want zoals Starbucks zegt, is geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>     My failure<span class="r1"> to(</span><span class="r1">0.010</span><span class="r1">)</span> procure myself a cup of sweet, green tea was not due to a 
+simple <span class="r7">misunder</span><span class="r1">standing(</span><span class="r1">0.009</span><span class="r1">)</span>. This was due to a fundamental difference in our ideas about<span class="r1"> choice(</span><span class="r1">0.013</span><span class="r1">)</span>. From my 
+American perspective, when a<span class="r1"> paying(</span><span class="r1">0.009</span><span class="r1">)</span> customer makes a reasonable request based on her preferences, she has 
+every right to have that request<span class="r1"> met(</span><span class="r1">0.008</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet<span class="r1"> </span>
+<span class="r1">zomaar(</span><span class="r1">0.011</span><span class="r1">)</span> een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit 
+mijn Amerikaanse perspectief heeft een betalende klant die een redelijk<span class="r1"> verzoek(</span><span class="r1">0.009</span><span class="r1">)</span> doet, op basis van haar 
+voorkeuren, het recht om te<span class="r1"> krijgen(</span><span class="r1">0.010</span><span class="r1">)</span> wat ze vraagt.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse manier, om Burger King te citeren, is om<span class="r5"> het(</span><span class="r5">0.122</span><span class="r5">)</span> op jouw manier 
+te hebben, want zoals Starbucks zegt, is geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she has every right to have that 
+request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet 
+zomaar een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn 
+Amerikaanse perspectief heeft een betalende klant die een redelijk<span class="r1"> verzoek(</span><span class="r1">0.014</span><span class="r1">)</span> doet, op basis van haar 
+voorkeuren, het recht om te krijgen wat ze<span class="r1"> vraag(</span><span class="r1">0.004</span><span class="r1">)</span>t.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De<span class="r5"> Amerikaanse(</span><span class="r5">0.075</span><span class="r5">)</span> manier, om Burger King te citeren, is om het op jouw manier 
+te hebben, want zoals Starbucks zegt, is geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     My failure to procure myself<span class="r1"> a(</span><span class="r1">0.002</span><span class="r1">)</span> cup of sweet, green tea was not due to a 
+simple misunderstanding. This was due to a fundamental difference in our ideas about<span class="r1"> choice(</span><span class="r1">0.002</span><span class="r1">)</span>. From<span class="r1"> my(</span><span class="r1">0.003</span><span class="r1">)</span> 
+American perspective, when a paying customer makes a reasonable request based on her preferences, she has every 
+right to have that request<span class="r1"> met(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet<span class="r1"> </span>
+<span class="r1">zomaar(</span><span class="r1">0.002</span><span class="r1">)</span> een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit 
+mijn Amerikaanse perspectief heeft een<span class="r1"> betalen(</span><span class="r1">0.002</span><span class="r1">)</span>de klant die een redelijk<span class="r1"> verzoek(</span><span class="r1">0.003</span><span class="r1">)</span> doet, op basis van 
+haar voorkeuren, het recht om te krijgen wat ze vraagt.
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse manier,<span class="r5"> om(</span><span class="r5">0.071</span><span class="r5">)</span> Burger King te citeren, is om het op jouw manier 
+te hebben, want zoals Starbucks zegt, is geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she has every right to have that 
+request<span class="r1"> met(</span><span class="r1">0.005</span><span class="r1">).(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet<span class="r1"> </span>
+<span class="r1">zomaar(</span><span class="r1">0.008</span><span class="r1">)</span> een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit 
+mijn Amerikaanse perspectief heeft een betalende klant die een redelijk verzoek doet, op basis van haar voorkeuren,
+het recht om te<span class="r1"> krijgen(</span><span class="r1">0.004</span><span class="r1">) wat(</span><span class="r1">0.004</span><span class="r1">)</span> ze vraagt.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse manier, om Burger King te citeren, is om het op jouw manier te 
+hebben, want zoals Starbucks zegt,<span class="r5"> is(</span><span class="r5">0.067</span><span class="r5">)</span> geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     My failure<span class="r1"> to(</span><span class="r1">0.003</span><span class="r1">)</span> procure myself a cup of sweet, green tea was not due to a 
+simple <span class="r7">misunder</span><span class="r1">standing(</span><span class="r1">0.004</span><span class="r1">)</span>. This was due to a fundamental difference in our ideas about<span class="r1"> choice(</span><span class="r1">0.004</span><span class="r1">)</span>. From my 
+American perspective, when a<span class="r1"> paying(</span><span class="r1">0.004</span><span class="r1">)</span> customer makes<span class="r1"> a(</span><span class="r1">0.003</span><span class="r1">)</span> reasonable request based on her preferences, she
+has every right to have that request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene<span class="r1"> the(</span><span class="r1">0.003</span><span class="r1">)</span>e te helpen, was 
+niet<span class="r1"> zomaar(</span><span class="r1">0.003</span><span class="r1">)</span> een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. 
+Vanuit mijn Amerikaanse perspectief heeft een betalende klant die een redelijk<span class="r1"> verzoek(</span><span class="r1">0.003</span><span class="r1">)</span> doet, op basis van 
+haar voorkeuren, het recht om te krijgen wat ze vraagt.
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse manier, om Burger King te citeren, is om het<span class="r5"> op(</span><span class="r5">0.062</span><span class="r5">)</span> jouw manier 
+te hebben, want zoals Starbucks zegt, is geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     My failure<span class="r1"> to(</span><span class="r1">0.007</span><span class="r1">)</span> procure myself a cup of sweet, green tea was not due to a 
+simple <span class="r7">misunder</span><span class="r1">standing(</span><span class="r1">0.005</span><span class="r1">)</span>. This was due to a fundamental difference in our ideas about<span class="r1"> choice(</span><span class="r1">0.007</span><span class="r1">)</span>. From my 
+American perspective, when a<span class="r1"> paying(</span><span class="r1">0.006</span><span class="r1">)</span> customer makes<span class="r1"> a(</span><span class="r1">0.005</span><span class="r1">)</span> reasonable request based on her preferences, she
+has every right to have that request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet 
+zomaar een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn 
+Amerikaanse perspectief heeft een betalende klant die een redelijk<span class="r1"> verzoek(</span><span class="r1">0.006</span><span class="r1">)</span> doet, op basis van haar 
+voorkeuren, het recht om te krijgen wat ze vraagt.
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse manier, om Burger King te citeren, is om het op jouw manier te 
+hebben, want zoals Starbucks zegt, is geluk in<span class="r5"> je(</span><span class="r5">0.060</span><span class="r5">)</span> keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas<span class="r1"> about(</span><span class="r1">0.002</span><span class="r1">)</span> choice. From my American 
+perspective, when a<span class="r1"> paying(</span><span class="r1">0.002</span><span class="r1">)</span> customer makes<span class="r1"> a(</span><span class="r1">0.002</span><span class="r1">)</span> reasonable request based on<span class="r1"> her(</span><span class="r1">0.001</span><span class="r1">)</span> preferences, she 
+has every right to have that request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene<span class="r1"> the(</span><span class="r1">0.001</span><span class="r1">)</span>e te helpen, was 
+niet zomaar een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn
+Amerikaanse perspectief heeft een betalende<span class="r1"> klant(</span><span class="r1">0.003</span><span class="r1">)</span> die een redelijk<span class="r1"> verzoek(</span><span class="r1">0.002</span><span class="r1">)</span> doet, op basis van haar 
+voorkeuren, het recht om te<span class="r1"> krijgen(</span><span class="r1">0.001</span><span class="r1">)</span> wat ze vraagt.
+#<span class="r4">10</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.050</span><span class="r2">):</span>  De Amerikaanse<span class="r5"> manier(</span><span class="r5">0.052</span><span class="r5">)</span>, om Burger King te citeren, is om het op jouw manier 
+te hebben, want zoals Starbucks zegt, is geluk in je keuzes.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she has every right to have that 
+request <span class="r7">met</span><span class="r1">.(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Dat ik had gefaald om mezelf aan een kop zoete groene thee te helpen, was niet 
+zomaar een misverstand. Het was te wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn 
+Amerikaanse<span class="r1"> per(</span><span class="r1">0.002</span><span class="r1">)</span>spectief heeft een betalende klant die een redelijk<span class="r1"> verzoek(</span><span class="r1">0.006</span><span class="r1">)</span> doet, op basis van haar 
+voorkeuren, het recht om te krijgen wat ze vraagt.
+
+</code></pre>
+</body>
+</html>

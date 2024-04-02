@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  We truly do all understand it, and we have this global digital fireplace, don&#x27;t we, but I want to 
+share you with the world, because you are also a tribe. You are the TED tribe, yeah? But you have to remember that 
+compliment.
+<span class="r2">Input current:</span> You have to stand tall, breathe in through your nose, and I&#x27;m going to photograph you. Okay?
+<span class="r2">Output context:</span> We begrijpen het echt en we hebben zo&#x27;n wereldwijd digitaal kampvuur, niet waar? Maar ik wil jullie
+met de wereld delen, want jullie zijn ook een stam. Jullie zijn toch de TED-stam? Maar je moet aan dat compliment 
+denken.
+<span class="r2">Output current:</span> Je moet recht staan, door je neus ademen, en ik ga jullie fotograferen. Oké?
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.047</span><span class="r2">):</span>  Je moet recht staan, door je neus ademen, en ik ga<span class="r5"> jullie(</span><span class="r5">0.420</span><span class="r5">)</span> fotograferen. 
+Oké?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.022</span><span class="r2">):</span>     We truly do all understand it, and we have this global digital fireplace, don&#x27;t 
+we, but I want to share you with the world, because you are also a tribe. You are the TED tribe, yeah? But you have
+to remember that compliment.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.024</span><span class="r2">):</span>    We begrijpen het echt en we hebben zo&#x27;n wereldwijd digitaal kampvuur, niet waar? 
+Maar ik wil<span class="r1"> jullie(</span><span class="r1">0.069</span><span class="r1">)</span> met de wereld delen, want<span class="r1"> jullie(</span><span class="r1">0.031</span><span class="r1">)</span> zijn ook een stam.<span class="r1"> Jul(</span><span class="r1">0.040</span><span class="r1">)</span>lie zijn toch de 
+TED-stam? Maar je moet aan dat compliment denken.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.047</span><span class="r2">):</span>  Je moet recht staan, door je neus ademen, en ik<span class="r5"> ga(</span><span class="r5">0.142</span><span class="r5">)</span> jullie fotograferen. 
+Oké?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    <span class="r1"> We(</span><span class="r1">0.003</span><span class="r1">)</span> truly do all understand it, and we have this<span class="r1"> global(</span><span class="r1">0.004</span><span class="r1">)</span> digital 
+fireplace, don&#x27;t we, but I want<span class="r1"> to(</span><span class="r1">0.002</span><span class="r1">)</span> share you with the world, because you are also a tribe. You are the<span class="r1"> </span>
+<span class="r1">(</span><span class="r1">0.002</span><span class="r1">)</span>TED tribe, yeah? But you have to remember<span class="r1"> that(</span><span class="r1">0.004</span><span class="r1">)</span> compliment.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    We begrijpen het echt en we hebben zo&#x27;n wereldwijd digitaal kampvuur, niet waar? 
+Maar ik wil jullie met de wereld delen, want jullie zijn ook een stam. Jullie zijn toch de TED-stam? Maar je<span class="r1"> </span>
+<span class="r1">moet(</span><span class="r1">0.004</span><span class="r1">)</span> aan dat compliment denken.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.047</span><span class="r2">):</span>  Je moet recht<span class="r5"> staan(</span><span class="r5">0.119</span><span class="r5">)</span>, door je neus ademen, en ik ga jullie fotograferen. 
+Oké?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     We truly do all understand it, and we have this global digital fireplace, don&#x27;t 
+we, but I want to share you with the world, because you are also a tribe. You are the TED tribe, yeah? But you have
+to remember<span class="r1"> that(</span><span class="r1">0.008</span><span class="r1">)</span> compliment.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    We begrijpen het echt en we hebben zo&#x27;n wereldwijd digitaal kampvuur, niet waar? 
+Maar ik wil jullie met de wereld delen, want jullie zijn ook een stam. Jullie zijn toch de TED-stam? Maar je moet 
+aan dat<span class="r1"> compliment(</span><span class="r1">0.004</span><span class="r1">) denken(</span><span class="r1">0.004</span><span class="r1">)</span>.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.047</span><span class="r2">):</span> <span class="r5"> Je(</span><span class="r5">0.107</span><span class="r5">)</span> moet recht staan, door je neus ademen, en ik ga jullie fotograferen. 
+Oké?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>     We truly do all understand it, and we have this global digital fireplace, don&#x27;t 
+we, but I want to share you with the world, because you are also a tribe. You are the TED tribe, yeah? But you have
+to remember<span class="r1"> that(</span><span class="r1">0.009</span><span class="r1">)</span> <span class="r7">compliment</span><span class="r1">.(</span><span class="r1">0.009</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>    We begrijpen het echt en we hebben zo&#x27;n wereldwijd digitaal kampvuur, niet waar? 
+Maar ik wil jullie met de wereld delen, want<span class="r1"> jullie(</span><span class="r1">0.009</span><span class="r1">)</span> zijn ook een stam.<span class="r1"> Jul(</span><span class="r1">0.020</span><span class="r1">)</span>lie zijn toch de TED-stam? 
+Maar<span class="r1"> je(</span><span class="r1">0.009</span><span class="r1">)</span> moet aan dat compliment <span class="r7">denken</span><span class="r1">.(</span><span class="r1">0.010</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

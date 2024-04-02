@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span> 
+a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say to companies, 
+this is not our first rodeo, people.
+<span class="r2">Input current:</span> We just need you to be authentic and real and say <span class="r3">...</span> <span class="r6">&quot;We&#x27;re sorry. We&#x27;ll fix it.&quot;</span> But there&#x27;s 
+another way, and I&#x27;ll leave you with this.
+<span class="r2">Output context:</span> Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het nu gaat om steun 
+aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op andere 
+mensen. Ik wil tegen bedrijven zeggen: &quot;We zijn niet van gisteren, mensen.
+<span class="r2">Output current:</span> We moeten authentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We zullen het repareren.&quot;</span> Maar er is 
+nog een andere manier, en ik zal jullie hiermee achterlaten.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We moeten authentiek en echt zijn en zeggen: <span class="r6">&quot;</span><span class="r5">Het(0.402)</span><span class="r6"> spijt ons. We zullen het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier, en ik zal jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our<span class="r1"> first(</span><span class="r1">0.003</span><span class="r1">)</span> rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik wil tegen bedrijven zeggen:<span class="r1"> &quot;(</span><span class="r1">0.003</span><span class="r1">)We(</span><span class="r1">0.004</span><span class="r1">)</span> zijn niet van<span class="r1"> gi(</span><span class="r1">0.005</span><span class="r1">)ster(</span><span class="r1">0.004</span><span class="r1">)</span>en, 
+mensen.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We moeten<span class="r5"> aut(</span><span class="r5">0.371</span><span class="r5">)</span>hentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We zullen het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier, en ik zal jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.008</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our<span class="r1"> first(</span><span class="r1">0.011</span><span class="r1">)</span> rodeo<span class="r1">,(</span><span class="r1">0.010</span><span class="r1">) people(</span><span class="r1">0.009</span><span class="r1">).(</span><span class="r1">0.014</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.008</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik wil tegen bedrijven zeggen:<span class="r1"> &quot;(</span><span class="r1">0.009</span><span class="r1">)</span>We zijn niet van gisteren,<span class="r1"> mensen(</span><span class="r1">0.013</span><span class="r1">).(</span><span class="r1">0.013</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span> <span class="r5"> We(</span><span class="r5">0.362</span><span class="r5">)</span> moeten authentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We zullen het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier, en ik zal jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our first rodeo, <span class="r7">people</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik wil tegen bedrijven zeggen: &quot;We zijn niet van gisteren<span class="r1">,(</span><span class="r1">0.003</span><span class="r1">) mensen(</span><span class="r1">0.004</span><span class="r1">).(</span><span class="r1">0.008</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We<span class="r5"> moeten(</span><span class="r5">0.099</span><span class="r5">)</span> authentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We zullen het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier, en ik zal jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our first rodeo, <span class="r7">people</span><span class="r1">.(</span><span class="r1">0.008</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik wil tegen bedrijven zeggen:<span class="r1"> &quot;(</span><span class="r1">0.009</span><span class="r1">)</span>We zijn niet van<span class="r1"> gi(</span><span class="r1">0.010</span><span class="r1">)ster(</span><span class="r1">0.007</span><span class="r1">)</span>en,<span class="r1"> </span>
+<span class="r1">mensen(</span><span class="r1">0.011</span><span class="r1">).(</span><span class="r1">0.013</span><span class="r1">)</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We moeten authentiek en echt zijn en zeggen:<span class="r5"> </span><span class="r5">&quot;(0.095)</span><span class="r6">Het spijt ons. We zullen het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier, en ik zal jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our first rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik wil tegen bedrijven zeggen<span class="r1">:(</span><span class="r1">0.006</span><span class="r1">) &quot;(</span><span class="r1">0.015</span><span class="r1">)</span>We zijn niet van gisteren, <span class="r7">mensen</span><span class="r1">.(</span><span class="r1">0.005</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We moeten authentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We zullen het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier,<span class="r5"> en(</span><span class="r5">0.094</span><span class="r5">)</span> ik zal jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our<span class="r1"> first(</span><span class="r1">0.002</span><span class="r1">)</span> rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan<span class="r1"> banken(</span><span class="r1">0.004</span><span class="r1">)</span> of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme 
+impact heeft op andere mensen. Ik wil tegen bedrijven zeggen:<span class="r1"> &quot;(</span><span class="r1">0.002</span><span class="r1">)</span>We zijn niet van<span class="r1"> gi(</span><span class="r1">0.002</span><span class="r1">)</span>steren, mensen.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We moeten authentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We zullen het </span>
+<span class="r6">repareren</span><span class="r5">.&quot;</span><span class="r5">(</span><span class="r5">0.083</span><span class="r5">)</span> Maar er is nog een andere manier, en ik zal jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+to companies, this is not our<span class="r1"> first(</span><span class="r1">0.002</span><span class="r1">)</span> rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik wil tegen bedrijven zeggen:<span class="r1"> &quot;(</span><span class="r1">0.003</span><span class="r1">)</span>We zijn niet van gisteren, <span class="r7">mensen</span><span class="r1">.(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We moeten authentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We</span><span class="r5"> zullen(0.080)</span><span class="r6"> het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier, en ik zal jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     We do that in our personal lives. We do<span class="r1"> that(</span><span class="r1">0.006</span><span class="r1">)</span> corporate -- whether it&#x27;s<span class="r1"> </span>
+<span class="r1">a(</span><span class="r1">0.005</span><span class="r1">)</span> bailout, an<span class="r1"> oil(</span><span class="r1">0.008</span><span class="r1">)</span> spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.009</span><span class="r1">)</span> recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge 
+impact on other people. I would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.010</span><span class="r1">)</span> rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik wil tegen bedrijven zeggen: &quot;We zijn niet van gisteren, mensen.
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We moeten authentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We zullen het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier, en ik zal<span class="r5"> jullie(</span><span class="r5">0.072</span><span class="r5">)</span> hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     We do that in our personal lives. We do that corporate -- whether it&#x27;s a bailout, 
+an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say
+<span class="r1">to(</span><span class="r1">0.004</span><span class="r1">)</span> companies, this is not our<span class="r1"> first(</span><span class="r1">0.006</span><span class="r1">)</span> rodeo<span class="r1">,(</span><span class="r1">0.010</span><span class="r1">)</span> people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik wil tegen<span class="r1"> bedrijven(</span><span class="r1">0.009</span><span class="r1">)</span> zeggen: &quot;We zijn niet van gisteren, mensen.
+#<span class="r4">10</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.056</span><span class="r2">):</span>  We moeten authentiek en echt zijn en zeggen: <span class="r6">&quot;Het spijt ons. We zullen het </span>
+<span class="r6">repareren.&quot;</span> Maar er is nog een andere manier, en ik<span class="r5"> zal(</span><span class="r5">0.072</span><span class="r5">)</span> jullie hiermee achterlaten.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do<span class="r1"> that(</span><span class="r1">0.003</span><span class="r1">)</span> corporate -- whether it&#x27;s a 
+bailout, an<span class="r1"> oil(</span><span class="r1">0.003</span><span class="r1">)</span> spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.003</span><span class="r1">)</span> recall.<span class="r1"> We(</span><span class="r1">0.004</span><span class="r1">)</span> pretend like what we&#x27;re doing doesn&#x27;t have a huge 
+impact on other people. I would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.003</span><span class="r1">)</span> rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Dat doen we in ons persoonlijke leven. We doen dat in het bedrijfsleven -- of het 
+nu gaat om steun aan banken of een olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact 
+heeft op andere mensen. Ik<span class="r1"> wil(</span><span class="r1">0.003</span><span class="r1">)</span> tegen bedrijven zeggen: &quot;We zijn niet van gisteren, mensen.
+
+</code></pre>
+</body>
+</html>
