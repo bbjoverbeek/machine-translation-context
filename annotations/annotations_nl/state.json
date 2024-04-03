@@ -4,8 +4,13 @@
       "filename": "data-00000-of-00001.arrow"
     }
   ],
-  "_fingerprint": "8987c0c3bb34b6cf",
-  "_format_columns": null,
+  "_fingerprint": "aa4a40d35fd9b664",
+  "_format_columns": [
+    "context",
+    "doc_id",
+    "seg_id",
+    "translation"
+  ],
   "_format_kwargs": {},
   "_format_type": null,
   "_output_all_columns": false,

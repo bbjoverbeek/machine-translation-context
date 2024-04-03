@@ -14,28 +14,17 @@
       "en": {
         "dtype": "string",
         "_type": "Value"
-      },
-      "nl": {
-        "dtype": "string",
-        "_type": "Value"
       }
     },
     "context": {
+      "de": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
       "en": {
-        "feature": {
-          "dtype": "string",
-          "_type": "Value"
-        },
-        "_type": "Sequence"
-      },
-      "nl": {
-        "feature": {
-          "dtype": "string",
-          "_type": "Value"
-        },
-        "_type": "Sequence"
-      },
-      "ru": {
         "feature": {
           "dtype": "string",
           "_type": "Value"

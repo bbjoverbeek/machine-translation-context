@@ -11,24 +11,20 @@
       "_type": "Value"
     },
     "translation": {
-      "de": {
-        "dtype": "string",
-        "_type": "Value"
-      },
       "en": {
         "dtype": "string",
         "_type": "Value"
       }
     },
     "context": {
-      "de": {
+      "en": {
         "feature": {
           "dtype": "string",
           "_type": "Value"
         },
         "_type": "Sequence"
       },
-      "en": {
+      "nl": {
         "feature": {
           "dtype": "string",
           "_type": "Value"

@@ -14,10 +14,6 @@
       "en": {
         "dtype": "string",
         "_type": "Value"
-      },
-      "nl": {
-        "dtype": "string",
-        "_type": "Value"
       }
     },
     "context": {
@@ -28,7 +24,7 @@
         },
         "_type": "Sequence"
       },
-      "nl": {
+      "ru": {
         "feature": {
           "dtype": "string",
           "_type": "Value"

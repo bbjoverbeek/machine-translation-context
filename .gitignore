@@ -50,6 +50,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+change_datasets.py
+translation_de.ipynb
 
 # Translations
 *.mo
