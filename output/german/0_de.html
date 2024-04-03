@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  And so on. There is a little bit of a difference there that is worth just --  -- thinking about. 
+And I remember when I was <span class="r4">12</span> years old, and I started playing tympani and percussion, and my teacher said, <span class="r6">&quot;Well, </span>
+<span class="r6">how are we going to do this? You know, music is about listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree with that. So what&#x27;s </span>
+<span class="r6">the problem?&quot;</span> And he said, <span class="r6">&quot;Well, how are you going to hear this? How are you going to hear that?&quot;</span>
+<span class="r2">Input current:</span> And I said, <span class="r6">&quot;Well, how do you hear it?&quot;</span>
+<span class="r2">Output context:</span> Und so weiter. Da gibt es ein wenig Unterschied, den es wert ist - - darüber nachzudenken. Und ich 
+erinnere mich, als ich <span class="r4">12</span> Jahre alt war, und ich begann Tympani und Percussion zu spielen, und mein Lehrer sagte, 
+<span class="r6">&quot;Nun, wie werden wir das tun? Du weißt, Musik geht darum, zu hören.&quot;</span> Und ich sagte: <span class="r6">&quot;Ja, ich bin damit </span>
+<span class="r6">einverstanden. Wo liegt das Problem?&quot;</span> Und er sagte: <span class="r6">&quot;Nun, wie wirst du das hören? Wie wirst du das hören?&quot;</span>
+<span class="r2">Output current:</span> Und ich sagte: <span class="r6">&quot;Nun, wie hörst du es?&quot;</span>
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">1.428</span><span class="r2">):</span> <span class="r5"> Und(</span><span class="r5">4.954</span><span class="r5">)</span> ich sagte: <span class="r6">&quot;Nun, wie hörst du es?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    <span class="r1"> And(</span><span class="r1">0.000</span><span class="r1">) so(</span><span class="r1">0.000</span><span class="r1">) on(</span><span class="r1">0.000</span><span class="r1">).(</span><span class="r1">0.000</span><span class="r1">) There(</span><span class="r1">0.000</span><span class="r1">)</span> is a little bit of a 
+difference there that is worth just -- -- thinking about. And I remember when I was <span class="r4">12</span> years old, and I started 
+playing tympani and percussion, and my teacher said, <span class="r6">&quot;Well, how are we going to do this? You know, music is about </span>
+<span class="r6">listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree with that. So what&#x27;s the problem?&quot;</span> And he said, <span class="r6">&quot;Well, how are you going to </span>
+<span class="r6">hear this? How are you going to hear that?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>   <span class="r1"> Und(</span><span class="r1">0.000</span><span class="r1">) so(</span><span class="r1">0.000</span><span class="r1">) weiter(</span><span class="r1">0.000</span><span class="r1">).(</span><span class="r1">0.000</span><span class="r1">) Da(</span><span class="r1">0.000</span><span class="r1">)</span> gibt es ein wenig 
+Unterschied, den es wert ist - - darüber nachzudenken. Und ich erinnere mich, als ich <span class="r4">12</span> Jahre alt war, und ich 
+begann Tympani und Percussion zu spielen, und mein Lehrer sagte, <span class="r6">&quot;Nun, wie werden wir das tun? Du weißt, Musik geht</span>
+<span class="r6">darum, zu hören.&quot;</span> Und ich sagte: <span class="r6">&quot;Ja, ich bin damit einverstanden. Wo liegt das Problem?&quot;</span> Und er sagte: <span class="r6">&quot;Nun, wie </span>
+<span class="r6">wirst du das hören? Wie wirst du das hören?&quot;</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">1.428</span><span class="r2">):</span>  Und ich sagte: <span class="r6">&quot;N</span><span class="r5">un(3.552)</span><span class="r6">, wie hörst du es?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     And so on. There is a little bit of a difference there that is worth just -- -- 
+thinking about. And I remember when I was <span class="r4">12</span> years old, and I started playing tympani and percussion, and my 
+teacher said,<span class="r1"> </span><span class="r1">&quot;(0.001)</span><span class="r6">Well, how are we going to do this? You know, music is about listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I </span>
+<span class="r6">agree with that. So what&#x27;s the problem?&quot;</span> And he said, <span class="r6">&quot;Well, how are you going to hear this? How are you going to </span>
+<span class="r6">hear that?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Und so weiter. Da gibt es ein wenig Unterschied, den es wert ist - - darüber 
+nachzudenken. Und ich erinnere mich, als ich <span class="r4">12</span> Jahre alt war, und ich begann Tympani und Percussion zu spielen, 
+und mein Lehrer sagte, <span class="r6">&quot;</span><span class="r1">N(0.003)un(0.005)</span><span class="r6">, wie werden wir das tun? Du weißt, Musik geht darum, zu hören.&quot;</span> Und ich 
+sagte: <span class="r6">&quot;Ja, ich bin damit einverstanden. Wo liegt das Problem?&quot;</span> Und er sagte: <span class="r6">&quot;</span><span class="r1">N(0.003)un(0.003)</span><span class="r6">, wie wirst du das </span>
+<span class="r6">hören? Wie wirst du das hören?&quot;</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">1.428</span><span class="r2">):</span>  Und ich sagte: <span class="r6">&quot;Nun,</span><span class="r5"> wie(2.438)</span><span class="r6"> hörst du es?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     And so on. There is a little bit of a difference there that is worth just -- -- 
+thinking about. And I remember when I was <span class="r4">12</span> years old, and I started playing tympani and percussion, and my 
+teacher said, <span class="r6">&quot;Well, how are we going to do this? You know, music is about listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree </span>
+<span class="r6">with that. So what&#x27;s the problem?&quot;</span> And he said, <span class="r6">&quot;Well, how are you going to hear this? How are you going to hear </span>
+<span class="r6">that?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>   <span class="r1"> Und(</span><span class="r1">0.013</span><span class="r1">)</span> so<span class="r1"> weiter(</span><span class="r1">0.006</span><span class="r1">).(</span><span class="r1">0.005</span><span class="r1">)</span> Da gibt es ein wenig Unterschied, den es wert 
+ist - - darüber nachzudenken. Und ich erinnere mich, als ich <span class="r4">12</span> Jahre alt war, und ich begann Tympani und 
+Percussion zu spielen, und mein Lehrer sagte, <span class="r6">&quot;Nun, wie werden wir das tun? Du weißt, Musik geht darum, zu hören.&quot;</span> 
+Und ich sagte: <span class="r6">&quot;Ja, ich bin damit einverstanden. Wo liegt das Problem?&quot;</span> Und er sagte: <span class="r6">&quot;Nun,</span><span class="r1"> wie(0.005)</span><span class="r6"> wirst du das</span>
+<span class="r6">hören? Wie wirst du das hören?&quot;</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">1.428</span><span class="r2">):</span>  Und ich sagte: <span class="r6">&quot;Nun, wie</span><span class="r5"> hör(1.762)</span><span class="r6">st du es?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     And so on. There is a little bit of a difference there that is worth just -- -- 
+thinking about. And I remember when I was <span class="r4">12</span> years old, and I started playing tympani and percussion, and my 
+teacher said, <span class="r6">&quot;Well, how are we going to do this? You know, music is about listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree </span>
+<span class="r6">with that. So what&#x27;s the problem?&quot;</span> And he said, <span class="r6">&quot;Well, how are you going to hear this? How are you going to hear </span>
+<span class="r6">that?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>   <span class="r1"> Und(</span><span class="r1">0.007</span><span class="r1">)</span> so weiter. Da gibt es ein wenig Unterschied, den es wert ist - - 
+darüber nachzudenken. Und ich erinnere mich, als ich <span class="r4">12</span> Jahre alt war, und ich begann Tympani und Percussion zu 
+spielen, und mein Lehrer sagte, <span class="r6">&quot;Nun, wie werden wir das tun? Du weißt, Musik geht darum, zu hören.&quot;</span> Und ich sagte:
+<span class="r6">&quot;Ja, ich bin damit einverstanden. Wo liegt das Problem?&quot;</span> Und er sagte: <span class="r6">&quot;Nun, wie</span><span class="r1"> wirst(0.024)</span><span class="r6"> du das hören? Wie</span><span class="r1"> </span>
+<span class="r1">wirst(0.008)</span><span class="r6"> du das hören?&quot;</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">1.428</span><span class="r2">):</span>  Und<span class="r5"> ich(</span><span class="r5">1.639</span><span class="r5">)</span> sagte: <span class="r6">&quot;Nun, wie hörst du es?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     And so on. There is a little bit of a difference there that is worth just -- -- 
+thinking about. And I remember when I was <span class="r4">12</span> years old, and I started playing tympani and percussion, and my 
+teacher said, <span class="r6">&quot;Well, how are we going to do this? You know, music is about listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree </span>
+<span class="r6">with that. So what&#x27;s the problem?&quot;</span> And he said, <span class="r6">&quot;Well, how are you going to hear this? How are you going to hear </span>
+<span class="r6">that?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>   <span class="r1"> Und(</span><span class="r1">0.012</span><span class="r1">)</span> so<span class="r1"> weiter(</span><span class="r1">0.006</span><span class="r1">).(</span><span class="r1">0.006</span><span class="r1">)</span> Da gibt es ein wenig Unterschied, den es wert 
+ist - - darüber nachzudenken.<span class="r1"> Und(</span><span class="r1">0.004</span><span class="r1">)</span> ich erinnere mich, als ich <span class="r4">12</span> Jahre alt war, und ich begann Tympani und 
+Percussion zu spielen, und mein Lehrer sagte, <span class="r6">&quot;Nun, wie werden wir das tun? Du weißt, Musik geht darum, zu hören.&quot;</span> 
+Und<span class="r1"> ich(</span><span class="r1">0.005</span><span class="r1">)</span> sagte: <span class="r6">&quot;Ja, ich bin damit einverstanden. Wo liegt das Problem?&quot;</span> Und er sagte: <span class="r6">&quot;Nun, wie wirst du das</span>
+<span class="r6">hören? Wie wirst du das hören?&quot;</span>
+
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  My failure to procure myself a cup of sweet, green tea was not due to a simple misunderstanding. 
+This was due to a fundamental difference in our ideas about choice. From my American perspective, when a paying 
+customer makes a reasonable request based on her preferences, she has every right to have that request met.
+<span class="r2">Input current:</span> The American way, to quote Burger King, is to <span class="r6">&quot;have it your way,&quot;</span> because, as Starbucks says, 
+<span class="r6">&quot;happiness is in your choices.&quot;</span>
+<span class="r2">Output context:</span> Mein Versäumnis, mir eine Tasse süßen grünen Tee zu besorgen, war nicht auf ein einfaches 
+Missverständnis zurückzuführen. Dies war auf Grund eines grundlegenden Unterschieds in unseren Vorstellungen über 
+die Wahl zurückzuführen. Aus meiner amerikanischen Perspektive, wenn ein zahlender Kunde eine angemessene Anfrage 
+basierend auf ihren Vorlieben macht, hat sie jedes Recht, dass diese Anfrage erfüllt wird.
+<span class="r2">Output current:</span> Der amerikanische Weg, um Burger King zu zitieren, ist, <span class="r6">&quot;haben Sie es auf Ihre Weise&quot;</span>, weil, wie 
+Starbucks sagt, <span class="r6">&quot;Freude ist in Ihren Entscheidungen.&quot;</span>
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.244</span><span class="r2">):</span> <span class="r5"> Der(</span><span class="r5">4.023</span><span class="r5">)</span> amerikanische Weg, um Burger King zu zitieren, ist, <span class="r6">&quot;haben Sie es auf </span>
+<span class="r6">Ihre Weise&quot;</span>, weil, wie Starbucks sagt, <span class="r6">&quot;Freude ist in Ihren Entscheidungen.&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    <span class="r1"> My(</span><span class="r1">0.000</span><span class="r1">) failure(</span><span class="r1">0.000</span><span class="r1">) to(</span><span class="r1">0.000</span><span class="r1">) procure(</span><span class="r1">0.000</span><span class="r1">) myself(</span><span class="r1">0.000</span><span class="r1">)</span> a cup of sweet, 
+green tea was not due to a simple misunderstanding. This was due to a fundamental difference in our ideas about 
+choice. From my American perspective, when a paying customer makes a reasonable request based on her preferences, 
+she has every right to have that request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>   <span class="r1"> Mein(</span><span class="r1">0.000</span><span class="r1">) Ver(</span><span class="r1">0.000</span><span class="r1">)sä(</span><span class="r1">0.000</span><span class="r1">)um(</span><span class="r1">0.000</span><span class="r1">)nis(</span><span class="r1">0.000</span><span class="r1">)</span>, mir eine Tasse süßen grünen 
+Tee zu besorgen, war nicht auf ein einfaches Missverständnis zurückzuführen. Dies war auf Grund eines grundlegenden
+Unterschieds in unseren Vorstellungen über die Wahl zurückzuführen. Aus meiner amerikanischen Perspektive, wenn ein
+zahlender Kunde eine angemessene Anfrage basierend auf ihren Vorlieben macht, hat sie jedes Recht, dass diese 
+Anfrage erfüllt wird.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.244</span><span class="r2">):</span>  Der amerikanische Weg,<span class="r5"> um(</span><span class="r5">1.224</span><span class="r5">)</span> Burger King zu zitieren, ist, <span class="r6">&quot;haben Sie es auf </span>
+<span class="r6">Ihre Weise&quot;</span>, weil, wie Starbucks sagt, <span class="r6">&quot;Freude ist in Ihren Entscheidungen.&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she has every right to have that 
+request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>   <span class="r1"> Mein(</span><span class="r1">0.014</span><span class="r1">)</span> Versäumnis,<span class="r1"> mir(</span><span class="r1">0.013</span><span class="r1">)</span> eine Tasse süßen grünen Tee zu besorgen, war 
+nicht auf ein einfaches Missverständnis zurückzuführen. Dies war auf Grund eines grundlegenden Unterschieds in 
+unseren Vorstellungen über die Wahl zurückzuführen. Aus meiner amerikanischen Perspektive, wenn ein zahlender Kunde
+eine angemessene Anfrage basierend auf ihren Vorlieben macht, hat sie jedes Recht, dass diese Anfrage erfüllt 
+<span class="r7">wird</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.244</span><span class="r2">):</span>  Der amerikanische Weg, um Burger King<span class="r5"> zu(</span><span class="r5">0.959</span><span class="r5">)</span> zitieren, ist, <span class="r6">&quot;haben Sie es auf </span>
+<span class="r6">Ihre Weise&quot;</span>, weil, wie Starbucks sagt, <span class="r6">&quot;Freude ist in Ihren Entscheidungen.&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she has every right to have that 
+request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>   <span class="r1"> Mein(</span><span class="r1">0.013</span><span class="r1">)</span> Versäumnis, mir eine Tasse süßen grünen Tee zu besorgen, war nicht auf
+ein einfaches Missverständnis zurückzuführen. Dies war auf Grund eines grundlegenden Unterschieds in unseren 
+Vorstellungen über die Wahl zurückzuführen. Aus meiner amerikanischen Perspektive, wenn ein zahlender Kunde eine 
+angemessene Anfrage basierend auf ihren Vorlieben macht, hat sie jedes Recht,<span class="r1"> dass(</span><span class="r1">0.005</span><span class="r1">)</span> diese Anfrage erfüllt<span class="r1"> </span>
+<span class="r1">wird(</span><span class="r1">0.005</span><span class="r1">)</span>.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.244</span><span class="r2">):</span>  Der<span class="r5"> (</span><span class="r5">0.650</span><span class="r5">)</span>amerikanische Weg, um Burger King zu zitieren, ist, <span class="r6">&quot;haben Sie es auf </span>
+<span class="r6">Ihre Weise&quot;</span>, weil, wie Starbucks sagt, <span class="r6">&quot;Freude ist in Ihren Entscheidungen.&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     My failure<span class="r1"> to(</span><span class="r1">0.000</span><span class="r1">)</span> procure myself a cup of sweet, green tea was not due to a 
+simple <span class="r7">misunder</span><span class="r1">standing(</span><span class="r1">0.000</span><span class="r1">)</span>. This was due to a fundamental difference in our ideas about<span class="r1"> choice(</span><span class="r1">0.000</span><span class="r1">)</span>. From my 
+American perspective, when a<span class="r1"> paying(</span><span class="r1">0.000</span><span class="r1">)</span> customer makes a reasonable request based on her preferences, she has 
+every right to have that request<span class="r1"> met(</span><span class="r1">0.000</span><span class="r1">)</span>.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>   <span class="r1"> Mein(</span><span class="r1">0.000</span><span class="r1">)</span> Versäumnis, mir eine Tasse süßen grünen Tee zu besorgen, war nicht auf
+ein einfaches Missverständnis zurückzuführen. Dies war auf Grund eines grundlegenden Unterschieds in unseren 
+Vorstellungen über die Wahl zurückzuführen. Aus meiner <span class="r1">amerikanische(</span><span class="r1">0.000</span><span class="r1">)</span>n Perspektive, wenn ein zahlender Kunde 
+eine angemessene Anfrage basierend auf ihren Vorlieben macht, hat sie jedes Recht, dass diese Anfrage erfüllt 
+<span class="r7">wird</span><span class="r1">.(</span><span class="r1">0.000</span><span class="r1">)</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.244</span><span class="r2">):</span>  Der amerikanische Weg, um Burger King zu zitieren, ist, <span class="r6">&quot;haben Sie es auf</span><span class="r5"> </span>
+<span class="r5">Ihre(0.283)</span><span class="r6"> Weise&quot;</span>, weil, wie Starbucks sagt, <span class="r6">&quot;Freude ist in Ihren Entscheidungen.&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she has every right to have that 
+request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>   <span class="r1"> Mein(</span><span class="r1">0.006</span><span class="r1">)</span> Versäumnis,<span class="r1"> mir(</span><span class="r1">0.006</span><span class="r1">)</span> eine Tasse süßen grünen Tee zu besorgen, war 
+nicht auf ein einfaches Missverständnis zurückzuführen. Dies war auf Grund eines grundlegenden Unterschieds in 
+unseren Vorstellungen über die Wahl zurückzuführen. Aus meiner amerikanischen Perspektive, wenn ein zahlender Kunde
+eine angemessene Anfrage basierend auf ihren Vorlieben macht, hat sie jedes Recht, dass diese Anfrage erfüllt wird.
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.244</span><span class="r2">):</span>  Der amerikanische Weg, um Burger King zu zitieren, ist, <span class="r6">&quot;haben</span><span class="r5"> Sie(0.266)</span><span class="r6"> es auf </span>
+<span class="r6">Ihre Weise&quot;</span>, weil, wie Starbucks sagt, <span class="r6">&quot;Freude ist in Ihren Entscheidungen.&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     My failure to procure myself a cup of sweet, green tea was not due to a simple 
+misunderstanding. This was due to a fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she has every right to have that 
+request met.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>   <span class="r1"> Mein(</span><span class="r1">0.011</span><span class="r1">)</span> Versäumnis,<span class="r1"> mir(</span><span class="r1">0.019</span><span class="r1">)</span> eine Tasse süßen grünen Tee zu besorgen, war 
+nicht auf ein einfaches Missverständnis zurückzuführen. Dies war auf Grund eines grundlegenden Unterschieds in 
+unseren Vorstellungen über die Wahl zurückzuführen. Aus meiner amerikanischen Perspektive, wenn ein zahlender Kunde
+eine angemessene Anfrage basierend auf ihren Vorlieben macht, hat sie jedes Recht, dass diese Anfrage erfüllt wird.
+
+</code></pre>
+</body>
+</html>

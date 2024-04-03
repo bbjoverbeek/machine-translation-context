@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence with <span class="r5">context-sensitive target spans</span> 
+<span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  The rabbi came in and saw what was going on. And he called the two of them to his office. And he 
+said, you know, <span class="r6">&quot;This is what&#x27;s happening.&quot;</span>
+<span class="r2">Input current:</span> And the rich man -- oh, dear -- crestfallen. <span class="r6">&quot;You mean God didn&#x27;t want my bread?&quot;</span>
+<span class="r2">Output context:</span> Der Rabbiner kam hinein und sah, was geschah. Und er rief die beiden zu seinem Büro. Und er sagte: 
+<span class="r6">&quot;Das ist, was passiert.&quot;</span>
+<span class="r2">Output current:</span> Und der reiche Mann - oh, liebe - fiel auf. <span class="r6">&quot;Sie meinen, Gott wollte mein Brot nicht?&quot;</span>
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.726</span><span class="r2">):</span>  Und<span class="r5"> der(</span><span class="r5">6.179</span><span class="r5">)</span> reiche Mann - oh, liebe - fiel auf. <span class="r6">&quot;Sie meinen, Gott wollte mein </span>
+<span class="r6">Brot nicht?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     The rabbi came in and saw what was going on. And he called the two of them to his 
+office. And he said, you know, <span class="r6">&quot;This is what&#x27;s happening.&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>   <span class="r1"> Der(</span><span class="r1">0.007</span><span class="r1">) Rabbi(</span><span class="r1">0.004</span><span class="r1">)</span>ner kam hinein und sah, was geschah.<span class="r1"> Und(</span><span class="r1">0.005</span><span class="r1">)</span> er rief die
+beiden zu seinem Büro. Und er sagte: <span class="r6">&quot;Das ist, was passiert.&quot;</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.726</span><span class="r2">):</span> <span class="r5"> Und(</span><span class="r5">3.887</span><span class="r5">)</span> der reiche Mann - oh, liebe - fiel auf. <span class="r6">&quot;Sie meinen, Gott wollte mein </span>
+<span class="r6">Brot nicht?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    <span class="r1"> The(</span><span class="r1">0.000</span><span class="r1">) rabbi(</span><span class="r1">0.000</span><span class="r1">) came(</span><span class="r1">0.000</span><span class="r1">) in(</span><span class="r1">0.000</span><span class="r1">) and(</span><span class="r1">0.000</span><span class="r1">)</span> saw what was going on. 
+And he called the two of them to his office. And he said, you know, <span class="r6">&quot;This is what&#x27;s happening.&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>   <span class="r1"> Der(</span><span class="r1">0.000</span><span class="r1">) Rabbi(</span><span class="r1">0.000</span><span class="r1">)ner(</span><span class="r1">0.000</span><span class="r1">) kam(</span><span class="r1">0.000</span><span class="r1">) hinein(</span><span class="r1">0.000</span><span class="r1">)</span> und sah, was geschah. 
+Und er rief die beiden zu seinem Büro. Und er sagte: <span class="r6">&quot;Das ist, was passiert.&quot;</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.726</span><span class="r2">):</span>  Und der reiche Mann - oh,<span class="r5"> liebe(</span><span class="r5">1.364</span><span class="r5">)</span> - fiel auf. <span class="r6">&quot;Sie meinen, Gott wollte mein </span>
+<span class="r6">Brot nicht?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    <span class="r1"> The(</span><span class="r1">0.007</span><span class="r1">)</span> rabbi came in and saw what was going on. And he called the two of them 
+to his office. And he said, you know, <span class="r6">&quot;This is what&#x27;s happening.&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>   <span class="r1"> Der(</span><span class="r1">0.009</span><span class="r1">)</span> Rabbiner kam hinein<span class="r1"> und(</span><span class="r1">0.006</span><span class="r1">)</span> sah, was geschah. Und er rief die beiden
+zu seinem Büro. Und er sagte: <span class="r6">&quot;Das ist, was passiert.&quot;</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.726</span><span class="r2">):</span>  Und der reiche Mann - oh, liebe - fiel auf.<span class="r5"> </span><span class="r5">&quot;(1.162)</span><span class="r6">Sie meinen, Gott wollte mein </span>
+<span class="r6">Brot nicht?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    <span class="r1"> The(</span><span class="r1">0.004</span><span class="r1">)</span> rabbi came in and saw what was going on. And he called the two of them 
+to his office. And he said, you know, <span class="r6">&quot;This is what&#x27;s happening.&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Der Rabbiner kam hinein und sah, was geschah.<span class="r1"> Und(</span><span class="r1">0.004</span><span class="r1">)</span> er rief die beiden zu 
+seinem Büro. Und er sagte:<span class="r1"> </span><span class="r1">&quot;(0.005)</span><span class="r6">Das ist, was passiert.&quot;</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.726</span><span class="r2">):</span>  Und der reiche Mann - oh, liebe -<span class="r5"> fiel(</span><span class="r5">0.952</span><span class="r5">)</span> auf. <span class="r6">&quot;Sie meinen, Gott wollte mein </span>
+<span class="r6">Brot nicht?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    <span class="r1"> The(</span><span class="r1">0.008</span><span class="r1">)</span> rabbi came in and saw what was going on. And he called the two of them 
+to his office. And he said, you know, <span class="r6">&quot;This is what&#x27;s happening.&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>   <span class="r1"> Der(</span><span class="r1">0.009</span><span class="r1">)</span> Rabbiner<span class="r1"> kam(</span><span class="r1">0.011</span><span class="r1">)</span> hinein und sah, was geschah.<span class="r1"> Und(</span><span class="r1">0.010</span><span class="r1">)</span> er rief die
+beiden zu seinem Büro. Und er sagte: <span class="r6">&quot;Das ist, was passiert.&quot;</span>
+
+</code></pre>
+</body>
+</html>
