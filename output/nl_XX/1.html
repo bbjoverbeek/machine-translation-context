@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  And so on. There is a little bit of a difference there that is 
+worth just -- -- thinking about. And I remember when I was <span class="r4">12</span> years old, and I 
+started playing tympani and percussion, and my teacher said, <span class="r6">&quot;Well, how are we </span>
+<span class="r6">going to do this? You know, music is about listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree</span>
+<span class="r6">with that. So what&#x27;s the problem?&quot;</span> And he said, <span class="r6">&quot;Well, how are you going to hear</span>
+<span class="r6">this? How are you going to hear that?&quot;</span>
+<span class="r2">Input current:</span> And I said, <span class="r6">&quot;Well, how do you hear it?&quot;</span>
+<span class="r2">Output context:</span> en zo verder. Er zit een klein verschil op, dat de moeite is -- 
+-- om over na te denken Ik herinner mij dat ik op mijn twaalfde op pauken en 
+percussie begon te spelen. Mijn leraar zei: <span class="r6">&quot;Wel, hoe gaan we dat doen? Muziek </span>
+<span class="r6">gaat om luisteren.&quot;</span> <span class="r6">&quot;Ja, akkoord. En wat is het probleem?&quot;</span> Hij zei: <span class="r6">&quot;Hoe ga je </span>
+<span class="r6">dit horen? Hoe ga je dat horen?&quot;</span>
+<span class="r2">Output current:</span> Ik zei: <span class="r6">&quot;Hoe ga je het horen?&quot;</span>
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.134</span><span class="r2">):</span>  Ik zei: <span class="r6">&quot;Hoe</span><span class="r5"> ga(0.767)</span><span class="r6"> je het horen?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.023</span><span class="r2">):</span>     And so on. There is a little bit of a 
+difference there that is worth just -- -- thinking about. And I remember when I 
+was <span class="r4">12</span> years old, and I started playing tympani and percussion, and my teacher 
+said, <span class="r6">&quot;Well, how are we going to do this? You know, music is about listening.&quot;</span> 
+And I said, <span class="r6">&quot;Yes, I agree with that. So what&#x27;s the problem?&quot;</span> And he said, <span class="r6">&quot;Well,</span>
+<span class="r6">how are</span><span class="r1"> you(0.025)</span><span class="r6"> going</span><span class="r1"> to(0.026)</span><span class="r6"> hear this? How are</span><span class="r1"> you(0.032)</span><span class="r6"> going to hear </span>
+<span class="r6">that?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.025</span><span class="r2">):</span>    en zo verder. Er zit een klein verschil op, dat
+de moeite is -- -- om over na te denken Ik herinner mij dat ik op mijn twaalfde 
+op pauken en percussie begon te spelen. Mijn leraar zei: <span class="r6">&quot;Wel, hoe gaan we dat </span>
+<span class="r6">doen? Muziek gaat om luisteren.&quot;</span> <span class="r6">&quot;Ja, akkoord. En wat is het probleem?&quot;</span> Hij zei:
+<span class="r6">&quot;</span><span class="r1">Ho(0.030)</span><span class="r6">e</span><span class="r1"> ga(0.093)</span><span class="r6"> je dit horen? Hoe</span><span class="r1"> ga(0.025)</span><span class="r6"> je dat horen?&quot;</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.134</span><span class="r2">):</span>  Ik<span class="r5"> ze(</span><span class="r5">0.268</span><span class="r5">)</span>i: <span class="r6">&quot;Hoe ga je het horen?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     And so on. There is a little bit of a 
+difference there that is worth just -- -- thinking about. And I remember when I 
+was <span class="r4">12</span> years old, and I started<span class="r1"> playing(</span><span class="r1">0.007</span><span class="r1">)</span> tympani and percussion, and my 
+teacher said, <span class="r6">&quot;Well, how are we going to do this? You know, music is about </span>
+<span class="r6">listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree with that. So what&#x27;s the problem?&quot;</span> And<span class="r1"> </span>
+<span class="r1">he(</span><span class="r1">0.004</span><span class="r1">)</span> said, <span class="r6">&quot;Well, how are you going to hear this? How are you going to hear</span>
+<span class="r1">that(0.004)</span><span class="r6">?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    en zo verder. Er zit een klein verschil op, dat
+de moeite is -- -- om over na te denken Ik<span class="r1"> herinner(</span><span class="r1">0.005</span><span class="r1">)</span> mij dat ik op mijn 
+twaalfde op pauken en percussie begon te spelen. Mijn leraar<span class="r1"> ze(</span><span class="r1">0.005</span><span class="r1">)</span>i: <span class="r6">&quot;Wel, </span>
+<span class="r6">hoe gaan we dat doen? Muziek gaat om luisteren.&quot;</span> <span class="r6">&quot;Ja, akkoord. En wat is het </span>
+<span class="r6">probleem?&quot;</span><span class="r1"> Hij(</span><span class="r1">0.008</span><span class="r1">) ze(</span><span class="r1">0.013</span><span class="r1">)</span>i: <span class="r6">&quot;Hoe ga je dit horen? Hoe ga je dat </span>
+<span class="r6">horen</span><span class="r1">?&quot;</span><span class="r1">(</span><span class="r1">0.006</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.134</span><span class="r2">):</span>  Ik zei: <span class="r6">&quot;</span><span class="r5">Ho(0.152)</span><span class="r6">e ga je het horen?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.007</span><span class="r2">):</span>     And so on. There is a little bit of a 
+difference there that is worth just -- -- thinking about. And I remember when I 
+was <span class="r4">12</span> years old, and I started playing tympani and percussion, and my teacher 
+said,<span class="r1"> </span><span class="r1">&quot;(0.010)</span><span class="r6">Well, how are we going to do this? You know, music is about </span>
+<span class="r6">listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree with that. So what&#x27;s the problem?&quot;</span> And he 
+said, <span class="r6">&quot;Well, how are you going to hear this? How are you going to hear that?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.008</span><span class="r2">):</span>    en zo verder. Er zit een klein verschil op, dat
+de moeite is -- -- om over na te denken Ik herinner mij dat ik op mijn twaalfde 
+op pauken en percussie begon te spelen. Mijn leraar zei: <span class="r6">&quot;</span><span class="r1">W(0.015)</span><span class="r6">el, hoe gaan </span>
+<span class="r6">we dat doen? Muziek gaat om luisteren.&quot;</span> <span class="r6">&quot;Ja, akkoord. En wat is het probleem?&quot;</span> 
+Hij zei: <span class="r6">&quot;</span><span class="r1">Ho(0.034)</span><span class="r6">e ga je dit horen? Hoe ga je dat horen?&quot;</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.134</span><span class="r2">):</span>  Ik zei: <span class="r6">&quot;Hoe ga je</span><span class="r5"> het(0.152)</span><span class="r6"> horen?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     And so on. There is a little bit of a 
+difference there that is worth just -- -- thinking about. And I remember when I 
+was <span class="r4">12</span> years old, and I started<span class="r1"> playing(</span><span class="r1">0.004</span><span class="r1">)</span> tympani and percussion, and my 
+teacher said, <span class="r6">&quot;Well, how are we going to do this? You know, music is about </span>
+<span class="r6">listening.&quot;</span> And I said, <span class="r6">&quot;Yes, I agree with that. So what&#x27;s the problem?&quot;</span> And he 
+said, <span class="r6">&quot;Well, how are you going</span><span class="r1"> to(0.003) hear(0.003)</span><span class="r6"> this? How are you going to</span><span class="r1"> </span>
+<span class="r1">hear(0.003)</span><span class="r6"> that?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    en zo verder. Er zit een klein verschil op, dat
+de moeite is -- -- om over na te denken Ik herinner mij dat ik op mijn twaalfde 
+op pauken en percussie begon te spelen. Mijn leraar zei: <span class="r6">&quot;Wel, hoe gaan we dat </span>
+<span class="r6">doen? Muziek gaat om luisteren.&quot;</span> <span class="r6">&quot;Ja, akkoord. En wat is het probleem?&quot;</span> Hij zei:
+<span class="r6">&quot;</span><span class="r1">Ho(0.003)</span><span class="r6">e</span><span class="r1"> ga(0.003)</span><span class="r6"> je</span><span class="r1"> dit(0.008) horen(0.003)</span><span class="r6">? Hoe ga je dat</span><span class="r1"> horen(0.003)</span><span class="r6">?&quot;</span>
+
+</code></pre>
+</body>
+</html>

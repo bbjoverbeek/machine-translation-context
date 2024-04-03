@@ -1,4 +1,3 @@
-
 import datasets
 
 data_nl = datasets.load_from_disk("./annotations/annotations_nl")
@@ -29,16 +28,21 @@ for nl, ru, de in zip(data_nl, data_ru, data_de):
         lan: ' '.join(context) for lan, context in new_item['context'].items()
     }
 
-    # something went wrong with the data, do a cleanup of '[' and ']' in all strings
+
+    def do_clean(string):
+        """# something went wrong with the data, do a cleanup of '[' and ']' and double spaces in all strings"""
+        return string.replace('[', '').replace(']', '').replace('  ', ' ')
+
+
     for k, v in new_item.items():
         if isinstance(v, dict):
             for k2, v2 in v.items():
                 if isinstance(v2, str):
-                    v[k2] = v2.replace('[', '').replace(']', '')
+                    v[k2] = do_clean(v2)
                 elif isinstance(v2, list):
-                    v[k2] = [s.replace('[', '').replace(']', '') for s in v2]
+                    v[k2] = [do_clean(s) for s in v2]
         elif isinstance(v, str):
-            new_item[k] = v.replace('[', '').replace(']', '')
+            new_item[k] = do_clean(v)
 
     combined_set.append(new_item)
 
