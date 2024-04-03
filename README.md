@@ -14,7 +14,7 @@ translation : target sentence in English to translate
 context : context sentences in English and one of three languages: Dutch/Russian/German
 ```
 
-## Code usage instructions
+## Usage instructions
 
 Clone the repository
 
