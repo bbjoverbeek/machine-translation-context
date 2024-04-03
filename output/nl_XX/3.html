@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  They said they were going to beat us up if we didn&#x27;t make some 
+gunpowder for them. We said, well, what are you going to do with it? They said, 
+we&#x27;re going to melt it down and make rocket fuel.
+<span class="r2">Input current:</span> Sure. We&#x27;ll make you a big batch.
+<span class="r2">Output context:</span> Ze gingen ons een pak rammel geven als we niet wat buskruit voor
+hen zouden maken. Wij vroegen wat ze ermee wilden doen. Zij zeiden: <span class="r6">&quot;We gaan het</span>
+<span class="r6">smelten om er raketbrandstof van te maken.&quot;</span>
+<span class="r2">Output current:</span> Natuurlijk. We maken er een groot lot van.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.053</span><span class="r2">):</span> <span class="r5"> Natuurlijk(</span><span class="r5">0.188</span><span class="r5">)</span>. We maken er een groot lot 
+van.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     They said they were going to beat us up if we 
+didn&#x27;t make some gunpowder for them. We said, well, what are you going to do 
+with it? They said, we&#x27;re going to melt it down and make rocket <span class="r7">fuel</span><span class="r1">.(</span><span class="r1">0.018</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Ze gingen ons een pak rammel geven als we niet 
+wat buskruit voor hen zouden maken. Wij vroegen wat ze ermee wilden doen. Zij 
+zeiden: <span class="r6">&quot;We gaan het smelten om er raketbrandstof van te maken</span><span class="r1">.&quot;</span><span class="r1">(</span><span class="r1">0.011</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.053</span><span class="r2">):</span>  Natuurlijk. We maken<span class="r5"> er(</span><span class="r5">0.077</span><span class="r5">)</span> een groot lot 
+van.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     They said they were going to beat us up if we 
+didn&#x27;t make some gunpowder for them. We said, well, what are you going to do 
+with it? They said, we&#x27;re going to<span class="r1"> (</span><span class="r1">0.010</span><span class="r1">)</span>melt it down and make <span class="r7">rock</span><span class="r1">et(</span><span class="r1">0.011</span><span class="r1">)</span> 
+<span class="r7">fuel</span><span class="r1">.(</span><span class="r1">0.007</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Ze gingen ons een pak rammel geven als we niet 
+wat buskruit voor hen zouden maken. Wij vroegen wat ze ermee wilden doen. Zij 
+zeiden: <span class="r6">&quot;We gaan het smelten om er raketbrandstof van te maken.&quot;</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.053</span><span class="r2">):</span>  Natuurlijk. We maken er een groot<span class="r5"> lot(</span><span class="r5">0.066</span><span class="r5">)</span> 
+van.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     They said they were going<span class="r1"> to(</span><span class="r1">0.003</span><span class="r1">)</span> beat us up 
+if we didn&#x27;t make<span class="r1"> some(</span><span class="r1">0.004</span><span class="r1">)</span> gunpowder for them. We said, well, what are you 
+going to do with it? They said, we&#x27;re going to<span class="r1"> (</span><span class="r1">0.005</span><span class="r1">)</span>melt it down and<span class="r1"> </span>
+<span class="r1">make(</span><span class="r1">0.004</span><span class="r1">)</span> <span class="r7">rock</span><span class="r1">et(</span><span class="r1">0.006</span><span class="r1">)</span> fuel.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Ze gingen ons een pak rammel geven als we niet 
+wat buskruit voor hen zouden maken. Wij vroegen wat ze ermee wilden doen. Zij 
+zeiden: <span class="r6">&quot;We gaan het smelten om er raketbrandstof van te maken.&quot;</span>
+
+</code></pre>
+</body>
+</html>

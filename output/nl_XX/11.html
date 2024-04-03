@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  One of the weird things that&#x27;s happened is, after the TED 
+explosion, I got a lot of offers to speak all over the country -- everyone from 
+schools and parent meetings to Fortune <span class="r4">500</span> companies. And so many of the calls 
+went like this, &quot;Dr. Brown, we loved your TED talk. We&#x27;d like you to come in and
+speak.
+<span class="r2">Input current:</span> We&#x27;d appreciate it if you wouldn&#x27;t mention vulnerability or 
+shame.&quot;
+<span class="r2">Output context:</span> Eén van de rare dingen die gebeurden na de TED-explosie, is dat 
+ik overal gevraagd werd om te spreken -- van scholen en ouderavonden tot Fortune
+<span class="r4">500</span>-bedrijven. Vele gesprekken verliepen als volgt: &quot;Hallo, Dr. Brown. We zijn 
+dol op uw TEDTalk. We willen u graag als spreker.
+<span class="r2">Output current:</span> We zouden het waarderen als u niet sprak over kwetsbaarheid of 
+schaamte.&quot;
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.196</span><span class="r2">):</span>  We zouden het waarderen als<span class="r5"> u(</span><span class="r5">2.811</span><span class="r5">)</span> niet sprak
+over kwetsbaarheid of schaamte.&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>     One of the weird things that&#x27;s happened is, 
+after the TED explosion, I got a lot of offers to speak all over the country -- 
+everyone from schools and parent meetings to Fortune <span class="r4">500</span> companies. And so many 
+of the calls went like this, &quot;Dr. Brown, we loved your TED talk. We&#x27;d like you 
+to come in and speak.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.012</span><span class="r2">):</span>    Eén van de rare dingen die gebeurden na de 
+TED-explosie, is dat ik overal gevraagd werd om te spreken -- van scholen en 
+ouderavonden tot Fortune <span class="r4">500</span>-bedrijven. Vele gesprekken verliepen als volgt: 
+&quot;Hallo, Dr. Brown. We zijn dol op uw TEDTalk. We willen<span class="r1"> u(</span><span class="r1">0.058</span><span class="r1">)</span> graag als 
+spreker.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.196</span><span class="r2">):</span>  We zouden het waarderen als u niet<span class="r5"> (</span><span class="r5">0.414</span><span class="r5">)</span>sprak
+over kwetsbaarheid of schaamte.&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    <span class="r1"> One(</span><span class="r1">0.000</span><span class="r1">) of(</span><span class="r1">0.000</span><span class="r1">) the(</span><span class="r1">0.000</span><span class="r1">) weird(</span><span class="r1">0.000</span><span class="r1">) </span>
+<span class="r1">things(</span><span class="r1">0.000</span><span class="r1">)</span> that&#x27;s happened is, after the TED explosion, I got a lot of offers
+to speak all over the country -- everyone from schools and parent meetings to 
+Fortune <span class="r4">500</span> companies. And so many of the calls went like this, &quot;Dr. Brown, we 
+loved your TED talk. We&#x27;d like you to come in and speak.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>   <span class="r1"> E(</span><span class="r1">0.000</span><span class="r1">)én(</span><span class="r1">0.000</span><span class="r1">) van(</span><span class="r1">0.000</span><span class="r1">) de(</span><span class="r1">0.000</span><span class="r1">) </span>
+<span class="r1">rare(</span><span class="r1">0.000</span><span class="r1">)</span> dingen die gebeurden na de TED-explosie, is dat ik overal gevraagd 
+werd om te spreken -- van scholen en ouderavonden tot Fortune <span class="r4">500</span>-bedrijven. 
+Vele gesprekken verliepen als volgt: &quot;Hallo, Dr. Brown. We zijn dol op uw 
+TEDTalk. We willen u graag als spreker.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.196</span><span class="r2">):</span>  We zouden het<span class="r5"> waarde(</span><span class="r5">0.224</span><span class="r5">)</span>ren als u niet sprak
+over kwetsbaarheid of schaamte.&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     One of<span class="r1"> the(</span><span class="r1">0.003</span><span class="r1">)</span> weird things that&#x27;s happened 
+is, after the TED explosion, I got a lot of offers to speak all over the country
+-- everyone from schools and parent meetings<span class="r1"> to(</span><span class="r1">0.004</span><span class="r1">)</span> Fortune <span class="r4">500</span> companies. 
+And so many of the calls went like this,<span class="r1"> &quot;(</span><span class="r1">0.003</span><span class="r1">)</span>Dr. Brown, we loved your TED 
+talk. We&#x27;d like you to come in and<span class="r1"> speak(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.004</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Eén van de rare dingen die gebeurden na de 
+TED-explosie, is dat ik overal gevraagd werd om te spreken -- van scholen en 
+ouderavonden tot Fortune <span class="r4">500</span>-bedrijven. Vele gesprekken verliepen als volgt: 
+&quot;Hallo, Dr. Brown. We zijn dol op uw TEDTalk. We willen u<span class="r1"> graag(</span><span class="r1">0.003</span><span class="r1">) </span>
+<span class="r1">als(</span><span class="r1">0.004</span><span class="r1">) spre(</span><span class="r1">0.002</span><span class="r1">)</span><span class="r7">ker</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

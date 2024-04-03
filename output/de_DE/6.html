@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  It wasn&#x27;t this arm-wrestle, but it was a little surprising for 
+the person involved. I interviewed Steve Martin. It wasn&#x27;t all that long ago. 
+And we were sitting there, and almost toward the beginning of the interview, I 
+turned to him and I said, <span class="r6">&quot;Steve,&quot;</span> or &quot;Mr. Martin, it is said that all comedians
+have unhappy childhoods.
+<span class="r2">Input current:</span> Was yours unhappy?&quot;
+<span class="r2">Output context:</span> Es war nicht dieses Arm-Wrestle, aber es war ein wenig 
+überraschend für die betroffene Person. Ich interviewte Steve Martin. Es war 
+nicht allzu lange her. Und wir saßen da, und fast zum Beginn des Interviews 
+drehte ich mich zu ihm und sagte: <span class="r6">&quot;Steve&quot;</span>, oder &quot;Herr Martin, man sagt, dass 
+alle Komiker unglückliche Kindheit haben.
+<span class="r2">Output current:</span> War Ihre unglückliche?&quot;
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.600</span><span class="r2">):</span>  War Ihre <span class="r7">unglück</span><span class="r5">liche(</span><span class="r5">1.307</span><span class="r5">)</span>?&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.019</span><span class="r2">):</span>     It wasn&#x27;t this arm-wrestle, but it was a little
+surprising for the person involved. I interviewed Steve Martin. It wasn&#x27;t all 
+that long ago. And we were sitting there, and almost toward the beginning of the
+interview, I turned to him and I said, <span class="r6">&quot;Steve,&quot;</span> or &quot;Mr. Martin, it is said that 
+all comedians have<span class="r1"> un(</span><span class="r1">0.031</span><span class="r1">)happy(</span><span class="r1">0.019</span><span class="r1">) child(</span><span class="r1">0.025</span><span class="r1">)</span><span class="r7">hoods</span><span class="r1">.(</span><span class="r1">0.023</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.020</span><span class="r2">):</span>    Es war nicht dieses Arm-Wrestle, aber es war 
+ein wenig überraschend für die betroffene Person. Ich interviewte Steve Martin. 
+Es war nicht allzu lange her. Und wir saßen da, und fast zum Beginn des 
+Interviews drehte ich mich zu ihm und sagte: <span class="r6">&quot;Steve&quot;</span>, oder &quot;Herr Martin, man 
+sagt, dass alle Komiker <span class="r7">un</span><span class="r1">glück(</span><span class="r1">0.042</span><span class="r1">)liche(</span><span class="r1">0.067</span><span class="r1">) Kind(</span><span class="r1">0.022</span><span class="r1">)heit(</span><span class="r1">0.023</span><span class="r1">)</span> haben.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.600</span><span class="r2">):</span> <span class="r5"> War(</span><span class="r5">0.742</span><span class="r5">)</span> Ihre unglückliche?&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     It wasn&#x27;t this arm-wrestle, but it was a little
+surprising for the person involved. I interviewed Steve Martin. It wasn&#x27;t all 
+that long ago. And we were sitting there, and almost toward the beginning of the
+interview, I turned to him and I said, <span class="r6">&quot;Steve,&quot;</span> or &quot;Mr. Martin, it is said that 
+all comedians have unhappy <span class="r7">childhoods</span><span class="r1">.(</span><span class="r1">0.014</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Es war nicht dieses Arm-Wrestle, aber es war 
+ein wenig überraschend für die betroffene Person. Ich interviewte Steve Martin. 
+Es war nicht allzu lange her. Und wir saßen da, und fast zum Beginn des 
+Interviews drehte ich mich zu ihm und sagte: <span class="r6">&quot;Steve&quot;</span>, oder &quot;Herr Martin, man 
+sagt, dass alle Komiker unglückliche Kindheit <span class="r7">haben</span><span class="r1">.(</span><span class="r1">0.013</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.600</span><span class="r2">):</span>  War Ihre<span class="r5"> un(</span><span class="r5">0.701</span><span class="r5">)</span>glückliche?&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     It wasn&#x27;t this arm-wrestle, but it was a little
+surprising for the person involved. I interviewed Steve Martin. It wasn&#x27;t all 
+that long ago. And we were sitting there, and almost toward the beginning of the
+interview, I turned to him and I said, <span class="r6">&quot;Steve,&quot;</span> or &quot;Mr. Martin, it is said that 
+all comedians have<span class="r1"> un(</span><span class="r1">0.009</span><span class="r1">)</span>happy<span class="r1"> child(</span><span class="r1">0.005</span><span class="r1">)</span><span class="r7">hoods</span><span class="r1">.(</span><span class="r1">0.007</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Es war nicht dieses Arm-Wrestle, aber es war 
+ein wenig überraschend für die betroffene Person. Ich interviewte Steve Martin. 
+Es war nicht allzu lange her. Und wir saßen da, und fast zum Beginn des 
+Interviews drehte ich mich zu ihm und sagte: <span class="r6">&quot;Steve&quot;</span>, oder &quot;Herr Martin, man 
+sagt, dass alle Komiker<span class="r1"> un(</span><span class="r1">0.014</span><span class="r1">)glück(</span><span class="r1">0.012</span><span class="r1">)</span>liche<span class="r1"> Kind(</span><span class="r1">0.007</span><span class="r1">)</span>heit haben.
+
+</code></pre>
+</body>
+</html>

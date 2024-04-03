@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  And so he&#x27;s assembled a group of people. And I&#x27;ve fallen in love
+with him, as I have with Herbie and with his music. And Quincy said, <span class="r6">&quot;Where did </span>
+<span class="r6">the idea for centers like this come from?&quot;</span>
+<span class="r2">Input current:</span> And I said, &quot;It came from your music, man. Because Mr. Ross used 
+to bring in your albums when I was <span class="r4">16</span> years old in the pottery class,
+<span class="r2">Output context:</span> Und so hat er eine Gruppe von Leuten versammelt. Und ich habe 
+mich in ihn verliebt, wie ich mich in Herbie und seine Musik verliebt habe. Und 
+Quincy sagte: <span class="r6">&quot;Wo kam die Idee für solche Zentren her?&quot;</span>
+<span class="r2">Output current:</span> Und ich sagte: &quot;Es kam von deiner Musik, Mann. Weil Herr Ross 
+deine Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt war in der Keramikklasse,
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span>  Und ich sagte: &quot;<span class="r5">Es(</span><span class="r5">0.342</span><span class="r5">)</span> kam von deiner Musik,
+Mann. Weil Herr Ross deine Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt war in 
+der Keramikklasse,
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     And so he&#x27;s assembled a group of people. And 
+I&#x27;ve fallen in love with him, as I have with Herbie and with his music. And 
+Quincy said, <span class="r6">&quot;Where did the idea for centers like this come from?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Und so hat er eine Gruppe von Leuten 
+versammelt. Und ich habe mich in ihn verliebt, wie ich mich in Herbie und seine 
+Musik verliebt habe. Und Quincy sagte: <span class="r6">&quot;</span><span class="r1">Wo(0.006) kam(0.005)</span><span class="r6"> die</span><span class="r1"> Idee(0.008)</span><span class="r6"> für</span>
+<span class="r6">solche Zentren</span><span class="r1"> her(0.005)?&quot;</span><span class="r1">(</span><span class="r1">0.008</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span>  Und ich sagte:<span class="r5"> &quot;(</span><span class="r5">0.323</span><span class="r5">)</span>Es kam von deiner Musik,
+Mann. Weil Herr Ross deine Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt war in 
+der Keramikklasse,
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     And so he&#x27;s assembled a group of people. And 
+I&#x27;ve fallen in love with him, as I have with Herbie and with his music. And 
+Quincy said, <span class="r6">&quot;Where did the idea for centers like this come from?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Und so hat er eine Gruppe von Leuten 
+versammelt. Und ich habe mich in ihn verliebt, wie ich mich in Herbie und seine 
+Musik verliebt habe. Und Quincy sagte:<span class="r1"> </span><span class="r1">&quot;(0.004)</span><span class="r6">Wo kam die Idee für solche </span>
+<span class="r6">Zentren her</span><span class="r1">?&quot;</span><span class="r1">(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span>  Und ich sagte<span class="r5">:(</span><span class="r5">0.305</span><span class="r5">)</span> &quot;Es kam von deiner Musik,
+Mann. Weil Herr Ross deine Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt war in 
+der Keramikklasse,
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     And so he&#x27;s assembled a group of people. And 
+I&#x27;ve fallen in love with him, as I have with Herbie and with his music. And 
+Quincy said, <span class="r6">&quot;Where did the idea for centers like this come from?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Und so hat er eine Gruppe von Leuten 
+versammelt. Und ich habe mich in ihn verliebt, wie ich mich in Herbie und seine 
+Musik verliebt habe. Und Quincy<span class="r1"> sagte(</span><span class="r1">0.007</span><span class="r1">):(</span><span class="r1">0.013</span><span class="r1">)</span> <span class="r6">&quot;Wo kam die Idee für solche</span>
+<span class="r6">Zentren her?&quot;</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span> <span class="r5"> Und(</span><span class="r5">0.302</span><span class="r5">)</span> ich sagte: &quot;Es kam von deiner Musik,
+Mann. Weil Herr Ross deine Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt war in 
+der Keramikklasse,
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     And so he&#x27;s assembled a group of people. And 
+I&#x27;ve fallen in love with him, as I have with Herbie and with his music.<span class="r1"> </span>
+<span class="r1">And(</span><span class="r1">0.006</span><span class="r1">)</span> Quincy said, <span class="r6">&quot;Where did the idea for centers like this come </span>
+<span class="r6">from</span><span class="r1">?&quot;</span><span class="r1">(</span><span class="r1">0.008</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    Und so hat er eine Gruppe von Leuten 
+versammelt. Und ich habe mich in ihn verliebt, wie ich mich in Herbie und seine 
+Musik verliebt habe. Und Quincy sagte<span class="r1">:(</span><span class="r1">0.006</span><span class="r1">) </span><span class="r1">&quot;(0.006)</span><span class="r6">Wo kam die Idee für solche</span>
+<span class="r6">Zentren her</span><span class="r1">?&quot;</span><span class="r1">(</span><span class="r1">0.016</span><span class="r1">)</span>
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span>  Und ich sagte: &quot;Es kam von deiner Musik, Mann. 
+Weil Herr Ross<span class="r5"> deine(</span><span class="r5">0.293</span><span class="r5">)</span> Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt war in 
+der Keramikklasse,
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     And so he&#x27;s<span class="r1"> (</span><span class="r1">0.002</span><span class="r1">)</span>assembled a group of people.
+And I&#x27;ve fallen in love with him, as I have with Herbie and with his music.<span class="r1"> </span>
+<span class="r1">And(</span><span class="r1">0.003</span><span class="r1">)</span> Quincy said, <span class="r6">&quot;Where did the idea for centers like this come from?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Und so hat er eine Gruppe von<span class="r1"> Leute(</span><span class="r1">0.002</span><span class="r1">)</span>n 
+versammelt. Und ich habe mich in ihn verliebt, wie ich mich in Herbie und seine<span class="r1"> </span>
+<span class="r1">Musik(</span><span class="r1">0.003</span><span class="r1">)</span> verliebt habe. Und Quincy sagte: <span class="r6">&quot;Wo kam die Idee für solche </span>
+<span class="r6">Zentren her</span><span class="r1">?&quot;</span><span class="r1">(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span>  Und ich sagte: &quot;Es kam von deiner Musik, Mann. 
+Weil Herr Ross deine Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt war in der 
+Keramikklasse<span class="r5">,(</span><span class="r5">0.280</span><span class="r5">)</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     And so he&#x27;s assembled a group of people. And 
+I&#x27;ve fallen in love with him, as I have with Herbie and with his music.<span class="r1"> </span>
+<span class="r1">And(</span><span class="r1">0.002</span><span class="r1">)</span> Quincy said, <span class="r6">&quot;Where did the idea for centers like this come from?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Und so hat er eine Gruppe von Leuten 
+versammelt. Und ich habe mich in ihn verliebt, wie ich mich in Herbie und seine 
+Musik verliebt habe. Und Quincy<span class="r1"> sagte(</span><span class="r1">0.002</span><span class="r1">):(</span><span class="r1">0.004</span><span class="r1">) </span><span class="r1">&quot;(0.002)</span><span class="r6">Wo kam die Idee für</span>
+<span class="r6">solche Zentren her?&quot;</span>
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span>  Und ich sagte: &quot;Es kam von deiner Musik, 
+<span class="r7">Mann</span><span class="r5">.(</span><span class="r5">0.153</span><span class="r5">)</span> Weil Herr Ross deine Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt 
+war in der Keramikklasse,
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     And so he&#x27;s assembled a group of people. And 
+I&#x27;ve fallen in love with him, as I have with Herbie and with his music.<span class="r1"> </span>
+<span class="r1">And(</span><span class="r1">0.001</span><span class="r1">)</span> Quincy said, <span class="r6">&quot;Where did the idea for centers like this come</span><span class="r1"> </span>
+<span class="r1">from(0.001)</span><span class="r6">?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Und so hat er eine Gruppe von Leuten 
+versammelt. Und ich habe mich in ihn verliebt, wie ich mich in Herbie und seine 
+Musik verliebt habe. Und Quincy<span class="r1"> sagte(</span><span class="r1">0.001</span><span class="r1">):(</span><span class="r1">0.002</span><span class="r1">) </span><span class="r1">&quot;(0.002)</span><span class="r6">Wo kam die Idee für</span>
+<span class="r6">solche Zentren her</span><span class="r1">?&quot;</span><span class="r1">(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span>  Und ich sagte: &quot;Es kam von deiner Musik, Mann. 
+Weil Herr Ross deine Alben mitgebracht<span class="r5"> hat(</span><span class="r5">0.152</span><span class="r5">)</span>, als ich <span class="r4">16</span> Jahre alt war in 
+der Keramikklasse,
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     And so he&#x27;s assembled a group of people. And 
+I&#x27;ve fallen in love with him, as I have with Herbie and with his music. And 
+Quincy said, <span class="r6">&quot;Where did the idea for centers like this come from?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    Und so<span class="r1"> hat(</span><span class="r1">0.016</span><span class="r1">)</span> er eine Gruppe von Leuten 
+versammelt. Und ich<span class="r1"> habe(</span><span class="r1">0.006</span><span class="r1">)</span> mich in ihn verliebt, wie ich mich in Herbie und
+seine Musik verliebt habe. Und Quincy<span class="r1"> sagte(</span><span class="r1">0.006</span><span class="r1">)</span>: <span class="r6">&quot;Wo kam die Idee für solche </span>
+<span class="r6">Zentren her?&quot;</span>
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.078</span><span class="r2">):</span>  Und ich sagte: &quot;Es kam von deiner Musik,<span class="r5"> </span>
+<span class="r5">Mann(</span><span class="r5">0.089</span><span class="r5">)</span>. Weil Herr Ross deine Alben mitgebracht hat, als ich <span class="r4">16</span> Jahre alt 
+war in der Keramikklasse,
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     And so he&#x27;s<span class="r1"> (</span><span class="r1">0.003</span><span class="r1">)</span>assembled a group of people.
+And I&#x27;ve fallen in love with him, as I have with Herbie and with his music.<span class="r1"> </span>
+<span class="r1">And(</span><span class="r1">0.009</span><span class="r1">)</span> Quincy said, <span class="r6">&quot;Where did the idea for centers like this come from?&quot;</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Und so hat er eine Gruppe von Leuten 
+versammelt. Und ich habe mich in ihn verliebt, wie ich mich in Herbie und seine 
+Musik verliebt habe. Und Quincy sagte<span class="r1">:(</span><span class="r1">0.004</span><span class="r1">)</span> <span class="r6">&quot;Wo kam die Idee für solche </span>
+<span class="r6">Zentren her</span><span class="r1">?&quot;</span><span class="r1">(</span><span class="r1">0.003</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

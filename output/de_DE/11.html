@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  One of the weird things that&#x27;s happened is, after the TED 
+explosion, I got a lot of offers to speak all over the country -- everyone from 
+schools and parent meetings to Fortune <span class="r4">500</span> companies. And so many of the calls 
+went like this, &quot;Dr. Brown, we loved your TED talk. We&#x27;d like you to come in and
+speak.
+<span class="r2">Input current:</span> We&#x27;d appreciate it if you wouldn&#x27;t mention vulnerability or 
+shame.&quot;
+<span class="r2">Output context:</span> Eine der seltsamen Dinge, die geschehen sind, ist, dass ich nach
+der TED-Explosion viele Angebote erhielt, um im ganzen Land zu sprechen - von 
+Schulen und Elterntreffen bis zu Fortune <span class="r4">500</span>-Unternehmen. Und so viele der 
+Anrufe gingen so: &quot;Dr. Brown, wir haben Ihren TED-Vortrag geliebt. Wir möchten, 
+dass Sie kommen und sprechen.
+<span class="r2">Output current:</span> Wir würden es schätzen, wenn Sie nicht die Verletzlichkeit oder 
+Schande erwähnen.&quot;
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.147</span><span class="r2">):</span>  Wir würden es schätzen, wenn<span class="r5"> Sie(</span><span class="r5">1.392</span><span class="r5">)</span> nicht 
+die Verletzlichkeit oder Schande erwähnen.&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     One of the weird things that&#x27;s happened is, 
+after the TED explosion, I got a lot of offers to speak all over the country -- 
+everyone from schools and parent meetings to Fortune <span class="r4">500</span> companies. And so many 
+of the calls went like this, &quot;Dr. Brown, we loved your TED talk. We&#x27;d like you 
+to come in and speak.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Eine der seltsamen Dinge, die geschehen sind, 
+ist, dass ich nach der TED-Explosion viele Angebote erhielt, um im ganzen Land 
+zu sprechen - von Schulen und Elterntreffen bis zu Fortune <span class="r4">500</span>-Unternehmen. Und 
+so viele der Anrufe gingen so: &quot;Dr. Brown, wir haben Ihren TED-Vortrag geliebt. 
+Wir möchten,<span class="r1"> dass(</span><span class="r1">0.002</span><span class="r1">) Sie(</span><span class="r1">0.003</span><span class="r1">)</span> kommen und sprechen.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.147</span><span class="r2">):</span>  Wir würden<span class="r5"> es(</span><span class="r5">0.689</span><span class="r5">)</span> schätzen, wenn Sie nicht 
+die Verletzlichkeit oder Schande erwähnen.&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     One of the weird things that&#x27;s happened is, 
+after the TED explosion, I got a lot of offers to speak all over the country -- 
+everyone from schools and parent meetings<span class="r1"> to(</span><span class="r1">0.001</span><span class="r1">)</span> Fortune <span class="r4">500</span> companies. And 
+so many of the calls went like this, &quot;Dr. Brown,<span class="r1"> we(</span><span class="r1">0.001</span><span class="r1">)</span> loved your TED talk. 
+We&#x27;d like you to come in and<span class="r1"> speak(</span><span class="r1">0.001</span><span class="r1">).(</span><span class="r1">0.002</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Eine der seltsamen Dinge, die geschehen sind, 
+ist, dass ich nach der TED-Explosion viele Angebote erhielt, um im ganzen Land 
+zu sprechen - von Schulen und Elterntreffen bis zu Fortune <span class="r4">500</span>-Unternehmen. Und 
+so viele der Anrufe gingen so: &quot;Dr. Brown, wir haben Ihren TED-<span class="r7">Vor</span><span class="r1">trag(</span><span class="r1">0.003</span><span class="r1">)</span> 
+geliebt. Wir<span class="r1"> möchten(</span><span class="r1">0.002</span><span class="r1">)</span>,<span class="r1"> dass(</span><span class="r1">0.002</span><span class="r1">)</span> Sie kommen und<span class="r1"> sprechen(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.002</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.147</span><span class="r2">):</span> <span class="r5"> Wir(</span><span class="r5">0.363</span><span class="r5">)</span> würden es schätzen, wenn Sie nicht 
+die Verletzlichkeit oder Schande erwähnen.&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     One of the weird things that&#x27;s happened is, 
+after the TED explosion, I got a lot of offers to speak all over the country -- 
+everyone from schools and parent meetings to Fortune <span class="r4">500</span> companies. And so many 
+of the calls went like this, &quot;Dr. Brown, we loved your TED talk. We&#x27;d like you 
+to come in and <span class="r7">speak</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Eine der seltsamen Dinge, die geschehen sind, 
+ist, dass ich nach der TED-Explosion viele Angebote erhielt, um im ganzen Land 
+zu sprechen - von Schulen und Elterntreffen bis zu Fortune <span class="r4">500</span>-Unternehmen. Und 
+so viele der Anrufe gingen so: &quot;Dr. Brown, wir haben Ihren TED-Vortrag geliebt. 
+Wir möchten, dass Sie kommen und<span class="r1"> sprechen(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.010</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.147</span><span class="r2">):</span>  Wir würden es<span class="r5"> (</span><span class="r5">0.338</span><span class="r5">)</span>schätzen, wenn Sie nicht 
+die Verletzlichkeit oder Schande erwähnen.&quot;
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     One of the weird things that&#x27;s happened is, 
+after the TED explosion, I got a lot of offers to speak all over the country -- 
+everyone from schools and parent meetings<span class="r1"> to(</span><span class="r1">0.000</span><span class="r1">)</span> Fortune <span class="r4">500</span> companies. And 
+so many of the calls went like this, &quot;Dr. Brown, we loved your TED talk. We&#x27;d 
+like you to come in and<span class="r1"> speak(</span><span class="r1">0.000</span><span class="r1">).(</span><span class="r1">0.000</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Eine der <span class="r1">selt(</span><span class="r1">0.000</span><span class="r1">)</span>samen Dinge, die geschehen 
+sind, ist, dass ich nach der TED-Explosion viele Angebote<span class="r1"> erhielt(</span><span class="r1">0.000</span><span class="r1">)</span>, um im 
+ganzen Land zu sprechen - von Schulen und Elterntreffen bis zu Fortune 
+<span class="r4">500</span>-Unternehmen. Und so viele der Anrufe gingen so: &quot;Dr. Brown, wir haben Ihren 
+TED-Vortrag geliebt. Wir möchten,<span class="r1"> dass(</span><span class="r1">0.000</span><span class="r1">)</span> Sie kommen und<span class="r1"> </span>
+<span class="r1">sprechen(</span><span class="r1">0.000</span><span class="r1">).(</span><span class="r1">0.000</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

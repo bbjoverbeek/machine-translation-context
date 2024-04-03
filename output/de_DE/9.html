@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  We do that in our personal lives. We do that corporate -- 
+whether it&#x27;s a bailout, an oil spill <span class="r3">...</span> a recall. We pretend like what we&#x27;re 
+doing doesn&#x27;t have a huge impact on other people. I would say to companies, this
+is not our first rodeo, people.
+<span class="r2">Input current:</span> We just need you to be authentic and real and say <span class="r3">...</span> <span class="r6">&quot;We&#x27;re </span>
+<span class="r6">sorry. We&#x27;ll fix it.&quot;</span> But there&#x27;s another way, and I&#x27;ll leave you with this.
+<span class="r2">Output context:</span> Wir tun das in unserem persönlichen Leben. Wir machen das 
+Unternehmen - ob es eine Rettungsaktion ist, ein Ölverschmutz<span class="r3">...</span> ein Rückruf. 
+Wir fingen an, dass das, was wir tun, keinen großen Einfluss auf andere Menschen
+hat. Ich würde den Unternehmen sagen, das ist nicht unser erstes Rodeo, Leute.
+<span class="r2">Output current:</span> Wir brauchen nur, dass Sie authentisch und real sind und sagen 
+<span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> Aber es gibt einen 
+anderen Weg, und ich werde Sie mit diesem verlassen.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur, dass<span class="r5"> Sie(</span><span class="r5">0.460</span><span class="r5">)</span> authentisch 
+und real sind und sagen <span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> 
+Aber es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     We do that in our personal lives. We do that 
+corporate -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.006</span><span class="r1">)</span> recall. We 
+pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I 
+would say to companies, this is not our first rodeo<span class="r1">,(</span><span class="r1">0.006</span><span class="r1">)</span> people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine<span class="r1"> Rettungs(</span><span class="r1">0.005</span><span class="r1">)</span>aktion ist, ein 
+Ölverschmutz<span class="r3">...</span> ein Rückruf. Wir fingen an, dass das, was wir tun, keinen großen
+Einfluss auf andere Menschen hat. Ich würde den<span class="r1"> Unternehmen(</span><span class="r1">0.008</span><span class="r1">)</span> sagen, das 
+ist nicht unser erstes Rodeo,<span class="r1"> Leute(</span><span class="r1">0.009</span><span class="r1">)</span>.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span> <span class="r5"> Wir(</span><span class="r5">0.258</span><span class="r5">)</span> brauchen nur, dass Sie authentisch 
+und real sind und sagen <span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> 
+Aber es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do that 
+corporate -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span> a recall. We pretend like 
+what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say to 
+companies, this is not our first rodeo, <span class="r7">people</span><span class="r1">.(</span><span class="r1">0.004</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine Rettungsaktion ist, ein Ölverschmutz<span class="r3">...</span> ein 
+Rückruf. Wir fingen an, dass das, was wir tun, keinen großen Einfluss auf andere
+Menschen hat. Ich würde den Unternehmen sagen, das ist nicht unser erstes Rodeo,
+<span class="r1">Leute(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.005</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur, dass Sie authentisch und real
+sind und sagen<span class="r5"> ...(</span><span class="r5">0.224</span><span class="r5">)</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> 
+Aber es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do that<span class="r1"> </span>
+<span class="r1">corporate(</span><span class="r1">0.003</span><span class="r1">)</span> -- whether it&#x27;s a bailout, an oil<span class="r1"> spill(</span><span class="r1">0.005</span><span class="r1">)</span> <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.003</span><span class="r1">)</span> 
+recall. We pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other 
+people. I would say to companies, this is not our first rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen<span class="r1"> -(</span><span class="r1">0.003</span><span class="r1">)</span> ob es eine<span class="r1"> Rettungs(</span><span class="r1">0.002</span><span class="r1">)</span>aktion ist, ein 
+<span class="r7">Ölverschmutz</span><span class="r1">...(</span><span class="r1">0.003</span><span class="r1">)</span> ein Rückruf. Wir fingen an, dass das, was wir tun, keinen
+großen Einfluss auf andere Menschen hat. Ich würde den Unternehmen sagen, das 
+ist nicht unser erstes Rodeo, Leute.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur, dass Sie authentisch und real
+sind und sagen <span class="r3">...</span> <span class="r6">&quot;Wir</span><span class="r5"> en(0.154)</span><span class="r6">tschuldigen uns. Wir werden es reparieren.&quot;</span> 
+Aber es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     We do that in our personal lives. We do<span class="r1"> </span>
+<span class="r1">that(</span><span class="r1">0.001</span><span class="r1">)</span> corporate -- whether it&#x27;s a bailout, an<span class="r1"> oil(</span><span class="r1">0.001</span><span class="r1">)</span> spill <span class="r3">...</span><span class="r1"> </span>
+<span class="r1">a(</span><span class="r1">0.001</span><span class="r1">)</span> recall.<span class="r1"> We(</span><span class="r1">0.001</span><span class="r1">)</span> pretend like what we&#x27;re doing doesn&#x27;t have a huge 
+impact on other people. I would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.002</span><span class="r1">)</span> 
+rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine Rettungsaktion ist, ein Ölverschmutz<span class="r3">...</span> ein 
+Rückruf. Wir fingen an, dass das, was wir tun, keinen großen Einfluss auf andere
+Menschen hat. Ich würde den Unternehmen sagen, das ist nicht unser erstes Rodeo,
+Leute.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur, dass Sie authentisch und real
+sind und sagen <span class="r3">...</span> <span class="r6">&quot;</span><span class="r5">Wir(0.122)</span><span class="r6"> entschuldigen uns. Wir werden es reparieren.&quot;</span> 
+Aber es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     We do that in our personal lives. We do<span class="r1"> </span>
+<span class="r1">that(</span><span class="r1">0.001</span><span class="r1">)</span> corporate -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.001</span><span class="r1">)</span> 
+recall.<span class="r1"> We(</span><span class="r1">0.001</span><span class="r1">)</span> pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on 
+other people. I would say<span class="r1"> to(</span><span class="r1">0.001</span><span class="r1">)</span> companies, this is not our<span class="r1"> first(</span><span class="r1">0.001</span><span class="r1">)</span> 
+rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine Rettungsaktion ist, ein 
+<span class="r7">Ölverschmutz</span><span class="r1">...(</span><span class="r1">0.001</span><span class="r1">)</span> ein Rückruf. Wir fingen an,<span class="r1"> dass(</span><span class="r1">0.001</span><span class="r1">)</span> das, was wir tun,
+keinen großen Einfluss auf andere Menschen hat. Ich würde den Unternehmen sagen,
+das ist nicht unser erstes Rodeo, <span class="r7">Leute</span><span class="r1">.(</span><span class="r1">0.001</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur<span class="r5">,(</span><span class="r5">0.079</span><span class="r5">)</span> dass Sie authentisch 
+und real sind und sagen <span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> 
+Aber es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>     We do that in our personal lives. We do that 
+corporate -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.007</span><span class="r1">)</span> recall. We 
+pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I 
+would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.005</span><span class="r1">)</span> rodeo,<span class="r1"> </span>
+<span class="r1">people(</span><span class="r1">0.005</span><span class="r1">).(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine Rettungsaktion ist, ein Ölverschmutz<span class="r3">...</span> ein 
+Rückruf. Wir fingen an, dass das<span class="r1">,(</span><span class="r1">0.005</span><span class="r1">)</span> was wir tun, keinen großen Einfluss auf
+andere Menschen<span class="r1"> hat(</span><span class="r1">0.004</span><span class="r1">)</span>. Ich würde den Unternehmen sagen, das ist nicht unser
+erstes Rodeo,<span class="r1"> Leute(</span><span class="r1">0.004</span><span class="r1">).(</span><span class="r1">0.004</span><span class="r1">)</span>
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur, dass Sie authentisch und real
+<span class="r5">sind(</span><span class="r5">0.064</span><span class="r5">)</span> und sagen <span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> 
+Aber es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     We do that in our personal lives. We do that 
+corporate -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.004</span><span class="r1">)</span> recall. We 
+pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I 
+would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.004</span><span class="r1">)</span> rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine<span class="r1"> Rettungs(</span><span class="r1">0.004</span><span class="r1">)</span>aktion ist, ein 
+Ölverschmutz<span class="r3">...</span> ein Rückruf. Wir fingen an, dass das, was wir tun, keinen großen
+Einfluss auf andere Menschen<span class="r1"> hat(</span><span class="r1">0.006</span><span class="r1">)</span>. Ich würde den Unternehmen sagen, das 
+ist nicht unser erstes Rodeo,<span class="r1"> Leute(</span><span class="r1">0.004</span><span class="r1">)</span>.
+#<span class="r4">8</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur, dass Sie authentisch und real
+sind und sagen <span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> Aber es 
+gibt einen anderen Weg, und ich werde Sie mit diesem<span class="r5"> verlassen(</span><span class="r5">0.049</span><span class="r5">)</span>.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     We do that in our personal lives. We do<span class="r1"> </span>
+<span class="r1">that(</span><span class="r1">0.002</span><span class="r1">)</span> corporate -- whether it&#x27;s a bailout, an<span class="r1"> oil(</span><span class="r1">0.002</span><span class="r1">)</span> spill <span class="r3">...</span><span class="r1"> </span>
+<span class="r1">a(</span><span class="r1">0.002</span><span class="r1">)</span> recall.<span class="r1"> We(</span><span class="r1">0.002</span><span class="r1">)</span> pretend like what we&#x27;re doing doesn&#x27;t have a huge 
+impact on other people. I would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.002</span><span class="r1">)</span> 
+rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine<span class="r1"> Rettungs(</span><span class="r1">0.001</span><span class="r1">)</span>aktion ist, ein 
+Ölverschmutz<span class="r3">...</span> ein Rückruf. Wir fingen an, dass das, was wir tun, keinen großen
+Einfluss auf andere Menschen hat. Ich würde den Unternehmen sagen, das ist nicht
+unser erstes Rodeo, Leute.
+#<span class="r4">9</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen<span class="r5"> nur(</span><span class="r5">0.049</span><span class="r5">)</span>, dass Sie authentisch 
+und real sind und sagen <span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> 
+Aber es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do that 
+corporate -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span> a recall. We pretend like 
+what we&#x27;re doing doesn&#x27;t have a huge impact on other people. I would say to 
+companies, this is not our first rodeo, <span class="r7">people</span><span class="r1">.(</span><span class="r1">0.004</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine Rettungsaktion ist, ein Ölverschmutz<span class="r3">...</span> ein 
+Rückruf. Wir fingen an, dass das, was wir tun, keinen großen Einfluss auf andere
+Menschen hat. Ich<span class="r1"> würde(</span><span class="r1">0.004</span><span class="r1">)</span> den Unternehmen sagen, das ist nicht unser erstes
+Rodeo,<span class="r1"> Leute(</span><span class="r1">0.002</span><span class="r1">).(</span><span class="r1">0.004</span><span class="r1">)</span>
+#<span class="r4">10</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur, dass Sie authentisch und real
+sind und sagen <span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span> Aber es 
+gibt<span class="r5"> einen(</span><span class="r5">0.048</span><span class="r5">)</span> anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     We do that in our personal lives. We do<span class="r1"> </span>
+<span class="r1">that(</span><span class="r1">0.003</span><span class="r1">) corporate(</span><span class="r1">0.002</span><span class="r1">)</span> -- whether it&#x27;s a bailout, an oil spill <span class="r3">...</span><span class="r1"> </span>
+<span class="r1">a(</span><span class="r1">0.003</span><span class="r1">)</span> recall.<span class="r1"> We(</span><span class="r1">0.003</span><span class="r1">)</span> pretend like what we&#x27;re doing doesn&#x27;t have a huge 
+impact on other people. I would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.003</span><span class="r1">)</span> 
+rodeo, people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine Rettungsaktion ist, ein Ölverschmutz<span class="r3">...</span> ein 
+Rückruf. Wir fingen an, dass das, was wir tun, keinen großen Einfluss auf andere
+Menschen hat. Ich würde den Unternehmen sagen, das ist nicht unser erstes Rodeo,
+Leute.
+#<span class="r4">11</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.045</span><span class="r2">):</span>  Wir brauchen nur, dass Sie authentisch und real
+sind und sagen <span class="r3">...</span> <span class="r6">&quot;Wir entschuldigen uns. Wir werden es reparieren.&quot;</span><span class="r5"> </span>
+<span class="r5">Aber(</span><span class="r5">0.047</span><span class="r5">)</span> es gibt einen anderen Weg, und ich werde Sie mit diesem verlassen.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>     We do that in our personal lives. We do that<span class="r1"> </span>
+<span class="r1">corporate(</span><span class="r1">0.001</span><span class="r1">)</span> -- whether it&#x27;s a bailout, an<span class="r1"> oil(</span><span class="r1">0.001</span><span class="r1">)</span> spill <span class="r3">...</span><span class="r1"> a(</span><span class="r1">0.001</span><span class="r1">)</span> 
+recall.<span class="r1"> We(</span><span class="r1">0.001</span><span class="r1">)</span> pretend like what we&#x27;re doing doesn&#x27;t have a huge impact on 
+other people. I would say to companies, this is not our<span class="r1"> first(</span><span class="r1">0.001</span><span class="r1">)</span> rodeo, 
+people.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.001</span><span class="r2">):</span>    Wir tun das in unserem persönlichen Leben. Wir 
+machen das Unternehmen - ob es eine Rettungsaktion ist, ein Ölverschmutz<span class="r3">...</span> ein 
+Rückruf. Wir fingen an, dass das, was wir tun, keinen großen Einfluss auf andere
+Menschen<span class="r1"> hat(</span><span class="r1">0.001</span><span class="r1">)</span>. Ich würde den Unternehmen sagen, das ist nicht unser erstes
+Rodeo, Leute.
+
+</code></pre>
+</body>
+</html>

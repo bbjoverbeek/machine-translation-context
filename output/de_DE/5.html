@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  And the rich man -- oh, dear -- crestfallen. <span class="r6">&quot;You mean God </span>
+<span class="r6">didn&#x27;t want my bread?&quot;</span> And the poor man said, <span class="r6">&quot;And you mean God didn&#x27;t answer my</span>
+<span class="r6">pleas?&quot;</span> And the rabbi said, &quot;You&#x27;ve misunderstood me.
+<span class="r2">Input current:</span> You&#x27;ve misunderstood totally,&quot; he said.
+<span class="r2">Output context:</span> Und der reiche Mann – oh, liebe – fiel auf den Kopf. <span class="r6">&quot;Du meinst,</span>
+<span class="r6">Gott wollte mein Brot nicht?&quot;</span> Und der arme Mann sagte: <span class="r6">&quot;Und meinst du, dass Gott</span>
+<span class="r6">meine Bitten nicht beantwortet hat?&quot;</span> Und der Rabbiner sagte: &quot;Sie haben mich 
+falsch verstanden.
+<span class="r2">Output current:</span> Sie haben mich völlig falsch verstanden&quot;, sagte er.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.431</span><span class="r2">):</span>  Sie haben<span class="r5"> mich(</span><span class="r5">1.467</span><span class="r5">)</span> völlig falsch 
+verstanden&quot;, sagte er.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>     And the rich man -- oh, dear -- crestfallen. 
+<span class="r6">&quot;You mean God didn&#x27;t want my bread?&quot;</span> And the poor man said, <span class="r6">&quot;And you mean God </span>
+<span class="r6">didn&#x27;t answer my pleas?&quot;</span> And the rabbi said, &quot;You&#x27;ve <span class="r7">misunder</span><span class="r1">st(</span><span class="r1">0.011</span><span class="r1">)ood(</span><span class="r1">0.008</span><span class="r1">)</span>
+me.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.006</span><span class="r2">):</span>    Und der reiche Mann – oh, liebe – fiel auf den 
+Kopf. <span class="r6">&quot;Du meinst, Gott wollte mein Brot nicht?&quot;</span> Und der arme Mann sagte: <span class="r6">&quot;Und </span>
+<span class="r6">meinst du, dass Gott meine Bitten nicht beantwortet hat?&quot;</span> Und der Rabbiner 
+sagte: &quot;Sie haben<span class="r1"> mich(</span><span class="r1">0.015</span><span class="r1">) falsch(</span><span class="r1">0.015</span><span class="r1">)</span> verstanden.
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.431</span><span class="r2">):</span> <span class="r5"> Sie(</span><span class="r5">1.378</span><span class="r5">)</span> haben mich völlig falsch 
+verstanden&quot;, sagte er.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.008</span><span class="r2">):</span>     And the rich man -- oh, dear -- crestfallen. 
+<span class="r6">&quot;You mean God didn&#x27;t want my bread?&quot;</span> And the poor man said, <span class="r6">&quot;And you mean God </span>
+<span class="r6">didn&#x27;t answer my pleas?&quot;</span> And the rabbi said, &quot;You&#x27;ve misunderstood me.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.009</span><span class="r2">):</span>    Und der reiche Mann – oh, liebe – fiel auf den 
+Kopf. <span class="r6">&quot;Du meinst, Gott wollte mein Brot nicht?&quot;</span> Und der arme Mann sagte: <span class="r6">&quot;Und </span>
+<span class="r6">meinst du, dass Gott meine Bitten nicht beantwortet hat?&quot;</span> Und der Rabbiner 
+sagte: &quot;<span class="r1">Sie(</span><span class="r1">0.021</span><span class="r1">)</span> haben mich falsch <span class="r7">verstanden</span><span class="r1">.(</span><span class="r1">0.029</span><span class="r1">)</span>
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.431</span><span class="r2">):</span>  Sie haben mich völlig<span class="r5"> falsch(</span><span class="r5">0.728</span><span class="r5">)</span> 
+verstanden&quot;, sagte er.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.011</span><span class="r2">):</span>     And the rich man -- oh, dear -- crestfallen. 
+<span class="r6">&quot;You mean God didn&#x27;t want my bread?&quot;</span> And the poor man said, <span class="r6">&quot;And you mean God </span>
+<span class="r6">didn&#x27;t answer my pleas?&quot;</span> And the rabbi said, &quot;You&#x27;ve misunderstood me.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.012</span><span class="r2">):</span>    Und der reiche Mann – oh, liebe – fiel auf den 
+Kopf. <span class="r6">&quot;Du meinst, Gott wollte mein Brot nicht?&quot;</span> Und der arme Mann sagte: <span class="r6">&quot;Und </span>
+<span class="r6">meinst du, dass Gott meine Bitten nicht beantwortet hat?&quot;</span> Und der Rabbiner 
+sagte: &quot;Sie haben mich<span class="r1"> falsch(</span><span class="r1">0.051</span><span class="r1">)</span> verstanden.
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.431</span><span class="r2">):</span>  Sie haben mich völlig falsch 
+verstanden<span class="r5">&quot;,(</span><span class="r5">0.523</span><span class="r5">)</span> sagte er.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     And the rich man -- oh, dear -- crestfallen. 
+<span class="r6">&quot;You mean God didn&#x27;t want my bread?&quot;</span> And the poor man said, <span class="r6">&quot;And you mean God </span>
+<span class="r6">didn&#x27;t answer my pleas?&quot;</span> And<span class="r1"> the(</span><span class="r1">0.005</span><span class="r1">)</span> rabbi said, &quot;You&#x27;ve misunderstood me.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.004</span><span class="r2">):</span>    Und der reiche Mann – oh, liebe – fiel auf den 
+Kopf. <span class="r6">&quot;Du meinst, Gott wollte mein Brot nicht?&quot;</span> Und der arme Mann sagte: <span class="r6">&quot;Und </span>
+<span class="r6">meinst du, dass Gott meine Bitten nicht beantwortet hat?&quot;</span> Und der Rabbiner<span class="r1"> </span>
+<span class="r1">sagte(</span><span class="r1">0.006</span><span class="r1">)</span>:<span class="r1"> &quot;(</span><span class="r1">0.006</span><span class="r1">)</span>Sie haben mich falsch <span class="r7">verstanden</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+
+</code></pre>
+</body>
+</html>

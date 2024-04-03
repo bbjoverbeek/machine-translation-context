@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  Hi, sir, could you stand up, please? Just right where you are. 
+You&#x27;re married, you follow directions well. Nice to meet you, sir.
+<span class="r2">Input current:</span> You don&#x27;t have a lot in your pockets. Anything down here?
+<span class="r2">Output context:</span> Hallo, Herr, könntest du bitte aufstehen? Genau da, wo du bist. 
+Sie sind verheiratet, Sie folgen Anweisungen gut. Schön Sie zu treffen, Herr.
+<span class="r2">Output current:</span> Sie haben nicht viel in Ihren Taschen. Irgendwas hier unten?
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.084</span><span class="r2">):</span> <span class="r5"> Sie(</span><span class="r5">0.620</span><span class="r5">)</span> haben nicht viel in Ihren Taschen. 
+Irgendwas hier unten?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     Hi, sir, could you stand up, please? Just right
+where you are. You&#x27;re married, you follow directions well. Nice to meet you, 
+<span class="r7">sir</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Hallo, Herr, könntest du bitte aufstehen? Genau
+da, wo du bist.<span class="r1"> Sie(</span><span class="r1">0.006</span><span class="r1">)</span> sind verheiratet, Sie folgen Anweisungen gut. Schön 
+Sie zu treffen, <span class="r7">Herr</span><span class="r1">.(</span><span class="r1">0.009</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.084</span><span class="r2">):</span>  Sie haben nicht viel in Ihren Taschen.<span class="r5"> </span>
+<span class="r5">Ir(</span><span class="r5">0.321</span><span class="r5">)</span>gendwas hier unten?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     Hi, sir, could you stand up, please? Just right
+where you are. You&#x27;<span class="r1">re(</span><span class="r1">0.004</span><span class="r1">)</span> married, you follow directions <span class="r7">well</span><span class="r1">.(</span><span class="r1">0.004</span><span class="r1">)</span> Nice to
+meet you, sir.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Hallo, Herr, könntest du bitte aufstehen? Genau
+da, wo du bist. Sie sind verheiratet, Sie folgen Anweisungen gut.<span class="r1"> Schön(</span><span class="r1">0.003</span><span class="r1">)</span> 
+Sie zu treffen, Herr.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.084</span><span class="r2">):</span>  Sie haben nicht viel in Ihren <span class="r7">Taschen</span><span class="r5">.(</span><span class="r5">0.123</span><span class="r5">)</span> 
+Irgendwas hier unten?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>     Hi, sir, could you stand up, please? Just right
+where you are. You&#x27;<span class="r1">re(</span><span class="r1">0.000</span><span class="r1">)</span> married, you follow directions <span class="r7">well</span><span class="r1">.(</span><span class="r1">0.000</span><span class="r1">)</span> Nice to
+meet you, sir.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    Hallo, Herr, könntest du bitte aufstehen? Genau
+da, wo du bist. Sie sind verheiratet, Sie folgen Anweisungen gut.<span class="r1"> Schön(</span><span class="r1">0.000</span><span class="r1">)</span> 
+Sie zu treffen, Herr.
+
+</code></pre>
+</body>
+</html>

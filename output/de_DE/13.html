@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  CA: How cool is that?  Elon, how have you done this? These 
+projects are so -- Paypal, SolarCity, Tesla, SpaceX, they&#x27;re so spectacularly 
+different, they&#x27;re such ambitious projects at scale. How on Earth has one person
+been able to innovate in this way?
+<span class="r2">Input current:</span> What is it about you?
+<span class="r2">Output context:</span> CA: Wie cool ist das? Elon, wie hast du das gemacht? Diese 
+Projekte sind so - Paypal, SolarCity, Tesla, SpaceX, sie sind so spektakulär 
+verschieden, sie sind so ehrgeizige Projekte auf Skala. Wie ist es überhaupt 
+möglich, dass eine Person auf diese Weise innovativ ist?
+<span class="r2">Output current:</span> Was ist es über dich?
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.222</span><span class="r2">):</span>  Was ist es über<span class="r5"> dich(</span><span class="r5">0.611</span><span class="r5">)</span>?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>     CA: How cool is that? Elon, how have you done 
+this? These projects are so<span class="r1"> --(</span><span class="r1">0.015</span><span class="r1">)</span> Paypal, SolarCity, Tesla, SpaceX, they&#x27;re 
+so spectacularly different, they&#x27;re such ambitious projects at scale. How on 
+Earth has one person been able to innovate in this way?
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.010</span><span class="r2">):</span>    CA: Wie cool ist das? Elon, wie<span class="r1"> hast(</span><span class="r1">0.016</span><span class="r1">) </span>
+<span class="r1">du(</span><span class="r1">0.029</span><span class="r1">)</span> das gemacht? Diese Projekte sind so - Paypal, SolarCity, Tesla, 
+SpaceX, sie sind so spektakulär verschieden, sie sind so ehrgeizige Projekte auf
+Skala. Wie ist es<span class="r1"> überhaupt(</span><span class="r1">0.012</span><span class="r1">)</span> möglich, dass eine Person auf diese Weise 
+innovativ ist?
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.222</span><span class="r2">):</span>  Was ist<span class="r5"> es(</span><span class="r5">0.271</span><span class="r5">)</span> über dich?
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     CA: How cool is that? Elon, how have you done 
+this? These projects are so<span class="r1"> --(</span><span class="r1">0.009</span><span class="r1">)</span> Paypal, SolarCity, Tesla, SpaceX, they&#x27;re 
+so spectacularly different, they&#x27;re such ambitious projects at scale. How on 
+Earth has one person been able to innovate in this way<span class="r1">?(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    CA: Wie cool ist das? Elon, wie hast du das 
+gemacht? Diese Projekte sind so - Paypal, SolarCity, Tesla, SpaceX, sie sind so 
+spektakulär verschieden, sie sind so ehrgeizige Projekte auf Skala. Wie ist es<span class="r1"> </span>
+<span class="r1">überhaupt(</span><span class="r1">0.012</span><span class="r1">)</span> möglich,<span class="r1"> dass(</span><span class="r1">0.007</span><span class="r1">)</span> eine Person auf diese Weise<span class="r1"> </span>
+<span class="r1">innovativ(</span><span class="r1">0.006</span><span class="r1">)</span> ist?
+
+</code></pre>
+</body>
+</html>

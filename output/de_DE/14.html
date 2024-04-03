@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  And the week before I showed up, the CEO of this big software 
+company went to that group, <span class="r4">200</span> engineers, and canceled the project. And I stood
+there in front of <span class="r4">200</span> of the most depressed people I&#x27;ve ever talked to. And I 
+described to them some of these Lego experiments, and they said they felt like 
+they had just been through that experiment.
+<span class="r2">Input current:</span> And I asked them, I said, <span class="r6">&quot;How many of you now show up to work </span>
+<span class="r6">later than you used to?&quot;</span>
+<span class="r2">Output context:</span> Und die Woche vor meiner Ankunft ging der CEO dieses großen 
+Software-Unternehmens zu dieser Gruppe, <span class="r4">200</span> Ingenieure, und kündigte das Projekt
+an. Und ich stand da vor <span class="r4">200</span> der deprimierendsten Menschen, mit denen ich je 
+gesprochen habe. Und ich beschrieb ihnen einige dieser Lego-Experimente, und sie
+sagten, dass sie das Gefühl hatten, dass sie gerade durch das Experiment waren.
+<span class="r2">Output current:</span> Und ich fragte sie, ich sagte, <span class="r6">&quot;Wie viele von Ihnen kommen jetzt</span>
+<span class="r6">später als früher zur Arbeit?&quot;</span>
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.074</span><span class="r2">):</span> <span class="r5"> Und(</span><span class="r5">0.257</span><span class="r5">)</span> ich fragte sie, ich sagte, <span class="r6">&quot;Wie </span>
+<span class="r6">viele von Ihnen kommen jetzt später als früher zur Arbeit?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     And the week before I showed up, the CEO of 
+this big software company went to that group, <span class="r4">200</span> engineers, and canceled the 
+project. And I stood there in front of <span class="r4">200</span> of the most depressed people I&#x27;ve 
+ever talked to. And I described to them some of these Lego experiments, and they
+said they felt like they had just been through that<span class="r1"> experiment(</span><span class="r1">0.005</span><span class="r1">).(</span><span class="r1">0.006</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Und die Woche vor meiner Ankunft ging der CEO 
+dieses großen Software-Unternehmens zu dieser Gruppe, <span class="r4">200</span> Ingenieure, und 
+kündigte das Projekt an.<span class="r1"> Und(</span><span class="r1">0.003</span><span class="r1">)</span> ich stand da vor <span class="r4">200</span> der deprimierendsten 
+Menschen, mit denen ich je gesprochen habe. Und ich beschrieb ihnen einige 
+dieser Lego-Experimente, und sie sagten, dass sie das Gefühl hatten, dass sie 
+gerade durch das Experiment <span class="r7">waren</span><span class="r1">.(</span><span class="r1">0.009</span><span class="r1">)</span>
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.074</span><span class="r2">):</span>  Und ich fragte sie, ich sagte, <span class="r6">&quot;Wie viele von </span>
+<span class="r6">Ihnen kommen jetzt später als früher</span><span class="r5"> zur(0.233)</span><span class="r6"> Arbeit?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     And the week before I showed up,<span class="r1"> the(</span><span class="r1">0.004</span><span class="r1">)</span> CEO
+of this<span class="r1"> big(</span><span class="r1">0.002</span><span class="r1">)</span> software company went to that group,<span class="r1"> 200(</span><span class="r1">0.002</span><span class="r1">)</span> engineers, 
+and canceled the project. And I stood there in front of <span class="r4">200</span> of the most 
+depressed people I&#x27;ve ever talked to. And I described to them some of<span class="r1"> </span>
+<span class="r1">these(</span><span class="r1">0.005</span><span class="r1">)</span> Lego experiments, and they said they felt like they had just been 
+through<span class="r1"> that(</span><span class="r1">0.002</span><span class="r1">)</span> experiment.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>    Und die Woche vor<span class="r1"> meiner(</span><span class="r1">0.002</span><span class="r1">)</span> Ankunft ging 
+der CEO dieses großen Software-Unternehmens zu dieser Gruppe, <span class="r4">200</span> Ingenieure, 
+und kündigte das Projekt an. Und ich stand da vor <span class="r4">200</span> der deprimierendsten 
+Menschen, mit denen ich je gesprochen habe. Und ich beschrieb ihnen einige 
+dieser Lego-Experimente, und sie sagten, dass sie das Gefühl hatten, dass sie 
+gerade durch das Experiment<span class="r1"> waren(</span><span class="r1">0.002</span><span class="r1">)</span>.
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.074</span><span class="r2">):</span>  Und ich fragte sie, ich sagte, <span class="r6">&quot;Wie viele von </span>
+<span class="r6">Ihnen kommen jetzt später</span><span class="r5"> als(0.190)</span><span class="r6"> früher zur Arbeit?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     And the week before I showed up,<span class="r1"> the(</span><span class="r1">0.002</span><span class="r1">)</span> CEO
+of this big software company went to that group, <span class="r4">200</span> engineers, and canceled the
+project. And I stood there in front of <span class="r4">200</span> of the most depressed people I&#x27;ve 
+ever talked to. And I described to them some of<span class="r1"> these(</span><span class="r1">0.003</span><span class="r1">)</span> Lego experiments, 
+and they said they felt like they had just been through that experiment.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>   <span class="r1"> Und(</span><span class="r1">0.003</span><span class="r1">)</span> die Woche vor<span class="r1"> meiner(</span><span class="r1">0.003</span><span class="r1">)</span> Ankunft 
+ging der CEO dieses großen Software-Unternehmens zu dieser Gruppe, <span class="r4">200</span> 
+Ingenieure, und kündigte das Projekt an. Und ich stand da vor <span class="r4">200</span> der 
+deprimierendsten Menschen, mit denen ich je gesprochen habe. Und ich beschrieb 
+ihnen einige dieser Lego-Experimente, und sie sagten, dass sie das Gefühl 
+hatten,<span class="r1"> dass(</span><span class="r1">0.003</span><span class="r1">)</span> sie gerade durch das Experiment<span class="r1"> waren(</span><span class="r1">0.003</span><span class="r1">).(</span><span class="r1">0.003</span><span class="r1">)</span>
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.074</span><span class="r2">):</span>  Und ich fragte sie,<span class="r5"> ich(</span><span class="r5">0.166</span><span class="r5">)</span> sagte, <span class="r6">&quot;Wie </span>
+<span class="r6">viele von Ihnen kommen jetzt später als früher zur Arbeit?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     And the week before I showed up, the CEO of 
+this big software company went to that group, <span class="r4">200</span> engineers, and canceled the 
+project. And I stood there in front of <span class="r4">200</span> of the most depressed people I&#x27;ve 
+ever talked to. And I described to them some of<span class="r1"> these(</span><span class="r1">0.005</span><span class="r1">)</span> Lego experiments, 
+and they said they felt like they had just been through that<span class="r1"> </span>
+<span class="r1">experiment(</span><span class="r1">0.004</span><span class="r1">).(</span><span class="r1">0.004</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Und die Woche vor meiner Ankunft<span class="r1"> ging(</span><span class="r1">0.003</span><span class="r1">)</span> 
+der CEO dieses großen Software-Unternehmens zu dieser Gruppe, <span class="r4">200</span> Ingenieure, 
+und kündigte das Projekt an. Und ich stand da vor <span class="r4">200</span> der deprimierendsten 
+Menschen, mit denen ich je gesprochen habe. Und<span class="r1"> ich(</span><span class="r1">0.003</span><span class="r1">)</span> beschrieb ihnen 
+einige dieser Lego-Experimente, und sie sagten,<span class="r1"> dass(</span><span class="r1">0.004</span><span class="r1">)</span> sie das<span class="r1"> </span>
+<span class="r1">Gefühl(</span><span class="r1">0.004</span><span class="r1">)</span> hatten, dass sie gerade durch das Experiment<span class="r1"> waren(</span><span class="r1">0.004</span><span class="r1">)</span>.
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.074</span><span class="r2">):</span>  Und ich fragte sie<span class="r5">,(</span><span class="r5">0.161</span><span class="r5">)</span> ich sagte, <span class="r6">&quot;Wie </span>
+<span class="r6">viele von Ihnen kommen jetzt später als früher zur Arbeit?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>     And the week before I showed up, the CEO of 
+this big software company went to that group, <span class="r4">200</span> engineers, and canceled the 
+project. And I stood there in front of <span class="r4">200</span> of the most depressed people I&#x27;ve 
+ever talked to. And I described to them some of<span class="r1"> these(</span><span class="r1">0.004</span><span class="r1">)</span> Lego experiments, 
+and they said they felt like they had just been through that experiment.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.002</span><span class="r2">):</span>   <span class="r1"> Und(</span><span class="r1">0.003</span><span class="r1">)</span> die Woche vor meiner Ankunft<span class="r1"> </span>
+<span class="r1">ging(</span><span class="r1">0.003</span><span class="r1">)</span> der CEO dieses großen Software-Unternehmens zu dieser Gruppe, <span class="r4">200</span> 
+Ingenieure, und kündigte das Projekt an. Und ich stand da vor <span class="r4">200</span> der 
+deprimierendsten Menschen, mit denen ich je gesprochen habe. Und ich beschrieb 
+ihnen einige dieser Lego-Experimente, und sie sagten, dass sie das<span class="r1"> Gefühl(</span><span class="r1">0.003</span><span class="r1">)</span>
+hatten, dass sie<span class="r1"> gerade(</span><span class="r1">0.003</span><span class="r1">)</span> durch das Experiment <span class="r7">waren</span><span class="r1">.(</span><span class="r1">0.003</span><span class="r1">)</span>
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.074</span><span class="r2">):</span>  Und ich fragte sie, ich sagte<span class="r5">,(</span><span class="r5">0.098</span><span class="r5">)</span> <span class="r6">&quot;Wie </span>
+<span class="r6">viele von Ihnen kommen jetzt später als früher zur Arbeit?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     And the week before I showed up, the CEO of 
+this big software company went to that group, <span class="r4">200</span> engineers, and canceled the 
+project. And I stood there in front of <span class="r4">200</span> of the most depressed people I&#x27;ve 
+ever talked to. And I described to them some of<span class="r1"> these(</span><span class="r1">0.007</span><span class="r1">)</span> Lego experiments, 
+and they said they felt like they had just been through that experiment.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>   <span class="r1"> Und(</span><span class="r1">0.008</span><span class="r1">)</span> die Woche vor meiner Ankunft<span class="r1"> </span>
+<span class="r1">ging(</span><span class="r1">0.006</span><span class="r1">)</span> der CEO dieses großen Software-Unternehmens zu dieser Gruppe, <span class="r4">200</span> 
+Ingenieure, und kündigte das Projekt <span class="r7">an</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span> Und ich stand da vor <span class="r4">200</span> der 
+deprimierendsten Menschen, mit denen ich je gesprochen habe. Und ich beschrieb 
+ihnen einige dieser Lego-Experimente, und sie<span class="r1"> sagt(</span><span class="r1">0.006</span><span class="r1">)</span>en<span class="r1">,(</span><span class="r1">0.008</span><span class="r1">)</span> dass sie das
+Gefühl hatten, dass sie gerade durch das Experiment waren.
+#<span class="r4">7</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.074</span><span class="r2">):</span>  Und ich fragte sie, ich sagte, <span class="r6">&quot;Wie viele von</span><span class="r5"> </span>
+<span class="r5">Ihnen(0.084)</span><span class="r6"> kommen jetzt später als früher zur Arbeit?&quot;</span>
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     And the week before I showed up,<span class="r1"> the(</span><span class="r1">0.005</span><span class="r1">)</span> CEO
+of this big software company went to that group, <span class="r4">200</span> engineers, and canceled the
+project. And I stood there in front of <span class="r4">200</span> of the most depressed people I&#x27;ve 
+ever talked to. And I described to them some of<span class="r1"> these(</span><span class="r1">0.007</span><span class="r1">)</span> Lego experiments, 
+and they said they felt like they had just been through that experiment.
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>   <span class="r1"> Und(</span><span class="r1">0.006</span><span class="r1">)</span> die Woche vor meiner Ankunft ging 
+der CEO dieses großen Software-Unternehmens zu dieser Gruppe, <span class="r4">200</span> Ingenieure, 
+und kündigte das Projekt an. Und ich stand da vor <span class="r4">200</span> der deprimierendsten 
+Menschen, mit denen ich je gesprochen habe. Und ich beschrieb<span class="r1"> ihnen(</span><span class="r1">0.006</span><span class="r1">)</span> 
+einige dieser Lego-Experimente, und sie sagten, dass sie das<span class="r1"> Gefühl(</span><span class="r1">0.007</span><span class="r1">)</span> 
+hatten, dass sie<span class="r1"> gerade(</span><span class="r1">0.005</span><span class="r1">)</span> durch das Experiment<span class="r1"> waren(</span><span class="r1">0.005</span><span class="r1">)</span>.
+
+</code></pre>
+</body>
+</html>

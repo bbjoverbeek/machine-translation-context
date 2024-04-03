@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r2 {font-weight: bold}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r5 {color: #0087ff; text-decoration-color: #0087ff; font-weight: bold}
+.r6 {color: #008000; text-decoration-color: #008000}
+.r7 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">
+Context with <span class="r1">contextual cues</span> <span class="r2">(</span>std <span class="r3">λ</span>=<span class="r4">2.00</span>, top <span class="r4">5</span><span class="r2">)</span> followed by output sentence 
+with <span class="r5">context-sensitive target spans</span> <span class="r2">(</span>all<span class="r2">)</span>
+<span class="r2">(</span>CTI = <span class="r6">&quot;kl_divergence&quot;</span>, CCI = <span class="r6">&quot;saliency&quot;</span> w/ <span class="r6">&quot;contrast_prob_diff&quot;</span> target<span class="r2">)</span>
+
+<span class="r2">Input context:</span>  there&#x27;s one more thing, there&#x27;s one final piece of the puzzle. 
+Gwen, I am so grateful for your choices
+<span class="r2">Input current:</span> because if we take a look at the first letters of your 
+combinations, we get <span class="r6">&quot;C-H-A-O-S&quot;</span> for chaos and <span class="r6">&quot;O-R-D-E-R&quot;</span> for order.
+<span class="r2">Output context:</span> Es gibt noch eine Sache, da ist ein letztes Stück des Puzzles. 
+Gwen, ich bin so dankbar für Ihre Entscheidungen
+<span class="r2">Output current:</span> , denn wenn wir einen Blick auf die ersten Buchstaben Ihrer 
+Kombinationen werfen, bekommen wir <span class="r6">&quot;C-H-A-O-S&quot;</span> für Chaos und <span class="r6">&quot;O-R-D-E-R&quot;</span> für 
+Ordnung.
+
+#<span class="r4">1</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.101</span><span class="r2">):</span> <span class="r5"> (</span><span class="r5">3.335</span><span class="r5">)</span>, denn wenn wir einen Blick auf die 
+ersten Buchstaben Ihrer Kombinationen werfen, bekommen wir <span class="r6">&quot;C-H-A-O-S&quot;</span> für Chaos
+und <span class="r6">&quot;O-R-D-E-R&quot;</span> für Ordnung.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>    <span class="r1"> there(</span><span class="r1">0.000</span><span class="r1">)</span><span class="r1">&#x27;(0.000)s(0.000) one(0.000) </span>
+<span class="r1">more(0.000)</span><span class="r6"> thing, there&#x27;</span>s one final piece of the puzzle. Gwen, I am so grateful
+for your choices
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.000</span><span class="r2">):</span>   <span class="r1"> Es(</span><span class="r1">0.000</span><span class="r1">) gibt(</span><span class="r1">0.000</span><span class="r1">) noch(</span><span class="r1">0.000</span><span class="r1">) eine(</span><span class="r1">0.000</span><span class="r1">) </span>
+<span class="r1">Sache(</span><span class="r1">0.000</span><span class="r1">)</span>, da ist ein letztes Stück des Puzzles. Gwen, ich bin so dankbar für
+Ihre Entscheidungen
+#<span class="r4">2</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.101</span><span class="r2">):</span>  <span class="r5">,(</span><span class="r5">0.437</span><span class="r5">)</span> denn wenn wir einen Blick auf die 
+ersten Buchstaben Ihrer Kombinationen werfen, bekommen wir <span class="r6">&quot;C-H-A-O-S&quot;</span> für Chaos
+und <span class="r6">&quot;O-R-D-E-R&quot;</span> für Ordnung.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>     there&#x27;s one more thing, there&#x27;s one final piece
+of the <span class="r7">puzzle</span><span class="r1">.(</span><span class="r1">0.006</span><span class="r1">)</span> Gwen, I am so grateful for your <span class="r7">choice</span><span class="r1">s(</span><span class="r1">0.003</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.003</span><span class="r2">):</span>    Es gibt noch eine Sache, da ist ein letztes 
+Stück des Puzzles. Gwen, ich bin so dankbar für Ihre<span class="r1"> Entscheidung(</span><span class="r1">0.003</span><span class="r1">)</span>en
+#<span class="r4">3</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.101</span><span class="r2">):</span>  , denn wenn wir<span class="r5"> einen(</span><span class="r5">0.345</span><span class="r5">)</span> Blick auf die 
+ersten Buchstaben Ihrer Kombinationen werfen, bekommen wir <span class="r6">&quot;C-H-A-O-S&quot;</span> für Chaos
+und <span class="r6">&quot;O-R-D-E-R&quot;</span> für Ordnung.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.008</span><span class="r2">):</span>     there&#x27;s one more thing, there&#x27;s one final piece
+of the <span class="r7">puzzle</span><span class="r1">.(</span><span class="r1">0.019</span><span class="r1">)</span> Gwen, I am so grateful for your choices
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.008</span><span class="r2">):</span>    Es gibt noch eine Sache, da ist ein letztes 
+Stück des Puzzles. Gwen, ich bin so dankbar für Ihre Entscheidungen
+#<span class="r4">4</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.101</span><span class="r2">):</span>  , denn wenn wir einen Blick auf die ersten 
+Buchstaben Ihrer Kombinationen werfen<span class="r5">,(</span><span class="r5">0.167</span><span class="r5">)</span> bekommen wir <span class="r6">&quot;C-H-A-O-S&quot;</span> für Chaos
+und <span class="r6">&quot;O-R-D-E-R&quot;</span> für Ordnung.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.009</span><span class="r2">):</span>     there&#x27;s one more thing, there&#x27;s one final piece
+of the <span class="r7">puzzle</span><span class="r1">.(</span><span class="r1">0.017</span><span class="r1">)</span> Gwen, I am so grateful for your choices
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.009</span><span class="r2">):</span>    Es gibt noch eine Sache, da ist ein letztes 
+Stück des Puzzles. Gwen, ich bin so dankbar für<span class="r1"> Ihre(</span><span class="r1">0.009</span><span class="r1">) </span>
+<span class="r1">Entscheidung(</span><span class="r1">0.010</span><span class="r1">)</span>en
+#<span class="r4">5</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.101</span><span class="r2">):</span>  ,<span class="r5"> denn(</span><span class="r5">0.123</span><span class="r5">)</span> wenn wir einen Blick auf die 
+ersten Buchstaben Ihrer Kombinationen werfen, bekommen wir <span class="r6">&quot;C-H-A-O-S&quot;</span> für Chaos
+und <span class="r6">&quot;O-R-D-E-R&quot;</span> für Ordnung.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.015</span><span class="r2">):</span>     there&#x27;s one more thing, there&#x27;s one final piece
+of the <span class="r7">puzzle</span><span class="r1">.(</span><span class="r1">0.027</span><span class="r1">)</span> Gwen, I am so grateful for your <span class="r7">choice</span><span class="r1">s(</span><span class="r1">0.024</span><span class="r1">)</span>
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.015</span><span class="r2">):</span>    Es gibt noch eine Sache, da ist ein letztes 
+Stück des Puzzles. Gwen, ich bin so dankbar für Ihre<span class="r1"> Entscheidung(</span><span class="r1">0.017</span><span class="r1">)</span>en
+#<span class="r4">6</span>.
+<span class="r2">Generated output (CTI &gt; </span><span class="r4">0.101</span><span class="r2">):</span>  , denn wenn wir einen Blick auf die ersten 
+Buchstaben Ihrer Kombinationen werfen, bekommen wir<span class="r5"> </span><span class="r5">&quot;(0.110)</span><span class="r6">C-H-A-O-S&quot;</span> für Chaos
+und <span class="r6">&quot;O-R-D-E-R&quot;</span> für Ordnung.
+<span class="r2">Input context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>     there&#x27;s one more thing, there&#x27;s one final piece
+of the <span class="r7">puzzle</span><span class="r1">.(</span><span class="r1">0.013</span><span class="r1">)</span> Gwen, I am so grateful for your choices
+<span class="r2">Output context (CCI &gt; </span><span class="r4">0.005</span><span class="r2">):</span>    Es gibt noch eine Sache, da ist ein letztes 
+Stück des Puzzles. Gwen, ich bin so dankbar für Ihre Entscheidungen
+
+</code></pre>
+</body>
+</html>
