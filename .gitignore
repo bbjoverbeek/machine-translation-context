@@ -52,6 +52,7 @@ coverage.xml
 cover/
 change_datasets.py
 translation_de.ipynb
+.DS_Store
 
 # Translations
 *.mo
