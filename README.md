@@ -29,7 +29,7 @@ You should run all scripts from the root directory
 cd machine-translation-context
 ```
 
-Create a virtual environment and install the dependencies:
+Create a virtual environment and install the dependencies
 
 ```
 python -m venv env
@@ -59,7 +59,7 @@ Parameters:
 - save_path: the path to save created dataset
 
 ```
-python3 translate.py --lang your_lang --save_path your_save_path
+python translate.py --lang your_lang --save_path your_save_path
 ```
 
 ### PECoRe: context-sensitive words and their context detection:
