@@ -11,6 +11,10 @@
       "_type": "Value"
     },
     "translation": {
+      "de": {
+        "dtype": "string",
+        "_type": "Value"
+      },
       "en": {
         "dtype": "string",
         "_type": "Value"
