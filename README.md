@@ -18,5 +18,5 @@ context : context sentences in English and one of three languages: Dutch/Russian
 
 
 ## Useful links
-- [Project page](https://sites.google.com/rug.nl/ik-nlp-2024/projects-description/understanding-context-usage-in-machine-translation?authuser=0) describing the task
+- [Project page](https://sites.google.com/rug.nl/ik-nlp-2024/projects-description/understanding-context-usage-in-machine-translation?authuser=0)
 - [PECoRe paper](https://arxiv.org/abs/2310.01188)
