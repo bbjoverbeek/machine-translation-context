@@ -1,0 +1,2570 @@
+/Users/rickhuizing/PycharmProjects/machine-translation-context/.venv/bin/python /Users/rickhuizing/PycharmProjects/machine-translation-context/run_pecore.py
+columns: ['doc_id', 'seg_id', 'translation', 'context', 'concatenated_context']
+nrows: 20
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  Woman: There is no Paradise! It only exists in your head! Man:
+God forbid! May God forgive you.
+Input current: If you were not Abu Azzam's daughter ...
+Output context: Vrouw: Er is geen Paradijs! Het bestaat alleen in je hoofd! Man:
+Alsjeblieft zeg! Moge God je vergeven.
+Output current: Als je niet Abu Azzams dochter was...
+
+#1.
+Generated output (CTI > 0.042):  Als je niet(0.121) Abu Azzams dochter was...
+Input context (CCI > 0.005):     Woman: There is no(0.009) Paradise! It only
+exists in your head! Man: God forbid! May God for(0.006)give you.(0.006)
+Output context (CCI > 0.005):    Vrouw: Er is geen Paradijs! Het bestaat alleen
+in je hoofd! Man: Alsje(0.005)blieft zeg! Mog(0.005)e God je vergeven.
+#2.
+Generated output (CTI > 0.042):  Als(0.088) je niet Abu Azzams dochter was...
+Input context (CCI > 0.007):     Woman: There is no Paradise! It only exists in
+your head! Man: God forbid! May God forgive you.(0.008)
+Output context (CCI > 0.007):    Vrouw: Er is geen Paradijs! Het bestaat alleen
+in je hoofd! Man: Als(0.012)jeblieft zeg! Moge God je vergeven.(0.013)
+#3.
+Generated output (CTI > 0.042):  Als je(0.085) niet Abu Azzams dochter was...
+Input context (CCI > 0.003):     Woman: There is no Paradise! It only exists in
+your head! Man: God forbid! May God forgive you.
+Output context (CCI > 0.004):    Vrouw: Er is geen Paradijs! Het bestaat alleen
+in je hoofd! Man: Als(0.006)je(0.007)blieft zeg! Mog(0.004)e God je vergeven.
+#4.
+Generated output (CTI > 0.042):  Als je niet Abu(0.052) Azzams dochter was...
+Input context (CCI > 0.003):     Woman: There is no(0.005) Paradise! It only
+exists in your head! Man:(0.003) God forbid! May(0.003) God for(0.003)give you.
+Output context (CCI > 0.003):    Vrouw: Er is geen Paradijs! Het bestaat alleen
+in je hoofd! Man: Alsjeblieft zeg! Mog(0.005)e God je vergeven.
+
+
+ERROR for row 1 with language [nl]
+Output template '{context} {current}' contains prefix 'en zo verder. Er zit een klein verschil op, dat de moeite is --  -- om over na te denken Ik herinner mij dat ik op mijn twaalfde op pauken en percussie begon te spelen. Mijn leraar zei: "Wel, hoe gaan we dat doen? Muziek gaat om luisteren." "Ja, akkoord. En wat is het probleem?" Hij zei: "Hoe ga je dit horen? Hoe ga je dat horen?"' but output 'en zo verder. Er zit een klein verschil op, dat de moeite is -- -- om over na te denken Ik herinner mij dat ik op mijn twaalfde op pauken en percussie begon te spelen. Mijn leraar zei: "Wel, hoe gaan we dat doen? Muziek gaat om luisteren." "Ja, akkoord. En wat is het probleem?" Hij zei: "Hoe ga je dit horen? Hoe ga je dat horen?" Ik zei: "Hoe ga je het horen?"' does not match the prefix. Please check whether the template is correct, or force context/current outputs.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And so he's assembled a group of people. And I've fallen in love
+with him, as I have with Herbie and with his music. And Quincy said, "Where did
+the idea for centers like this come from?"
+Input current: And I said, "It came from your music, man. Because Mr. Ross used
+to bring in your albums when I was 16 years old in the pottery class,
+Output context: Hij verzamelde een groep mensen. Ik ben helemaal weg van hem,
+net als van Herbie en zijn muziek. Quincy zei: "Waar kwam de idee voor centra
+als dit vandaan?"
+Output current: Ik zei: "Het kwam van jouw muziek, man. Want Mr. Ross bracht je
+albums mee toen ik 16 jaar oud was in de keramiekles.
+
+#1.
+Generated output (CTI > 0.066):  Ik zei: "Het(0.364) kwam van jouw muziek, man.
+Want Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.009):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.010):    Hij verzamelde een groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei:
+"Wa(0.024)ar kwam de idee(0.016) voor centra als dit vandaan?"
+#2.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam van jouw muziek, man. Want
+Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.(0.282)
+Input context (CCI > 0.004):     And so he's assembled a group of people(0.005).
+And I've fallen in love with him, as I have with Herbie and with his music.
+And(0.006) Quincy said, "Where did the idea for(0.005) centers like this come
+from(0.006)?"
+Output context (CCI > 0.004):    Hij verzamelde een(0.005) groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei:
+"(0.007)Waar kwam de idee voor centra als dit vandaan?"(0.006)
+#3.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam van jouw muziek, man.(0.229)
+Want Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.005):     And so he's assembled a group of people(0.006).
+And I've fallen in love with him, as I have with Herbie and with his music.
+And(0.008) Quincy said, "Where did the idea for(0.006) centers like this come
+from(0.006)?"
+Output context (CCI > 0.005):    Hij verzamelde een groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei:
+"(0.006)Waar kwam de idee voor centra als dit vandaan(0.005)?"
+#4.
+Generated output (CTI > 0.066):  Ik(0.162) zei: "Het kwam van jouw muziek, man.
+Want Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.005):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music.
+And(0.007) Quincy said, "Where did the idea for centers like this come
+from?"(0.008)
+Output context (CCI > 0.006):    Hij verzamelde een groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei: "Waar kwam
+de idee voor centra als dit vandaan?"(0.015)
+#5.
+Generated output (CTI > 0.066):  Ik zei: "(0.151)Het kwam van jouw muziek, man.
+Want Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.001):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.001):    Hij verzamelde een groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei:
+"(0.004)Waar kwam de idee voor centra als dit vandaan?"(0.002)
+#6.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam van jouw muziek, man. Want
+Mr. Ross bracht je albums mee toen ik 16 jaar(0.124) oud was in de keramiekles.
+Input context (CCI > 0.002):     And so he's (0.002)assembled a group of people.
+And I've fallen in love with him, as I have with Herbie and with his music.
+And(0.002) Quincy said, "Where did the idea for(0.003) centers like this come
+from?"
+Output context (CCI > 0.002):    Hij verzamelde een(0.002) groep mensen. Ik ben
+helemaal(0.002) weg van hem, net als van Herbie en zijn muziek. Quincy zei:
+"Waar kwam de idee voor centra als dit vandaan?"(0.003)
+#7.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam van jouw muziek, man. Want
+Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles(0.120).
+Input context (CCI > 0.003):     And so he's (0.006)assembled a group of people.
+And I've fallen in love with him, as I have with Herbie and with his(0.004)
+music. And(0.004) Quincy said, "Where did the idea for(0.005) centers like this
+come from?"
+Output context (CCI > 0.003):    Hij verzamelde een(0.005) groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei: "Waar kwam
+de idee voor centra als dit vandaan?"
+#8.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam van jouw muziek, man.
+Want(0.099) Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de
+keramiekles.
+Input context (CCI > 0.003):     And so he's (0.004)assembled a group of people.
+And I've fallen in love with him, as I have with Herbie and with his music.
+And(0.005) Quincy said, "Where did the idea for(0.003) centers like this come
+from(0.003)?"
+Output context (CCI > 0.003):    Hij verzamelde een groep mensen. Ik ben
+helemaal(0.003) weg(0.003) van hem, net als van Herbie en zijn muziek. Quincy
+zei: "Waar kwam de idee voor centra als dit vandaan?"(0.003)
+#9.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam van jouw(0.097) muziek, man.
+Want Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.007):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.008):    Hij verzamelde een groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei: "Waar kwam
+de idee voor centra als dit van(0.008)daan(0.022)?"
+#10.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam(0.086) van jouw muziek, man.
+Want Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.002):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.003):    Hij verzamelde een groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei: "Waar
+kwam(0.007) de idee voor centra als dit vandaan?"
+#11.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam van jouw muziek, man. Want
+Mr. Ross bracht je albums mee toen(0.069) ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.002):     And so he's (0.002)assembled a group of people.
+And I've fallen in love with him, as I have with Herbie and with his music.
+And(0.002) Quincy said, "Where did the idea for(0.002) centers like this come
+from?"
+Output context (CCI > 0.002):    Hij verzamelde een(0.002) groep mensen. Ik ben
+helemaal(0.002) weg(0.002) van hem, net als van Herbie en zijn muziek. Quincy
+zei: "Waar kwam de idee voor centra als dit vandaan?"
+#12.
+Generated output (CTI > 0.066):  Ik zei: "Het kwam van jouw muziek, man. Want
+Mr(0.068). Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.006):     And so he's (0.008)assembled a group of people.
+And I've fallen in love with him, as I have with Her(0.007)bie and with his
+music. And(0.015) Quincy said, "Where did the idea for(0.008) centers like this
+come from?"
+Output context (CCI > 0.006):    Hij verzamelde een groep mensen. Ik ben
+helemaal(0.006) weg van hem, net als van Herbie en zijn muziek. Quin(0.008)cy
+zei: "Waar kwam de idee voor centra als dit vandaan?"
+#13.
+Generated output (CTI > 0.066):  Ik zei:(0.068) "Het kwam van jouw muziek, man.
+Want Mr. Ross bracht je albums mee toen ik 16 jaar oud was in de keramiekles.
+Input context (CCI > 0.001):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.001):    Hij verzamelde een groep mensen. Ik ben
+helemaal weg van hem, net als van Herbie en zijn muziek. Quincy zei:(0.003)
+"Waar kwam de idee voor centra als dit vandaan?"
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  They said they were going to beat us up if we didn't make some
+gunpowder for them. We said, well, what are you going to do with it? They said,
+we're going to melt it down and make rocket fuel.
+Input current: Sure. We'll make you a big batch.
+Output context: Ze gingen ons een pak rammel geven als we niet wat buskruit voor
+hen zouden maken. Wij vroegen wat ze ermee wilden doen. Zij zeiden: "We gaan het
+smelten om er raketbrandstof van te maken."
+Output current: Natuurlijk. We maken er een groot lot van.
+
+#1.
+Generated output (CTI > 0.053):  Natuurlijk(0.188). We maken er een groot lot
+van.
+Input context (CCI > 0.005):     They said they were going to beat us up if we
+didn't make some gunpowder for them. We said, well, what are you going to do
+with it? They said, we're going to melt it down and make rocket fuel.(0.018)
+Output context (CCI > 0.005):    Ze gingen ons een pak rammel geven als we niet
+wat buskruit voor hen zouden maken. Wij vroegen wat ze ermee wilden doen. Zij
+zeiden: "We gaan het smelten om er raketbrandstof van te maken."(0.011)
+#2.
+Generated output (CTI > 0.053):  Natuurlijk. We maken er(0.077) een groot lot
+van.
+Input context (CCI > 0.005):     They said they were going to beat us up if we
+didn't make some gunpowder for them. We said, well, what are you going to do
+with it? They said, we're going to (0.010)melt it down and make rocket(0.011)
+fuel.(0.007)
+Output context (CCI > 0.005):    Ze gingen ons een pak rammel geven als we niet
+wat buskruit voor hen zouden maken. Wij vroegen wat ze ermee wilden doen. Zij
+zeiden: "We gaan het smelten om er raketbrandstof van te maken."
+#3.
+Generated output (CTI > 0.053):  Natuurlijk. We maken er een groot lot(0.066)
+van.
+Input context (CCI > 0.003):     They said they were going to(0.003) beat us up
+if we didn't make some(0.004) gunpowder for them. We said, well, what are you
+going to do with it? They said, we're going to (0.005)melt it down and
+make(0.004) rocket(0.006) fuel.
+Output context (CCI > 0.003):    Ze gingen ons een pak rammel geven als we niet
+wat buskruit voor hen zouden maken. Wij vroegen wat ze ermee wilden doen. Zij
+zeiden: "We gaan het smelten om er raketbrandstof van te maken."
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  The rabbi came in and saw what was going on. And he called the
+two of them to his office. And he said, you know, "This is what's happening."
+Input current: And the rich man -- oh, dear -- crestfallen. "You mean God didn't
+want my bread?"
+Output context: De rabbijn zag wat er aan de hand was. En hij riep de beide
+mannen in zijn kantoor. En hij zei: "Weten jullie, dit is er aan de hand."
+Output current: En de rijke man -- oh, lieverd -- sloeg op. "Bedoel je dat God
+mijn brood niet wilde?"
+
+#1.
+Generated output (CTI > 0.046):  En de rijke man -- oh, lieverd -- sloeg
+op.(0.350) "Bedoel je dat God mijn brood niet wilde?"
+Input context (CCI > 0.005):     The(0.010) rabbi came in and saw what was going
+on. And he called the two of them to his office. And he said, you know, "This is
+what's(0.006) happening."
+Output context (CCI > 0.004):    De rabbijn zag wat er aan de hand was. En hij
+riep(0.005) de beide mannen in zijn kantoor. En hij zei: "Weten jullie, dit is
+er aan de hand."
+#2.
+Generated output (CTI > 0.046):  En de rijke man -- oh, lieverd -- slo(0.194)eg
+op. "Bedoel je dat God mijn brood niet wilde?"
+Input context (CCI > 0.001):     The(0.002) rabbi came in and saw what was going
+on. And he called the two of them to his office. And he said, you know, "This is
+what's(0.001) happening."
+Output context (CCI > 0.001):    De rabbijn zag wat er aan de hand was. En hij
+riep(0.001) de beide mannen in zijn kantoor. En hij zei: "Weten jullie, dit is
+er aan de hand."
+#3.
+Generated output (CTI > 0.046):  En(0.154) de rijke man -- oh, lieverd -- sloeg
+op. "Bedoel je dat God mijn brood niet wilde?"
+Input context (CCI > 0.016):     The rabbi came in and saw what was going on.
+And he called the two of them to his office. And he said, you know, "This is
+what's happening."
+Output context (CCI > 0.018):    De rabbijn zag wat er aan de hand was.
+En(0.022) hij riep de beide mannen in zijn kantoor. En hij zei: "Weten jullie,
+dit is er aan de hand."(0.044)
+#4.
+Generated output (CTI > 0.046):  En de rijke man -- oh, lieverd -- sloeg
+op(0.093). "Bedoel je dat God mijn brood niet wilde?"
+Input context (CCI > 0.002):     The(0.005) rabbi came in and saw what was going
+on. And he called the two of them to his office. And he said, you know, "This is
+what's(0.003) happening."
+Output context (CCI > 0.002):    De rabbijn zag wat er aan de hand was. En hij
+riep de beide mannen in zijn kantoor. En hij zei: "Weten jullie, dit is er aan
+de hand."
+#5.
+Generated output (CTI > 0.046):  En de rijke man -- oh, lieverd -- sloeg op.
+"(0.071)Bedoel je dat God mijn brood niet wilde?"
+Input context (CCI > 0.002):     The rabbi came in and saw what was going on.
+And he called the two of them to his office. And he said, you know, "This is
+what's happening."
+Output context (CCI > 0.002):    De rabbijn zag wat er aan de hand was. En hij
+riep de beide mannen in zijn kantoor. En hij zei: "(0.006)Weten jullie, dit is
+er aan de hand."(0.003)
+#6.
+Generated output (CTI > 0.046):  En de rijke man -- oh, liever(0.065)d -- sloeg
+op. "Bedoel je dat God mijn brood niet wilde?"
+Input context (CCI > 0.003):     The(0.004) rabbi came in and saw what was going
+on. And he called the two of them to his office. And he said, you know, "This is
+what's happening."
+Output context (CCI > 0.003):    De rabbijn zag wat er aan de hand was. En hij
+riep de beide mannen in zijn kantoor. En hij zei: "We(0.003)ten(0.003)
+jullie(0.005), dit is er aan de hand."
+#7.
+Generated output (CTI > 0.046):  En de rijke man -- oh, lieverd -- sloeg op.
+"Be(0.061)doel je dat God mijn brood niet wilde?"
+Input context (CCI > 0.001):     The(0.002) rabbi came in and saw what was going
+on. And he called the two of them to his office. And he said, you know, "This is
+what's happening."
+Output context (CCI > 0.001):    De rabbijn zag wat er aan de hand was. En hij
+riep de beide mannen in zijn kantoor. En hij zei: "We(0.002)ten jullie, dit is
+er aan de hand."(0.003)
+#8.
+Generated output (CTI > 0.046):  En de rijke man -- oh, lieverd -- sloeg op.
+"Bedoel(0.051) je dat God mijn brood niet wilde?"
+Input context (CCI > 0.003):     The(0.003) rabbi came in and saw what was going
+on. And he called the two of them to his office. And he said, you know, "This is
+what's happening."
+Output context (CCI > 0.003):    De rabbijn zag wat er aan de hand was. En hij
+riep de beide mannen in zijn kantoor. En hij zei: "(0.003)Weten jullie, dit is
+er aan de hand."(0.003)
+#9.
+Generated output (CTI > 0.046):  En de rijke man -- oh, lieverd -- sloeg op.
+"Bedoel je(0.046) dat God mijn brood niet wilde?"
+Input context (CCI > 0.007):     The rabbi came in and saw what was going on.
+And he called the two of them to his office. And he said, you know, "This is
+what's happening."
+Output context (CCI > 0.008):    De rabbijn zag wat er aan de hand was. En hij
+riep de beide mannen in zijn kantoor. En hij zei: "We(0.008)ten(0.009)
+jullie(0.022), dit is er aan de hand."
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And the rich man -- oh, dear -- crestfallen. "You mean God
+didn't want my bread?" And the poor man said, "And you mean God didn't answer my
+pleas?" And the rabbi said, "You've misunderstood me.
+Input current: You've misunderstood totally," he said.
+Output context: En de rijke man -- oh, lieve hemel -- teneergeslagen: "U bedoelt
+dat God mijn broden niet wilde hebben?" En de arme man zei: "En u bedoelt dat
+God mijn gebeden niet verhoorde?" En de rabbijn zei: "Jullie hebben me verkeerd
+begrepen."
+Output current: Hij zei: "Jullie hebben me helemaal verkeerd begrepen."
+
+#1.
+Generated output (CTI > 0.597):  Hij(2.399) zei: "Jullie hebben me helemaal
+verkeerd begrepen."
+Input context (CCI > 0.017):     And the rich man -- oh, dear -- crestfallen.
+"You mean God didn't want my bread?" And the poor man said, "And you mean God
+didn't answer my pleas?" And the rabbi said, "You've misunderstood me.
+Output context (CCI > 0.019):    En de rijke man -- oh, lieve hemel --
+teneergeslagen: "U bedoelt dat God mijn broden niet wilde hebben?" En de arme
+man zei: "En u bedoelt dat God mijn gebeden niet verhoorde?" En de rabbijn zei:
+"Jul(0.027)lie hebben me verkeerd begrepen."(0.063)
+#2.
+Generated output (CTI > 0.597):  Hij ze(2.347)i: "Jullie hebben me helemaal
+verkeerd begrepen."
+Input context (CCI > 0.002):     And the rich man -- oh, dear -- crestfallen.
+"You mean God didn't want my bread?" And the poor man said, "And you mean God
+didn't answer my pleas?" And the rabbi said, "You've misunderstood me.
+Output context (CCI > 0.002):    En de rijke man -- oh, lieve hemel --
+teneergeslagen: "U bedoelt dat God mijn broden niet wilde hebben?" En de arme
+man zei: "En u bedoelt dat God mijn gebeden niet verhoorde?" En de
+rabbi(0.002)jn ze(0.004)i: "Jullie hebben me verkeerd begrep(0.004)en."(0.005)
+#3.
+Generated output (CTI > 0.597):  Hij zei: "Jullie hebben me(1.286) helemaal
+verkeerd begrepen."
+Input context (CCI > 0.019):     And the rich man -- oh, dear -- crestfallen.
+"You mean God didn't want my bread?" And the poor man said, "And you mean God
+didn't answer my pleas?" And the rabbi said, "You've misunderst(0.023)ood(0.024)
+me.
+Output context (CCI > 0.020):    En de rijke man -- oh, lieve hemel --
+teneergeslagen: "U bedoelt dat God mijn broden niet wilde hebben?" En de arme
+man zei: "En u bedoelt dat God mijn gebeden niet verhoorde?" En de rabbijn zei:
+"Jul(0.025)lie hebben(0.023) me(0.039) verkeerd(0.036) begrepen."(0.032)
+#4.
+Generated output (CTI > 0.597):  Hij zei: "Jullie hebben me helemaal
+verkeerd(0.896) begrepen."
+Input context (CCI > 0.005):     And the rich man -- oh, dear -- crestfallen.
+"You mean God didn't want my bread?" And the poor man said, "And you mean God
+didn't answer my pleas?" And the rabbi said, "You've misunderstood me.
+Output context (CCI > 0.006):    En de rijke man -- oh, lieve hemel --
+teneergeslagen: "U bedoelt dat God mijn broden niet wilde hebben?" En de arme
+man zei: "En u bedoelt dat God mijn gebeden niet verhoorde?" En de rabbijn zei:
+"Jullie hebben me verkeerd(0.025) begrepen."
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  It wasn't this arm-wrestle, but it was a little surprising for
+the person involved. I interviewed Steve Martin. It wasn't all that long ago.
+And we were sitting there, and almost toward the beginning of the interview, I
+turned to him and I said, "Steve," or "Mr. Martin, it is said that all comedians
+have unhappy childhoods.
+Input current: Was yours unhappy?"
+Output context: Het was geen armpje drukken, maar het was best verrassend voor
+de betreffende persoon. Ik interviewde Steve Martin. Dat was niet zo heel lang
+geleden. En we zaten daar, en bijna aan het begin van het interview, draaide ik
+me naar hem toe en zei: "Steve," of "Meneer Martin, er wordt gezegd dat alle
+komieken een ongelukkige jeugd hebben.
+Output current: Was jouw niet gelukkig?"
+
+#1.
+Generated output (CTI > 0.292):  Was jouw niet(0.790) gelukkig?"
+Input context (CCI > 0.006):     It wasn't this arm-wrestle, but it was a little
+surprising for the person involved. I interviewed Steve Martin. It wasn't all
+that long ago. And we were sitting there, and almost toward the beginning of the
+interview, I turned to him and I said, "Steve," or "Mr. Martin, it is said that
+all comedians have un(0.007)happy child(0.007)hoods.
+Output context (CCI > 0.007):    Het was geen armpje drukken, maar het was best
+verrassend voor de betreffende persoon. Ik interviewde Steve Martin. Dat was
+niet zo heel lang geleden. En we zaten daar, en bijna aan het begin van het
+interview, draaide ik me naar hem toe en zei: "Steve," of "Meneer Martin, er
+wordt gezegd dat alle komieken een ongelukkig(0.012)e jeugd(0.027) hebben.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  My failure to procure myself a cup of sweet, green tea was not
+due to a simple misunderstanding. This was due to a fundamental difference in
+our ideas about choice. From my American perspective, when a paying customer
+makes a reasonable request based on her preferences, she has every right to have
+that request met.
+Input current: The American way, to quote Burger King, is to "have it your way,"
+because, as Starbucks says, "happiness is in your choices."
+Output context: Dat ik had gefaald om mezelf aan een kop zoete groene thee te
+helpen, was niet zomaar een misverstand. Het was te wijten aan een fundamenteel
+verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse perspectief heeft
+een betalende klant die een redelijk verzoek doet, op basis van haar voorkeuren,
+het recht om te krijgen wat ze vraagt.
+Output current: De Amerikaanse manier, om Burger King te citeren, is om het op
+jouw manier te hebben, want zoals Starbucks zegt, is geluk in je keuzes.
+
+#1.
+Generated output (CTI > 0.050):  De Amerikaanse manier, om Burger King te
+citeren, is om het op jouw manier te hebben(0.355), want zoals Starbucks zegt,
+is geluk in je keuzes.
+Input context (CCI > 0.011):     My failure to(0.014) procure myself a cup of
+sweet, green tea was not due to a simple misunderstanding(0.014). This was due
+to a fundamental difference in our ideas about choice(0.018). From my American
+perspective, when a paying(0.012) customer makes a reasonable request based on
+her preferences, she has every right to have that request met.
+Output context (CCI > 0.010):    Dat ik had gefaald om mezelf aan een kop zoete
+groene thee te helpen(0.026), was niet zomaar een misverstand. Het was te wijten
+aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+perspectief heeft een betalende klant die een redelijk verzoek doet, op basis
+van haar voorkeuren, het recht om te krijgen(0.019) wat ze vraagt.
+#2.
+Generated output (CTI > 0.050):  De Amerikaanse manier, om Burger King te
+citeren, is om het op jouw(0.269) manier te hebben, want zoals Starbucks zegt,
+is geluk in je keuzes.
+Input context (CCI > 0.004):     My failure to procure myself a cup of sweet,
+green tea was not due to a simple misunderstanding. This was due to a
+fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her(0.004)
+preferences, she has every right to have that request met.
+Output context (CCI > 0.004):    Dat ik had gefaald om mezelf aan een kop zoete
+groene thee te helpen, was niet zomaar een misverstand. Het was te wijten aan
+een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+perspectief heeft een betalende klant(0.007) die een redelijk verzoek(0.006)
+doet, op basis van haar(0.007) voorkeuren, het recht om te krijgen(0.004) wat ze
+vraagt.
+#3.
+Generated output (CTI > 0.050):  De Amerikaanse manier, om Burger King te
+citeren, is om(0.215) het op jouw manier te hebben, want zoals Starbucks zegt,
+is geluk in je keuzes.
+Input context (CCI > 0.007):     My failure to(0.010) procure myself a cup of
+sweet, green tea was not due to a simple misunderstanding(0.009). This was due
+to a fundamental difference in our ideas about choice(0.013). From my American
+perspective, when a paying(0.009) customer makes a reasonable request based on
+her preferences, she has every right to have that request met(0.008).
+Output context (CCI > 0.007):    Dat ik had gefaald om mezelf aan een kop zoete
+groene thee te helpen, was niet zomaar(0.011) een misverstand. Het was te wijten
+aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+perspectief heeft een betalende klant die een redelijk verzoek(0.009) doet, op
+basis van haar voorkeuren, het recht om te krijgen(0.010) wat ze vraagt.
+#4.
+Generated output (CTI > 0.050):  De Amerikaanse manier, om Burger King te
+citeren, is om het(0.122) op jouw manier te hebben, want zoals Starbucks zegt,
+is geluk in je keuzes.
+Input context (CCI > 0.004):     My failure to procure myself a cup of sweet,
+green tea was not due to a simple misunderstanding. This was due to a
+fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she
+has every right to have that request met.
+Output context (CCI > 0.004):    Dat ik had gefaald om mezelf aan een kop zoete
+groene thee te helpen, was niet zomaar een misverstand. Het was te wijten aan
+een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+perspectief heeft een betalende klant die een redelijk verzoek(0.014) doet, op
+basis van haar voorkeuren, het recht om te krijgen wat ze vraag(0.004)t.
+#5.
+Generated output (CTI > 0.050):  De Amerikaanse(0.075) manier, om Burger King te
+citeren, is om het op jouw manier te hebben, want zoals Starbucks zegt, is geluk
+in je keuzes.
+Input context (CCI > 0.002):     My failure to procure myself a(0.002) cup of
+sweet, green tea was not due to a simple misunderstanding. This was due to a
+fundamental difference in our ideas about choice(0.002). From my(0.003) American
+perspective, when a paying customer makes a reasonable request based on her
+preferences, she has every right to have that request met(0.003).(0.003)
+Output context (CCI > 0.002):    Dat ik had gefaald om mezelf aan een kop zoete
+groene thee te helpen, was niet zomaar(0.002) een misverstand. Het was te wijten
+aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+perspectief heeft een betalen(0.002)de klant die een redelijk verzoek(0.003)
+doet, op basis van haar voorkeuren, het recht om te krijgen wat ze vraagt.
+#6.
+Generated output (CTI > 0.050):  De Amerikaanse manier, om(0.071) Burger King te
+citeren, is om het op jouw manier te hebben, want zoals Starbucks zegt, is geluk
+in je keuzes.
+Input context (CCI > 0.004):     My failure to procure myself a cup of sweet,
+green tea was not due to a simple misunderstanding. This was due to a
+fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she
+has every right to have that request met(0.005).(0.006)
+Output context (CCI > 0.004):    Dat ik had gefaald om mezelf aan een kop zoete
+groene thee te helpen, was niet zomaar(0.008) een misverstand. Het was te wijten
+aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+perspectief heeft een betalende klant die een redelijk verzoek doet, op basis
+van haar voorkeuren, het recht om te krijgen(0.004) wat(0.004) ze vraagt.
+#7.
+Generated output (CTI > 0.050):  De Amerikaanse manier, om Burger King te
+citeren, is om het op jouw manier te hebben, want zoals Starbucks zegt,
+is(0.067) geluk in je keuzes.
+Input context (CCI > 0.003):     My failure to(0.003) procure myself a cup of
+sweet, green tea was not due to a simple misunderstanding(0.004). This was due
+to a fundamental difference in our ideas about choice(0.004). From my American
+perspective, when a paying(0.004) customer makes a(0.003) reasonable request
+based on her preferences, she has every right to have that request met.
+Output context (CCI > 0.002):    Dat ik had gefaald om mezelf aan een kop zoete
+groene the(0.003)e te helpen, was niet zomaar(0.003) een misverstand. Het was te
+wijten aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn
+Amerikaanse perspectief heeft een betalende klant die een redelijk
+verzoek(0.003) doet, op basis van haar voorkeuren, het recht om te krijgen wat
+ze vraagt.
+#8.
+Generated output (CTI > 0.050):  De Amerikaanse manier, om Burger King te
+citeren, is om het op(0.062) jouw manier te hebben, want zoals Starbucks zegt,
+is geluk in je keuzes.
+Input context (CCI > 0.004):     My failure to(0.007) procure myself a cup of
+sweet, green tea was not due to a simple misunderstanding(0.005). This was due
+to a fundamental difference in our ideas about choice(0.007). From my American
+perspective, when a paying(0.006) customer makes a(0.005) reasonable request
+based on her preferences, she has every right to have that request met.
+Output context (CCI > 0.004):    Dat ik had gefaald om mezelf aan een kop zoete
+groene thee te helpen, was niet zomaar een misverstand. Het was te wijten aan
+een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+perspectief heeft een betalende klant die een redelijk verzoek(0.006) doet, op
+basis van haar voorkeuren, het recht om te krijgen wat ze vraagt.
+#9.
+Generated output (CTI > 0.050):  De Amerikaanse manier, om Burger King te
+citeren, is om het op jouw manier te hebben, want zoals Starbucks zegt, is geluk
+in je(0.060) keuzes.
+Input context (CCI > 0.001):     My failure to procure myself a cup of sweet,
+green tea was not due to a simple misunderstanding. This was due to a
+fundamental difference in our ideas about(0.002) choice. From my American
+perspective, when a paying(0.002) customer makes a(0.002) reasonable request
+based on her(0.001) preferences, she has every right to have that request met.
+Output context (CCI > 0.001):    Dat ik had gefaald om mezelf aan een kop zoete
+groene the(0.001)e te helpen, was niet zomaar een misverstand. Het was te wijten
+aan een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+perspectief heeft een betalende klant(0.003) die een redelijk verzoek(0.002)
+doet, op basis van haar voorkeuren, het recht om te krijgen(0.001) wat ze
+vraagt.
+#10.
+Generated output (CTI > 0.050):  De Amerikaanse manier(0.052), om Burger King te
+citeren, is om het op jouw manier te hebben, want zoals Starbucks zegt, is geluk
+in je keuzes.
+Input context (CCI > 0.002):     My failure to procure myself a cup of sweet,
+green tea was not due to a simple misunderstanding. This was due to a
+fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she
+has every right to have that request met.(0.002)
+Output context (CCI > 0.002):    Dat ik had gefaald om mezelf aan een kop zoete
+groene thee te helpen, was niet zomaar een misverstand. Het was te wijten aan
+een fundamenteel verschil in onze ideeën over keuze. Vanuit mijn Amerikaanse
+per(0.002)spectief heeft een betalende klant die een redelijk verzoek(0.006)
+doet, op basis van haar voorkeuren, het recht om te krijgen wat ze vraagt.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And you know the reason why, of course. This is because of
+technology -- yeah. Any computer designers in the room?
+Input current: Yeah well, you guys are making my life miserable because track
+pads used to be round, a nice round shape.
+Output context: En jullie willen weten waarom, natuurlijk. Vanwege de
+technologie. Zijn er computerontwerpers aanwezig in de zaal?
+Output current: Ja nou, jullie maken mijn leven ellendig omdat trackpads vroeger
+rond waren, een mooie ronde vorm.
+
+#1.
+Generated output (CTI > 0.042):  Ja(0.541) nou, jullie maken mijn leven ellendig
+omdat trackpads vroeger rond waren, een mooie ronde vorm.
+Input context (CCI > 0.024):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?(0.061)
+Output context (CCI > 0.022):    En jullie willen weten waarom, natuurlijk.
+Vanwege de technologie. Zijn er computerontwerpers aanwezig in de zaal?(0.026)
+#2.
+Generated output (CTI > 0.042):  Ja nou,(0.182) jullie maken mijn leven ellendig
+omdat trackpads vroeger rond waren, een mooie ronde vorm.
+Input context (CCI > 0.003):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?(0.007)
+Output context (CCI > 0.003):    En jullie willen weten waarom, natuurlijk.
+Vanwege de technologie. Zijn er computerontwerpers aanwezig in de zaal?(0.004)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  We do that in our personal lives. We do that corporate --
+whether it's a bailout, an oil spill ... a recall. We pretend like what we're
+doing doesn't have a huge impact on other people. I would say to companies, this
+is not our first rodeo, people.
+Input current: We just need you to be authentic and real and say ... "We're
+sorry. We'll fix it." But there's another way, and I'll leave you with this.
+Output context: Dat doen we in ons persoonlijke leven. We doen dat in het
+bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp een
+terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven zeggen: "We zijn niet van gisteren,
+mensen.
+Output current: We moeten authentiek en echt zijn en zeggen: "Het spijt ons. We
+zullen het repareren." Maar er is nog een andere manier, en ik zal jullie
+hiermee achterlaten.
+
+#1.
+Generated output (CTI > 0.056):  We moeten authentiek en echt zijn en zeggen:
+"Het(0.402) spijt ons. We zullen het repareren." Maar er is nog een andere
+manier, en ik zal jullie hiermee achterlaten.
+Input context (CCI > 0.002):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first(0.003) rodeo, people.
+Output context (CCI > 0.002):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven zeggen: "(0.003)We(0.004) zijn niet van
+gi(0.005)ster(0.004)en, mensen.
+#2.
+Generated output (CTI > 0.056):  We moeten aut(0.371)hentiek en echt zijn en
+zeggen: "Het spijt ons. We zullen het repareren." Maar er is nog een andere
+manier, en ik zal jullie hiermee achterlaten.
+Input context (CCI > 0.008):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first(0.011) rodeo,(0.010) people(0.009).(0.014)
+Output context (CCI > 0.008):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven zeggen: "(0.009)We zijn niet van gisteren,
+mensen(0.013).(0.013)
+#3.
+Generated output (CTI > 0.056):  We(0.362) moeten authentiek en echt zijn en
+zeggen: "Het spijt ons. We zullen het repareren." Maar er is nog een andere
+manier, en ik zal jullie hiermee achterlaten.
+Input context (CCI > 0.003):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first rodeo, people.(0.006)
+Output context (CCI > 0.003):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven zeggen: "We zijn niet van gisteren,(0.003)
+mensen(0.004).(0.008)
+#4.
+Generated output (CTI > 0.056):  We moeten(0.099) authentiek en echt zijn en
+zeggen: "Het spijt ons. We zullen het repareren." Maar er is nog een andere
+manier, en ik zal jullie hiermee achterlaten.
+Input context (CCI > 0.006):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first rodeo, people.(0.008)
+Output context (CCI > 0.007):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven zeggen: "(0.009)We zijn niet van
+gi(0.010)ster(0.007)en, mensen(0.011).(0.013)
+#5.
+Generated output (CTI > 0.056):  We moeten authentiek en echt zijn en zeggen:
+"(0.095)Het spijt ons. We zullen het repareren." Maar er is nog een andere
+manier, en ik zal jullie hiermee achterlaten.
+Input context (CCI > 0.004):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first rodeo, people.
+Output context (CCI > 0.004):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven zeggen:(0.006) "(0.015)We zijn niet van
+gisteren, mensen.(0.005)
+#6.
+Generated output (CTI > 0.056):  We moeten authentiek en echt zijn en zeggen:
+"Het spijt ons. We zullen het repareren." Maar er is nog een andere manier,
+en(0.094) ik zal jullie hiermee achterlaten.
+Input context (CCI > 0.002):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first(0.002) rodeo, people.
+Output context (CCI > 0.002):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken(0.004) of een
+olieramp een terugroepactie -- we doen net alsof wat we doen geen enorme impact
+heeft op andere mensen. Ik wil tegen bedrijven zeggen: "(0.002)We zijn niet van
+gi(0.002)steren, mensen.
+#7.
+Generated output (CTI > 0.056):  We moeten authentiek en echt zijn en zeggen:
+"Het spijt ons. We zullen het repareren."(0.083) Maar er is nog een andere
+manier, en ik zal jullie hiermee achterlaten.
+Input context (CCI > 0.001):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first(0.002) rodeo, people.
+Output context (CCI > 0.001):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven zeggen: "(0.003)We zijn niet van gisteren,
+mensen.(0.002)
+#8.
+Generated output (CTI > 0.056):  We moeten authentiek en echt zijn en zeggen:
+"Het spijt ons. We zullen(0.080) het repareren." Maar er is nog een andere
+manier, en ik zal jullie hiermee achterlaten.
+Input context (CCI > 0.004):     We do that in our personal lives. We do
+that(0.006) corporate -- whether it's a(0.005) bailout, an oil(0.008) spill ...
+a(0.009) recall. We pretend like what we're doing doesn't have a huge impact on
+other people. I would say to companies, this is not our first(0.010) rodeo,
+people.
+Output context (CCI > 0.004):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven zeggen: "We zijn niet van gisteren,
+mensen.
+#9.
+Generated output (CTI > 0.056):  We moeten authentiek en echt zijn en zeggen:
+"Het spijt ons. We zullen het repareren." Maar er is nog een andere manier, en
+ik zal jullie(0.072) hiermee achterlaten.
+Input context (CCI > 0.004):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say
+to(0.004) companies, this is not our first(0.006) rodeo,(0.010) people.
+Output context (CCI > 0.004):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil tegen bedrijven(0.009) zeggen: "We zijn niet van gisteren,
+mensen.
+#10.
+Generated output (CTI > 0.056):  We moeten authentiek en echt zijn en zeggen:
+"Het spijt ons. We zullen het repareren." Maar er is nog een andere manier, en
+ik zal(0.072) jullie hiermee achterlaten.
+Input context (CCI > 0.002):     We do that in our personal lives. We do
+that(0.003) corporate -- whether it's a bailout, an oil(0.003) spill ...
+a(0.003) recall. We(0.004) pretend like what we're doing doesn't have a huge
+impact on other people. I would say to companies, this is not our first(0.003)
+rodeo, people.
+Output context (CCI > 0.002):    Dat doen we in ons persoonlijke leven. We doen
+dat in het bedrijfsleven -- of het nu gaat om steun aan banken of een olieramp
+een terugroepactie -- we doen net alsof wat we doen geen enorme impact heeft op
+andere mensen. Ik wil(0.003) tegen bedrijven zeggen: "We zijn niet van gisteren,
+mensen.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And after the trial had been running for a little while, he
+gathered together all his colleagues around his table, and he said, "Well,
+gentlemen, we have some preliminary results. They're not statistically
+significant. But we have something.
+Input current: And it turns out that you're right and I'm wrong.
+Output context: Nadat de studie een tijdje bezig was, verzamelde hij al zijn
+collega's rond zijn tafel, en hij zei: “Nou, heren, we hebben een aantal
+voorlopige resultaten. Ze zijn niet statistisch significant. Maar we hebben
+iets.
+Output current: En het blijkt dat jullie gelijk hebben en ik verkeerd.
+
+#1.
+Generated output (CTI > 0.101):  En het blijkt dat jullie(0.630) gelijk hebben
+en ik verkeerd.
+Input context (CCI > 0.005):     And after the trial had been running for a
+little while, he gathered together all his colleagues around his table, and he
+said, "Well,(0.014) gent(0.005)le(0.009)men, we have some preliminary results.
+They're not statistically significant. But we have something.
+Output context (CCI > 0.004):    Nadat de studie een tijdje bezig was,
+verzamelde hij al zijn collega's rond zijn tafel, en hij zei: “Nou, heren, we
+hebben een aantal voorlopige resultaten. Ze zijn niet statistisch significant.
+Maar we hebben iets.
+#2.
+Generated output (CTI > 0.101):  En(0.183) het blijkt dat jullie gelijk hebben
+en ik verkeerd.
+Input context (CCI > 0.008):     And after the trial had been running for a
+little while, he gathered together all his colleagues around his table, and he
+said, "Well, gentlemen, we have some preliminary results. They're not
+statistically significant. But we have something(0.009).(0.015)
+Output context (CCI > 0.009):    Nadat de studie een tijdje bezig was,
+verzamelde hij al zijn collega's rond zijn tafel, en hij zei: “Nou, heren, we
+hebben een aantal voorlopige resultaten. Ze zijn niet statistisch significant.
+Maar we hebben iets.(0.026)
+#3.
+Generated output (CTI > 0.101):  En het blijkt dat jullie gelijk hebben en ik
+verkeerd(0.137).
+Input context (CCI > 0.001):     And after the trial had been running for a
+little while, he gathered together all his(0.001) colleagues around his table,
+and he said, "Well, gentlemen, we have some(0.001) preliminary results. They're
+not(0.002) statistically(0.002) significant. But we have(0.002) something.
+Output context (CCI > 0.001):    Nadat de studie een tijdje bezig was,
+verzamelde hij al zijn collega's rond zijn tafel, en hij zei: “Nou, heren, we
+hebben een aantal voorlopig(0.002)e resultaten. Ze zijn niet statistisch
+significant. Maar we hebben iets(0.002).
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  One of the weird things that's happened is, after the TED
+explosion, I got a lot of offers to speak all over the country -- everyone from
+schools and parent meetings to Fortune 500 companies. And so many of the calls
+went like this, "Dr. Brown, we loved your TED talk. We'd like you to come in and
+speak.
+Input current: We'd appreciate it if you wouldn't mention vulnerability or
+shame."
+Output context: Eén van de rare dingen die gebeurden na de TED-explosie, is dat
+ik overal gevraagd werd om te spreken -- van scholen en ouderavonden tot Fortune
+500-bedrijven. Vele gesprekken verliepen als volgt: "Hallo, Dr. Brown. We zijn
+dol op uw TEDTalk. We willen u graag als spreker.
+Output current: We zouden het waarderen als u niet sprak over kwetsbaarheid of
+schaamte."
+
+#1.
+Generated output (CTI > 0.196):  We zouden het waarderen als u(2.811) niet sprak
+over kwetsbaarheid of schaamte."
+Input context (CCI > 0.010):     One of the weird things that's happened is,
+after the TED explosion, I got a lot of offers to speak all over the country --
+everyone from schools and parent meetings to Fortune 500 companies. And so many
+of the calls went like this, "Dr. Brown, we loved your TED talk. We'd like you
+to come in and speak.
+Output context (CCI > 0.012):    Eén van de rare dingen die gebeurden na de
+TED-explosie, is dat ik overal gevraagd werd om te spreken -- van scholen en
+ouderavonden tot Fortune 500-bedrijven. Vele gesprekken verliepen als volgt:
+"Hallo, Dr. Brown. We zijn dol op uw TEDTalk. We willen u(0.058) graag als
+spreker.
+#2.
+Generated output (CTI > 0.196):  We zouden het waarderen als u niet (0.414)sprak
+over kwetsbaarheid of schaamte."
+Input context (CCI > 0.000):     One(0.000) of(0.000) the(0.000) weird(0.000)
+things(0.000) that's happened is, after the TED explosion, I got a lot of offers
+to speak all over the country -- everyone from schools and parent meetings to
+Fortune 500 companies. And so many of the calls went like this, "Dr. Brown, we
+loved your TED talk. We'd like you to come in and speak.
+Output context (CCI > 0.000):    E(0.000)én(0.000) van(0.000) de(0.000)
+rare(0.000) dingen die gebeurden na de TED-explosie, is dat ik overal gevraagd
+werd om te spreken -- van scholen en ouderavonden tot Fortune 500-bedrijven.
+Vele gesprekken verliepen als volgt: "Hallo, Dr. Brown. We zijn dol op uw
+TEDTalk. We willen u graag als spreker.
+#3.
+Generated output (CTI > 0.196):  We zouden het waarde(0.224)ren als u niet sprak
+over kwetsbaarheid of schaamte."
+Input context (CCI > 0.002):     One of the(0.003) weird things that's happened
+is, after the TED explosion, I got a lot of offers to speak all over the country
+-- everyone from schools and parent meetings to(0.004) Fortune 500 companies.
+And so many of the calls went like this, "(0.003)Dr. Brown, we loved your TED
+talk. We'd like you to come in and speak(0.003).(0.004)
+Output context (CCI > 0.002):    Eén van de rare dingen die gebeurden na de
+TED-explosie, is dat ik overal gevraagd werd om te spreken -- van scholen en
+ouderavonden tot Fortune 500-bedrijven. Vele gesprekken verliepen als volgt:
+"Hallo, Dr. Brown. We zijn dol op uw TEDTalk. We willen u graag(0.003)
+als(0.004) spre(0.002)ker.(0.003)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  Not based upon the quality of your work, how long you've been
+there, if you stink, just if you're gay, lesbian, bisexual or transgendered. All
+of which flies in the face of the gay agenda, also known as the U.S.
+Constitution. Specifically, this little amendment right here: "No state shall
+make or enforce any law which shall abridge the privileges or immunities of
+citizens of the United States." I'm looking at you, North Carolina.
+Input current: But you're not looking at the U.S. Constitution.
+Output context: Niet omwille van de kwaliteit van je werk, of hoe lang je daar
+al werkt, of je stinkt, alleen maar omdat je homo, lesbisch, biseksueel of
+transseksueel bent. Allemaal in tegenspraak met de homoseksuele agenda, ook
+bekend als de Amerikaanse grondwet. Specifiek, dit kleine amendement hier: ‘Geen
+enkele staat mag enige wet maken of opleggen die de voorrechten of immuniteiten
+van de burgers van de Verenigde Staten zal inperken.’ Ik kijk naar je, North
+Carolina.
+Output current: Maar je kijkt niet naar de Amerikaanse grondwet.
+
+#1.
+Generated output (CTI > 0.066):  Maar je(0.257) kijkt niet naar de Amerikaanse
+grondwet.
+Input context (CCI > 0.003):     Not based upon the quality of your work, how
+long you've been there, if you stink, just if you're gay, lesbian, bisexual or
+transgendered. All of which flies in the face of the gay agenda, also known as
+the U.S. Constitution. Specifically, this little amendment right here: "No state
+shall make or enforce any law which shall abridge the privileges or immunities
+of citizens of the United States."(0.003) I'm(0.009) looking at(0.003) you,
+North(0.005) Carolina.(0.004)
+Output context (CCI > 0.003):    Niet omwille van de kwaliteit van je werk, of
+hoe lang je daar al werkt, of je stinkt, alleen maar omdat je homo, lesbisch,
+biseksueel of transseksueel bent. Allemaal in tegenspraak met de homoseksuele
+agenda, ook bekend als de Amerikaanse grondwet. Specifiek, dit kleine amendement
+hier: ‘Geen enkele staat mag enige wet maken of opleggen die de voorrechten of
+immuniteiten van de burgers van de Verenigde Staten zal inperken.’ Ik
+kijk(0.003) naar(0.005) je(0.010), North Carolina.
+#2.
+Generated output (CTI > 0.066):  Maar je kijkt niet naar de Amerikaanse(0.174)
+grondwet.
+Input context (CCI > 0.007):     Not based upon the quality of your work, how
+long you've been there, if you stink, just if you're gay, lesbian, bisexual or
+transgendered. All of which flies in the face of the gay agenda, also known as
+the U.S.(0.007) Constitution. Specifically, this little amendment right here:
+"No state shall make or enforce any law which shall abridge the privileges or
+immunities of citizens of the United States." I'm looking at you, North
+Carolina.
+Output context (CCI > 0.008):    Niet omwille van de kwaliteit van je werk, of
+hoe lang je daar al werkt, of je stinkt, alleen maar omdat je homo, lesbisch,
+biseksueel of transseksueel bent. Allemaal in tegenspraak met de
+homoseksuel(0.014)e agenda, ook bekend als de Amerikaanse(0.037)
+grond(0.023)wet. Specifiek, dit kleine amendement hier: ‘Geen enkele staat mag
+enige wet maken of opleggen die de voorrechten of immuniteiten van de burgers
+van de Verenigde Staten zal inperken.’ Ik kijk naar je, North Carolina.
+#3.
+Generated output (CTI > 0.066):  Maar je kijkt niet naar de Amerikaanse
+grond(0.120)wet.
+Input context (CCI > 0.004):     Not based upon the quality of your work, how
+long you've been there, if you stink, just if you're gay, lesbian, bisexual or
+transgendered. All of which flies in the face of the gay agenda, also known as
+the U.S. Constitution. Specifically, this little amendment right here: "No state
+shall make or enforce any law which shall abridge the privileges or immunities
+of citizens of the United States." I'm looking at you, North Carolina.
+Output context (CCI > 0.005):    Niet omwille van de kwaliteit van je werk, of
+hoe lang je daar al werkt, of je stinkt, alleen maar omdat je homo, lesbisch,
+biseksueel of transseksueel bent. Allemaal in tegenspraak met de homoseksuele
+agenda, ook bekend als de Amerikaanse grond(0.030)wet. Specifiek, dit kleine
+amendement hier: ‘Geen enkele staat mag enige wet maken of opleggen die de
+voorrechten of immuniteiten van de burgers van de Verenigde Staten zal
+inperken.’ Ik kijk naar je, North Carolina.
+#4.
+Generated output (CTI > 0.066):  Maar(0.072) je kijkt niet naar de Amerikaanse
+grondwet.
+Input context (CCI > 0.001):     Not based upon the quality of your work, how
+long you've been there, if you stink, just if you're gay, lesbian, bisexual or
+transgendered. All of which flies in the face of the gay agenda, also known as
+the U.S. Constitution. Specifically, this little amendment right here: "No state
+shall make or enforce any law which shall abridge the privileges or immunities
+of citizens of the United States." I'm looking at you, North(0.002)
+Carolina(0.002).(0.004)
+Output context (CCI > 0.001):    Niet omwille van de kwaliteit van je werk, of
+hoe lang je daar al werkt, of(0.002) je stinkt, alleen maar omdat je homo,
+lesbisch, biseksueel of transseksueel bent. Allemaal in tegenspraak met de
+homoseksuele agenda, ook bekend als de Amerikaanse grondwet. Specifiek, dit
+kleine amendement hier: ‘(0.002)Geen enkele staat mag enige wet maken of
+opleggen die de voorrechten of immuniteiten van de burgers van de Verenigde
+Staten zal inperken.’ Ik kijk naar je, North Carolina(0.002).(0.005)
+
+
+ERROR for row 13 with language [nl]
+Output template '{context} {current}' contains prefix 'CA: Hoe gaaf is data  Elon, hoe heb je dit gedaan? Deze projecten zijn zo -- PayPal, SolarCity, Tesla, SpaceX, ze zijn zo spectaculair anders, het zijn zeer grote, ambitieuze projecten. Hoe is het in hemelsnaam mogelijk, dat één persoon zó kan innoveren?' but output 'CA: Hoe gaaf is data Elon, hoe heb je dit gedaan? Deze projecten zijn zo -- PayPal, SolarCity, Tesla, SpaceX, ze zijn zo spectaculair anders, het zijn zeer grote, ambitieuze projecten. Hoe is het in hemelsnaam mogelijk, dat één persoon zó kan innoveren? Wat heb je aan jou?' does not match the prefix. Please check whether the template is correct, or force context/current outputs.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And the week before I showed up, the CEO of this big software
+company went to that group, 200 engineers, and canceled the project. And I stood
+there in front of 200 of the most depressed people I've ever talked to. And I
+described to them some of these Lego experiments, and they said they felt like
+they had just been through that experiment.
+Input current: And I asked them, I said, "How many of you now show up to work
+later than you used to?"
+Output context: De week voor ik opdook, vertelde de CEO van het softwarebedrijf
+aan de groep van 200 ingenieurs dat het project geannuleerd was. Ik moest 200
+van de meest depressieve mensen die ik ooit ontmoette, toespreken. Ik beschreef
+hen enkele van mijn Lego-experimenten en ze bevestigden dat ze zich voelden
+alsof ze net aan zo'n experiment deelnamen.
+Output current: Ik vroeg hen: "Hoeveel van jullie komen nu later op het werk dan
+vroeger?"
+
+#1.
+Generated output (CTI > 0.041):  Ik vroeg hen:(0.162) "Hoeveel van jullie komen
+nu later op het werk dan vroeger?"
+Input context (CCI > 0.001):     And the week before I showed up, the CEO of
+this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these(0.001) Lego experiments,
+and they said they felt like they had just been through that experiment.
+Output context (CCI > 0.001):    De week voor ik opdook, vertel(0.001)de de CEO
+van het softwarebedrijf aan de groep van 200 ingenieurs dat het project
+geannuleerd was. Ik moest 200 van de meest depressieve mensen die ik ooit
+ontmoette, toespreken. Ik beschreef hen enkele van mijn Lego-experimenten en ze
+bevestigden dat ze zich voelden alsof ze net aan zo'n experiment
+deelname(0.003)n.(0.001)
+#2.
+Generated output (CTI > 0.041):  Ik vroeg hen: "Hoeveel van jullie komen nu
+later op het(0.125) werk dan vroeger?"
+Input context (CCI > 0.004):     And the week before I(0.005) showed up,
+the(0.008) CEO of this big(0.004) software company went to that group,
+200(0.005) engineers, and canceled the project. And I stood there in front of
+200 of the most depressed people I've ever talked to. And I described to them
+some of these(0.006) Lego experiments, and they said they felt like they had
+just been through that experiment.
+Output context (CCI > 0.004):    De week voor ik op(0.005)do(0.007)ok, vertelde
+de CEO van het softwarebedrijf aan de groep van 200 ingenieurs dat het project
+geannuleerd was. Ik moest 200 van de meest depressieve mensen die ik ooit
+ontmoette, toespreken. Ik beschreef hen enkele van mijn Lego-experimenten en ze
+bevestigden dat ze zich voelden alsof ze net aan zo'n experiment
+deelname(0.012)n.
+#3.
+Generated output (CTI > 0.041):  Ik vroeg hen: "Hoeveel van jullie komen nu
+later op(0.125) het werk dan vroeger?"
+Input context (CCI > 0.004):     And the week before I(0.011) showed(0.009) up,
+the CEO of this big software company went to that group, 200 engineers, and
+canceled the project. And I stood there in front of 200 of the most depressed
+people I've ever talked to. And I described to them some of these(0.005) Lego
+experiments, and they said they felt like they had just been through that
+experiment.
+Output context (CCI > 0.004):    De week voor ik op(0.009)dook, vertelde de CEO
+van het softwarebedrijf aan de groep van 200 ingenieurs dat het project
+geannuleerd was. Ik moest 200 van de meest depressieve mensen die ik ooit
+ontmoette, toespreken. Ik beschreef hen enkele van mijn Lego-experimenten en ze
+bevestigden dat ze zich voelden alsof ze net aan zo'n experiment
+deelname(0.008)n.
+#4.
+Generated output (CTI > 0.041):  Ik vroeg hen: "Hoeveel van jullie komen nu
+later op het werk dan vroeger(0.057)?"
+Input context (CCI > 0.002):     And the week before I showed up, the(0.003) CEO
+of this big(0.003) software company went to that group, 200 engineers, and
+canceled the project. And I stood there in front of 200 of the most depressed
+people I've ever talked to. And I described to them some of these(0.003) Lego
+experiments, and they said they felt like they had just been through that
+experiment.
+Output context (CCI > 0.002):    De week voor ik opdook, vertelde de CEO van het
+softwarebedrijf aan de groep van 200 ingenieurs dat het project geannuleerd was.
+Ik moest 200 van de meest depressieve mensen die ik ooit ontmoette, toespreken.
+Ik beschreef hen enkele van mijn Lego-experimenten en ze bevestigden dat ze zich
+voelden alsof ze net aan zo'n experiment deelname(0.008)n.
+#5.
+Generated output (CTI > 0.041):  Ik vroeg hen: "Hoeveel van(0.057) jullie komen
+nu later op het werk dan vroeger?"
+Input context (CCI > 0.002):     And the week before I showed up, the(0.002) CEO
+of this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these(0.003) Lego experiments,
+and they said they felt like they had just been through that experiment.
+Output context (CCI > 0.002):    De week voor ik opdook, vertelde de CEO van het
+softwarebedrijf aan de groep van 200 ingenieurs dat het project geannuleerd was.
+Ik moest 200 van de meest depressieve mensen die ik ooit ontmoette, toespreken.
+Ik beschreef hen enkele van mijn Lego-experimenten en ze bevestigden dat ze zich
+voelden alsof ze net aan zo'n experiment deelname(0.007)n.
+#6.
+Generated output (CTI > 0.041):  Ik vroeg hen: "Ho(0.046)eveel van jullie komen
+nu later op het werk dan vroeger?"
+Input context (CCI > 0.001):     And the week before I showed up, the(0.002) CEO
+of this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these(0.003) Lego experiments,
+and they said they felt like they had just been through that experiment.
+Output context (CCI > 0.001):    De week voor ik opdook, vertelde de CEO van het
+softwarebedrijf aan de groep van 200 ingenieurs dat het project geannuleerd was.
+Ik moest 200 van de meest depressieve mensen die ik ooit ontmoette, toespreken.
+Ik beschreef hen enkele van mijn Lego-experimenten en ze bevestigden dat ze zich
+voelden alsof ze net aan zo'n experiment deelname(0.004)n.(0.002)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  Sometimes Brian and I walk through the park with Scarlett, and
+she rolls through the grass, and we just look at her and then we look at each
+other and we feel gratitude. We forget about all of our new middle-class
+frustrations and disappointments, and we feel like millionaires.
+Input current: Thank you.
+Output context: Soms lopen Brian en ik met Scarlett door het park en rolt ze
+door het gras. We kijken naar haar en dan kijken we naar elkaar en we voelen
+dankbaarheid. We vergeten onze middenklasse-frustraties en teleurstellingen en
+we voelen ons miljonairs.
+Output current: Dankuwel.
+
+#1.
+Generated output (CTI > 0.110):  Danku(0.223)wel.
+Input context (CCI > 0.007):     Sometimes Brian and I walk through the park
+with Scarlett, and she rolls through the grass, and we just look at her and then
+we look at each other and we feel gratitude. We forget about all of our new
+middle-class frustrations and disappointments, and we feel like
+millionaires.(0.023)
+Output context (CCI > 0.006):    Soms lopen Brian en ik met Scarlett door het
+park en rolt ze door het gras. We kijken naar haar en dan kijken we naar elkaar
+en we voelen dankbaarheid. We vergeten onze middenklasse-frustraties en
+teleurstellingen en we voelen ons miljon(0.006)airs.(0.010)
+#2.
+Generated output (CTI > 0.110):  Dank(0.180)uwel.
+Input context (CCI > 0.003):     Sometimes Brian and I walk through the park
+with Scarlett, and she rolls through the grass, and we just look at her and then
+we look at each other and we feel gratitude. We forget about all of our new
+middle-class frustrations and disappointments, and we feel like
+millionaires.(0.013)
+Output context (CCI > 0.003):    Soms lopen Brian en ik met Scarlett door het
+park en rolt ze door het gras. We kijken naar haar en dan kijken we naar elkaar
+en we voelen dankbaarheid. We vergeten onze middenklasse-frustraties en
+teleurstellingen en we voelen ons miljonairs.(0.008)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  Hi, sir, could you stand up, please? Just right where you are.
+You're married, you follow directions well. Nice to meet you, sir.
+Input current: You don't have a lot in your pockets. Anything down here?
+Output context: Meneer, kunt u alstublieft voor me opstaan? Gewoon, waar u bent.
+U bent gehuwd. U volgt de aanwijzingen goed op. Aangename kennismaking.
+Output current: U heeft niet veel in uw zak. Iets hier beneden?
+
+#1.
+Generated output (CTI > 0.152):  U(1.556) heeft niet veel in uw zak. Iets hier
+beneden?
+Input context (CCI > 0.020):     Hi, sir, could you stand up, please? Just right
+where you are. You're married, you follow directions well. Nice to meet you,
+sir.
+Output context (CCI > 0.022):    Mene(0.026)er, kunt u alstublieft voor me
+opstaan? Gewoon, waar u bent. U(0.046) bent gehuwd. U(0.033) volgt de
+aanwijzingen goed op. Aangename kennismaking.(0.023)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  there's one more thing, there's one final piece of the puzzle.
+Gwen, I am so grateful for your choices
+Input current: because if we take a look at the first letters of your
+combinations, we get "C-H-A-O-S" for chaos and "O-R-D-E-R" for order.
+Output context: Nog één ding. Het laatste puzzelstukje. Gwen, ik ben zo dankbaar
+voor jouw keuzes.
+Output current: Als we kijken naar de eerste letters van je combinaties, krijgen
+we "C-H-A-O-S" voor chaos en "O-R-D-E-R" voor orde.
+
+#1.
+Generated output (CTI > 0.021):  Als we kijken naar de eerste letters van
+je(0.451) combinaties, krijgen we "C-H-A-O-S" voor chaos en "O-R-D-E-R" voor
+orde.
+Input context (CCI > 0.011):     there's one more thing, there's one final piece
+of the puzzle. Gwen, I am so grateful for your choices
+Output context (CCI > 0.012):    Nog één ding. Het laatste puzzelstukje. Gwen,
+ik ben zo dankbaar voor jouw(0.032) keuzes.
+#2.
+Generated output (CTI > 0.021):  Als(0.309) we kijken naar de eerste letters van
+je combinaties, krijgen we "C-H-A-O-S" voor chaos en "O-R-D-E-R" voor orde.
+Input context (CCI > 0.023):     there's one more thing, there's one final piece
+of the puzzle.(0.040) Gwen, I am so grateful for your choices(0.025)
+Output context (CCI > 0.024):    Nog één ding. Het laatste puzzelstukje. Gwen,
+ik ben zo dankbaar voor jouw keuzes.(0.043)
+#3.
+Generated output (CTI > 0.021):  Als we kijken(0.024) naar de eerste letters van
+je combinaties, krijgen we "C-H-A-O-S" voor chaos en "O-R-D-E-R" voor orde.
+Input context (CCI > 0.005):     there's one more thing, there's one final piece
+of the puzzle.(0.010) Gwen, I am so(0.005) grateful for your choices
+Output context (CCI > 0.005):    Nog één ding. Het laatste puzzelstukje. Gwen,
+ik ben zo dankbaar voor jouw(0.005) keuzes.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  We truly do all understand it, and we have this global digital
+fireplace, don't we, but I want to share you with the world, because you are
+also a tribe. You are the TED tribe, yeah? But you have to remember that
+compliment.
+Input current: You have to stand tall, breathe in through your nose, and I'm
+going to photograph you. Okay?
+Output context: We begrijpen het echt en we hebben zo'n wereldwijd digitaal
+kampvuur, niet waar? Maar ik wil jullie met de wereld delen, want jullie zijn
+ook een stam. Jullie zijn toch de TED-stam? Maar je moet aan dat compliment
+denken.
+Output current: Je moet recht staan, door je neus ademen, en ik ga jullie
+fotograferen. Oké?
+
+#1.
+Generated output (CTI > 0.047):  Je moet recht staan, door je neus ademen, en ik
+ga jullie(0.420) fotograferen. Oké?
+Input context (CCI > 0.022):     We truly do all understand it, and we have this
+global digital fireplace, don't we, but I want to share you with the world,
+because you are also a tribe. You are the TED tribe, yeah? But you have to
+remember that compliment.
+Output context (CCI > 0.024):    We begrijpen het echt en we hebben zo'n
+wereldwijd digitaal kampvuur, niet waar? Maar ik wil jullie(0.069) met de wereld
+delen, want jullie(0.031) zijn ook een stam. Jul(0.040)lie zijn toch de
+TED-stam? Maar je moet aan dat compliment denken.
+#2.
+Generated output (CTI > 0.047):  Je moet recht staan, door je neus ademen, en ik
+ga(0.142) jullie fotograferen. Oké?
+Input context (CCI > 0.002):     We(0.003) truly do all understand it, and we
+have this global(0.004) digital fireplace, don't we, but I want to(0.002) share
+you with the world, because you are also a tribe. You are the (0.002)TED tribe,
+yeah? But you have to remember that(0.004) compliment.
+Output context (CCI > 0.002):    We begrijpen het echt en we hebben zo'n
+wereldwijd digitaal kampvuur, niet waar? Maar ik wil jullie met de wereld delen,
+want jullie zijn ook een stam. Jullie zijn toch de TED-stam? Maar je moet(0.004)
+aan dat compliment denken.
+#3.
+Generated output (CTI > 0.047):  Je moet recht staan(0.119), door je neus
+ademen, en ik ga jullie fotograferen. Oké?
+Input context (CCI > 0.003):     We truly do all understand it, and we have this
+global digital fireplace, don't we, but I want to share you with the world,
+because you are also a tribe. You are the TED tribe, yeah? But you have to
+remember that(0.008) compliment.
+Output context (CCI > 0.003):    We begrijpen het echt en we hebben zo'n
+wereldwijd digitaal kampvuur, niet waar? Maar ik wil jullie met de wereld delen,
+want jullie zijn ook een stam. Jullie zijn toch de TED-stam? Maar je moet aan
+dat compliment(0.004) denken(0.004).
+#4.
+Generated output (CTI > 0.047):  Je(0.107) moet recht staan, door je neus
+ademen, en ik ga jullie fotograferen. Oké?
+Input context (CCI > 0.007):     We truly do all understand it, and we have this
+global digital fireplace, don't we, but I want to share you with the world,
+because you are also a tribe. You are the TED tribe, yeah? But you have to
+remember that(0.009) compliment.(0.009)
+Output context (CCI > 0.007):    We begrijpen het echt en we hebben zo'n
+wereldwijd digitaal kampvuur, niet waar? Maar ik wil jullie met de wereld delen,
+want jullie(0.009) zijn ook een stam. Jul(0.020)lie zijn toch de TED-stam? Maar
+je(0.009) moet aan dat compliment denken.(0.010)
+
+
+ERROR for row 19 with language [nl]
+Output template '{context} {current}' contains prefix 'LT:  JF: Nee, dat is waar. Ik besta omdat ik vriendinnen heb. Jij bent er één van.' but output 'LT: JF: Nee, dat is waar. Ik besta omdat ik vriendinnen heb. Jij bent er één van. Ik weet niets van jou. Maar hoe dan ook.' does not match the prefix. Please check whether the template is correct, or force context/current outputs.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  Woman: There is no Paradise! It only exists in your head! Man:
+God forbid! May God forgive you.
+Input current: If you were not Abu Azzam's daughter ...
+Output context: Женщина: Рая не существует! он существует только в вашей голове!
+Мужчина: Бог запрещает! Да простит тебя Бог.
+Output current: Если ты не дочь Абу Аззама...
+
+#1.
+Generated output (CTI > 0.083):  Если(0.346) ты не дочь Абу Аззама...
+Input context (CCI > 0.011):     Woman: There is no Paradise! It only exists in
+your head! Man: God forbid! May God forgive you.
+Output context (CCI > 0.012):    Женщина: Рая не существует! он существует
+только в вашей голове! Мужчина: Бог запрещает! Да простит тебя
+Бог(0.014).(0.026)
+#2.
+Generated output (CTI > 0.083):  Если ты(0.179) не дочь Абу Аззама...
+Input context (CCI > 0.026):     Woman: There is no Paradise! It only exists in
+your head! Man: God forbid! May God forgive you.(0.055)
+Output context (CCI > 0.025):    Женщина: Рая не существует! он существует
+только в вашей(0.038) голове! Мужчина: Бог запрещает! Да простит тебя(0.029)
+Бог.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And so on. There is a little bit of a difference there that is
+worth just --  -- thinking about. And I remember when I was 12 years old, and I
+started playing tympani and percussion, and my teacher said, "Well, how are we
+going to do this? You know, music is about listening." And I said, "Yes, I agree
+with that. So what's the problem?" And he said, "Well, how are you going to hear
+this? How are you going to hear that?"
+Input current: And I said, "Well, how do you hear it?"
+Output context: И так далее. Здесь есть небольшая разница, о которой стоит
+просто подумать. И я помню, когда мне было 12 лет, и я начал играть на барабане
+и перкуссии, мой учитель спросил: "Ну и как мы будем это делать?" Ты же знаешь,
+музыка - это то, что нужно слушать." И я сказал: "Да, я согласен с этим. Так в
+чем проблема?" И он сказал: "Ну, и как ты собираешься это услышать? Как ты
+собираешься это услышать?"
+Output current: И я сказал: "Ну и как ты это слышишь?"
+
+#1.
+Generated output (CTI > 0.638):  И я сказал: "(2.613)Ну и как ты это слышишь?"
+Input context (CCI > 0.001):     And so on. There is a little bit of a
+difference there that is worth just -- -- thinking about. And I remember when I
+was 12 years old, and I started playing tympani and percussion, and my teacher
+said, "Well, how are we going to do this? You know, music is about listening."
+And I said, "Yes, I agree with that. So what's the problem?" And he said, "Well,
+how are you going to hear this? How are you going to hear that?"
+Output context (CCI > 0.001):    И так далее. Здесь есть небольшая разница, о
+которой стоит просто подумать. И я помню, когда мне было 12 лет, и я начал
+играть на барабане и перкуссии, мой учитель спросил: "Ну(0.001) и как мы будем
+это делать?" Ты же знаешь, музыка - это то, что нужно слушать." И я сказал:
+"(0.001)Да, я согласен с этим. Так в чем проблема?" И он сказал:
+"(0.002)Ну(0.001), и как ты собираешься это услышать? Как ты собираешься это
+услышать?"(0.002)
+#2.
+Generated output (CTI > 0.638):  И я сказал: "Ну и как ты(1.330) это слышишь?"
+Input context (CCI > 0.003):     And so on. There is a little bit of a
+difference there that is worth just -- -- thinking about. And I remember when I
+was 12 years old, and I started playing tympani and percussion, and my teacher
+said, "Well, how are we going to do this? You know, music is about listening."
+And I said, "Yes, I agree with that. So what's the problem?" And he said, "Well,
+how are you going to hear this? How are you going to hear that?"
+Output context (CCI > 0.004):    И так далее. Здесь есть небольшая разница, о
+которой стоит просто подумать. И я помню, когда мне было 12 лет, и я начал
+играть на барабане и перкуссии, мой учитель спросил: "Ну и как мы будем это
+делать?" Ты же знаешь, музыка - это то, что нужно слушать." И я сказал: "Да, я
+согласен с этим. Так в чем проблема?" И он сказал: "Ну, и как ты(0.018)
+собира(0.004)ешься это услышать? Как ты(0.005) собираешься это услышать(0.004)?"
+#3.
+Generated output (CTI > 0.638):  И я сказал: "Ну(1.323) и как ты это слышишь?"
+Input context (CCI > 0.005):     And so on. There is a little bit of a
+difference there that is worth just -- -- thinking about. And I remember when I
+was 12 years old, and I started playing tympani and percussion, and my teacher
+said, "Well, how are we going to do this? You know, music is about listening."
+And I said, "Yes, I agree with that. So what's the problem?" And he said, "Well,
+how are you going to hear this? How are you going to hear that?"
+Output context (CCI > 0.005):    И так далее. Здесь есть небольшая разница, о
+которой стоит просто подумать. И я помню, когда мне было 12 лет, и я начал
+играть на барабане и перкуссии, мой учитель спросил: "Ну(0.020) и как мы будем
+это делать?" Ты же знаешь, музыка - это то, что нужно слушать." И я сказал: "Да,
+я согласен с этим. Так в чем проблема?" И он сказал: "Ну(0.022), и как ты
+собираешься это услышать? Как ты собираешься это услышать?"
+#4.
+Generated output (CTI > 0.638):  И(1.104) я сказал: "Ну и как ты это слышишь?"
+Input context (CCI > 0.006):     And so on. There is a little bit of a
+difference there that is worth just -- -- thinking about. And I remember when I
+was 12 years old, and I started playing(0.007) tympani and percussion, and my
+teacher said, "Well, how are we going to do this? You know, music is about
+listening." And I said, "Yes, I agree with that. So what's the problem?" And he
+said, "Well, how are you going to hear this? How are you going to hear
+that(0.011)?"(0.013)
+Output context (CCI > 0.006):    И так далее. Здесь есть небольшая разница, о
+которой стоит просто подумать. И я помню, когда мне было 12 лет, и я начал
+играть на барабане и перкуссии, мой учитель спросил(0.007): "Ну и как мы будем
+это делать?" Ты(0.009) же знаешь, музыка - это то, что нужно слушать." И(0.008)
+я сказал: "Да, я согласен с этим. Так в чем проблема?" И он сказал: "Ну, и как
+ты собираешься это услышать? Как ты собираешься это услышать?"(0.018)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And so he's assembled a group of people. And I've fallen in love
+with him, as I have with Herbie and with his music. And Quincy said, "Where did
+the idea for centers like this come from?"
+Input current: And I said, "It came from your music, man. Because Mr. Ross used
+to bring in your albums when I was 16 years old in the pottery class,
+Output context: И вот он собрал группу людей. И я влюбился в него, как и в
+Херби, и в его музыку. И Куинси спросил: "Откуда взялась идея создания подобных
+центров?"
+Output current: Я сказал: "Это произошло от твоей музыки, человек. Потому что
+мистер Росс приносил твои альбомы, когда мне было 16 лет в классе керамики,
+
+#1.
+Generated output (CTI > 0.125):  Я сказал: "(1.386)Это произошло от твоей
+музыки, человек. Потому что мистер Росс приносил твои альбомы, когда мне было 16
+лет в классе керамики,
+Input context (CCI > 0.002):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.002):    И вот он собрал группу людей. И я влюбился в
+него, как и в Херби, и в его музыку. И Куинси спросил(0.003): "(0.006)Откуда
+взялась идея создания подобных центров?"(0.003)
+#2.
+Generated output (CTI > 0.125):  Я(0.978) сказал: "Это произошло от твоей
+музыки, человек. Потому что мистер Росс приносил твои альбомы, когда мне было 16
+лет в классе керамики,
+Input context (CCI > 0.010):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"(0.012)
+Output context (CCI > 0.012):    И вот он собрал группу людей. И я влюбился в
+него, как и в Херби, и в его музыку. И Куинси спросил(0.028): "Откуда взялась
+идея создания подобных центров?"(0.022)
+#3.
+Generated output (CTI > 0.125):  Я сказал(0.425): "Это произошло от твоей
+музыки, человек. Потому что мистер Росс приносил твои альбомы, когда мне было 16
+лет в классе керамики,
+Input context (CCI > 0.012):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.014):    И вот он собрал группу людей. И я влюбился в
+него, как и в Херби, и в его музыку. И Куинси спросил(0.051): "Откуда взялась
+идея создания подобных центров?"
+#4.
+Generated output (CTI > 0.125):  Я сказал: "Это произошло от твоей музыки,
+человек. Потому что мистер Росс приносил твои(0.361) альбомы, когда мне было 16
+лет в классе керамики,
+Input context (CCI > 0.003):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music.
+And(0.003) Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.003):    И вот он собрал группу людей. И я влюбился в
+него, как и в Херби, и в его музыку. И Куинси спросил(0.004): "Откуда
+взял(0.003)ась идея создания(0.003) подобных центров?"(0.003)
+#5.
+Generated output (CTI > 0.125):  Я сказал:(0.266) "Это произошло от твоей
+музыки, человек. Потому что мистер Росс приносил твои альбомы, когда мне было 16
+лет в классе керамики,
+Input context (CCI > 0.004):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.004):    И вот он собрал группу людей. И я влюбился в
+него, как и в Херби, и в его музыку. И Куинси спросил(0.009):(0.010) "Откуда
+взялась идея создания подобных центров?"
+#6.
+Generated output (CTI > 0.125):  Я сказал: "Это(0.256) произошло от твоей
+музыки, человек. Потому что мистер Росс приносил твои альбомы, когда мне было 16
+лет в классе керамики,
+Input context (CCI > 0.008):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music. And
+Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.009):    И вот он собрал группу людей. И я влюбился в
+него, как и в Херби, и в его музыку. И Куинси спросил: "От(0.016)куда
+взял(0.019)ась идея создания подобных центров?"(0.011)
+#7.
+Generated output (CTI > 0.125):  Я сказал: "Это произошло от твоей музыки,
+человек(0.212). Потому что мистер Росс приносил твои альбомы, когда мне было 16
+лет в классе керамики,
+Input context (CCI > 0.003):     And so he's (0.004)assembled a group of people.
+And I've fallen in love with him, as I have with Herbie and with his music.
+And(0.006) Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.003):    И вот(0.003) он собрал группу людей. И я
+влюбился в него, как и в Херби, и в его музыку. И Куинси спросил(0.006): "Откуда
+взял(0.004)ась идея создания подобных центров?"
+#8.
+Generated output (CTI > 0.125):  Я сказал: "Это произошло от твоей музыки,
+человек. Потому что мистер Росс приносил твои альбомы, когда мне было 16 лет в
+классе керамики,(0.181)
+Input context (CCI > 0.001):     And so he's assembled a group of people. And
+I've fallen in love with him, as I have with Herbie and with his music.
+And(0.001) Quincy said, "Where did the idea for centers like this come from?"
+Output context (CCI > 0.001):    И вот(0.001) он собрал группу людей. И я
+влюбился в него, как и в Херби, и в его музыку. И Куинси спросил(0.001): "Откуда
+взял(0.001)ась идея создания(0.001) подобных центров?"
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  They said they were going to beat us up if we didn't make some
+gunpowder for them. We said, well, what are you going to do with it? They said,
+we're going to melt it down and make rocket fuel.
+Input current: Sure. We'll make you a big batch.
+Output context: Они сказали, что изобьют нас, если мы не сделаем для них немного
+пороха. Мы сказали, хорошо, что вы будете делать с этим? Они сказали, что мы
+собираемся расплавить его и сделать ракетное топливо.
+Output current: Конечно. Мы сделаем вам большую партию.
+
+#1.
+Generated output (CTI > 0.167):  Конечно(1.263). Мы сделаем вам большую партию.
+Input context (CCI > 0.009):     They said they were going to beat us up if we
+didn't make some gunpowder for them. We said, well, what are you going to do
+with it? They said, we're going to melt it down and make rocket fuel.(0.024)
+Output context (CCI > 0.009):    Они сказали, что изобьют нас, если мы не
+сделаем для них немного(0.010) пороха. Мы сказали, хорошо, что вы будете делать
+с этим? Они сказали, что мы собираемся расплавить его и сделать ракетное
+топливо.(0.020)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  The rabbi came in and saw what was going on. And he called the
+two of them to his office. And he said, you know, "This is what's happening."
+Input current: And the rich man -- oh, dear -- crestfallen. "You mean God didn't
+want my bread?"
+Output context: Раввин вошел и увидел, что происходит. И он позвал их обоих к
+себе в кабинет. И он сказал, знаете, "Вот что происходит".
+Output current: И богатый человек - о, дорогой - упал.
+
+#1.
+Generated output (CTI > 0.212):  И(1.623) богатый человек - о, дорогой - упал.
+Input context (CCI > 0.006):     The rabbi came in and saw what was going on.
+And he called the two of them to his office. And he said, you know, "This is
+what's happening."(0.008)
+Output context (CCI > 0.007):    Раввин вошел и увидел, что происходит. И он
+позвал их обоих к себе в кабинет. И он сказал, знаете, "Вот что
+происходит".(0.014)
+#2.
+Generated output (CTI > 0.212):  И богатый человек -(0.429) о, дорогой - упал.
+Input context (CCI > 0.007):     The rabbi came in and saw what was going on.
+And he called the two of them to his office. And he said, you know, "This is
+what's happening."
+Output context (CCI > 0.008):    Раввин вошел и увидел, что происходит. И он
+позвал их обоих к себе в кабинет. И он сказал, знаете(0.009), "(0.020)Вот что
+происходит".
+#3.
+Generated output (CTI > 0.212):  И богат(0.214)ый человек - о, дорогой - упал.
+Input context (CCI > 0.001):     The(0.002) rabbi came in and saw what was going
+on. And he called the two of them to his office. And he said, you know, "This is
+what's(0.002) happening."
+Output context (CCI > 0.001):    Раввин вошел и увидел, что происходит. И он
+позвал их обоих к себе в кабинет. И он сказал, знаете, "Вот что
+происходит(0.002)".(0.002)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And the rich man -- oh, dear -- crestfallen. "You mean God
+didn't want my bread?" And the poor man said, "And you mean God didn't answer my
+pleas?" And the rabbi said, "You've misunderstood me.
+Input current: You've misunderstood totally," he said.
+Output context: И богач - о боже! - пал духом. "Ты хочешь сказать, что Богу не
+нужен был мой хлеб?" И бедняк сказал: "И ты хочешь сказать, что Бог не ответил
+на мои мольбы?" И раввин сказал: "Вы меня неправильно поняли.
+Output current: Вы совершенно неправильно поняли", - сказал он.
+
+#1.
+Generated output (CTI > 0.745):  Вы совершенно неправильно поняли",(3.095) -
+сказал он.
+Input context (CCI > 0.003):     And the rich man -- oh, dear -- crestfallen.
+"You mean God didn't want my bread?" And the poor man said, "And you mean God
+didn't answer my pleas?" And the rabbi said, "You've misunderstood me.
+Output context (CCI > 0.004):    И богач - о боже!(0.008) - пал духом. "Ты
+хочешь сказать, что Богу не нужен был мой хлеб?" И бедняк сказал: "И ты хочешь
+сказать, что Бог не ответил на мои мольбы?" И раввин сказал: "(0.005)Вы меня
+неправильно понял(0.004)и.(0.004)
+#2.
+Generated output (CTI > 0.745):  Вы(2.022) совершенно неправильно поняли", -
+сказал он.
+Input context (CCI > 0.005):     And the rich man -- oh, dear -- crestfallen.
+"You mean God didn't want my bread?" And the poor man said, "And you mean God
+didn't answer my pleas?" And the rabbi said, "You've misunderstood me.
+Output context (CCI > 0.006):    И богач - о боже! - пал духом. "Ты хочешь
+сказать, что Богу не нужен был мой хлеб?" И бедняк сказал: "И ты хочешь сказать,
+что Бог не ответил на мои мольбы?" И раввин сказал: "Вы(0.017) меня
+неправильно(0.011) поняли.(0.010)
+#3.
+Generated output (CTI > 0.745):  Вы совершенно неправильно(0.864) поняли", -
+сказал он.
+Input context (CCI > 0.011):     And the rich man -- oh, dear -- crestfallen.
+"You mean God didn't want my bread?" And the poor man said, "And you mean God
+didn't answer my pleas?" And the rabbi said, "You've misunderstood me.
+Output context (CCI > 0.012):    И богач - о боже! - пал духом. "Ты хочешь
+сказать, что Богу не нужен был мой хлеб?" И бедняк сказал: "И ты хочешь сказать,
+что Бог не ответил на мои мольбы?" И раввин сказал: "Вы меня неправильно(0.048)
+понял(0.012)и.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  It wasn't this arm-wrestle, but it was a little surprising for
+the person involved. I interviewed Steve Martin. It wasn't all that long ago.
+And we were sitting there, and almost toward the beginning of the interview, I
+turned to him and I said, "Steve," or "Mr. Martin, it is said that all comedians
+have unhappy childhoods.
+Input current: Was yours unhappy?"
+Output context: Это был не настоящий армрестлинг, но для человека,
+участвовавшего в нем, это было немного неожиданно. Я брал интервью у Стива
+Мартина. Это было не так давно. Мы сидели там, и почти в самом начале интервью я
+повернулся к нему и сказал: "Стив", или "Мистер Мартин, говорят, что у всех
+комиков несчастливое детство.
+Output current: Было ли ваше несчастливое?"
+
+#1.
+Generated output (CTI > 1.384):  Было ли ваше несчастливое?"(3.405)
+Input context (CCI > 0.020):     It wasn't this arm-wrestle, but it was a little
+surprising for the person involved. I interviewed Steve Martin. It wasn't all
+that long ago. And we were sitting there, and almost toward the beginning of the
+interview, I turned to him and I said, "Steve," or "Mr. Martin, it is said that
+all comedians have unhappy childhoods.
+Output context (CCI > 0.023):    Это был не настоящий армрестлинг, но для
+человека, участвовавшего в нем, это было немного неожиданно. Я брал интервью у
+Стива Мартина. Это было не так давно. Мы сидели там, и почти в самом начале
+интервью я повернулся к нему и сказал: "Стив", или "Мистер Мартин, говорят, что
+у всех комиков несчастливое детство(0.097).
+#2.
+Generated output (CTI > 1.384):  Было ли ваше нес(2.738)частливое?"
+Input context (CCI > 0.002):     It wasn't this arm-wrestle, but it was a little
+surprising for the person involved. I interviewed Steve Martin. It wasn't all
+that long ago. And we were sitting there, and almost toward the beginning of the
+interview, I turned to him and I said, "Steve," or "Mr. Martin, it is said that
+all comedians have un(0.002)happy childhoods.(0.002)
+Output context (CCI > 0.002):    Это был не настоящий армрестлинг, но для
+человека, участвовавшего в нем, это было немного неожиданно. Я брал интервью у
+Стива Мартина. Это было не так давно. Мы сидели там, и почти в самом начале
+интервью я повернулся к нему и сказал: "Стив", или "Мистер Мартин, говорят, что
+у всех комиков нес(0.006)част(0.002)ливое детство(0.004).
+#3.
+Generated output (CTI > 1.384):  Было ли ваше несчастливое(1.952)?"
+Input context (CCI > 0.018):     It wasn't this arm-wrestle, but it was a little
+surprising for the person involved. I interviewed Steve Martin. It wasn't all
+that long ago. And we were sitting there, and almost toward the beginning of the
+interview, I turned to him and I said, "Steve," or "Mr. Martin, it is said that
+all comedians have unhappy childhoods.
+Output context (CCI > 0.020):    Это был не настоящий армрестлинг, но для
+человека, участвовавшего в нем, это было немного неожиданно. Я брал интервью у
+Стива Мартина. Это было не так давно. Мы сидели там, и почти в самом начале
+интервью я повернулся к нему и сказал: "Стив", или "Мистер Мартин, говорят, что
+у всех комиков несчаст(0.021)ливо(0.035)е(0.032) детство(0.065).
+#4.
+Generated output (CTI > 1.384):  Было ли ваше несчастливо(1.443)е?"
+Input context (CCI > 0.018):     It wasn't this arm-wrestle, but it was a little
+surprising for the person involved. I interviewed Steve Martin. It wasn't all
+that long ago. And we were sitting there, and almost toward the beginning of the
+interview, I turned to him and I said, "Steve," or "Mr. Martin, it is said that
+all comedians have unhappy childhoods.
+Output context (CCI > 0.021):    Это был не настоящий армрестлинг, но для
+человека, участвовавшего в нем, это было немного неожиданно. Я брал интервью у
+Стива Мартина. Это было не так давно. Мы сидели там, и почти в самом начале
+интервью я повернулся к нему и сказал: "Стив", или "Мистер Мартин, говорят, что
+у всех комиков нес(0.029)част(0.042)ливо(0.085)е детство.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  My failure to procure myself a cup of sweet, green tea was not
+due to a simple misunderstanding. This was due to a fundamental difference in
+our ideas about choice. From my American perspective, when a paying customer
+makes a reasonable request based on her preferences, she has every right to have
+that request met.
+Input current: The American way, to quote Burger King, is to "have it your way,"
+because, as Starbucks says, "happiness is in your choices."
+Output context: Моя неудача приобрести себе чашку сладкого зеленого чая не была
+причиной простого недоразумения. Это было связано с фундаментальным различием в
+наших мыслях о выборе. С моей американской точки зрения, когда оплачивающий
+клиент делает разумный запрос на основе своих предпочтений, у него есть все
+права на удовлетворение этого запроса.
+Output current: Американский путь, чтобы процитировать Burger King, это "иметь
+его свой путь", потому что, как говорит Starbucks, "счастье в ваших выборах."
+
+#1.
+Generated output (CTI > 0.136):  Американски(0.875)й путь, чтобы процитировать
+Burger King, это "иметь его свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.007):     My failure to procure myself a cup of sweet,
+green tea was not due to a simple misunderstanding. This was due to a
+fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she
+has every right to have that request met(0.007).(0.008)
+Output context (CCI > 0.008):    Моя неудача приобрести себе чашку сладкого
+зеленого чая не была причиной простого недоразумения. Это было связано с
+фундаментальным различием в наших мыслях о выборе. С моей американ(0.010)ской
+точки зрения, когда оплачивающий клиент делает разумный запрос на основе своих
+предпочтений, у него есть все права на удовлетворение этого запроса.(0.028)
+#2.
+Generated output (CTI > 0.136):  Американский путь, чтобы процитировать Burger
+King, это "иметь его(0.620) свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.003):     My failure to(0.004) procure myself a cup of
+sweet, green tea was not due to a simple misunderstanding(0.004). This was due
+to a fundamental difference in our ideas about choice(0.006). From my American
+perspective, when a paying(0.003) customer makes a(0.003) reasonable request
+based on her preferences, she has every right to have that request met.
+Output context (CCI > 0.002):    Моя неудача приобрести себе чашку сладкого
+зеленого чая не была причиной простого недоразумения. Это было связано с
+фундаментальным различием в наших мыслях о выборе. С моей американской точки
+зрения, когда оплачивающий клиент делает разумный запрос(0.003) на основе своих
+предпочтений, у него есть все права на удовлетворение этого запроса.
+#3.
+Generated output (CTI > 0.136):  Американский путь, чтобы(0.549) процитировать
+Burger King, это "иметь его свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.004):     My failure to(0.005) procure myself a cup of
+sweet, green(0.005) tea was not due to a simple misunderstanding(0.005). This
+was due to a fundamental difference in our ideas about choice(0.006). From my
+American perspective, when a paying customer makes a reasonable request based on
+her preferences, she has every right to have that request met(0.005).
+Output context (CCI > 0.004):    Моя неудач(0.005)а приобрести(0.005) себе чашку
+сладкого зеленого чая не была причиной простого недоразумения. Это было связано
+с фундаментальным различием в наших мыслях о выборе. С моей американской точки
+зрения, когда оплачивающий клиент делает разумный запрос на основе своих
+предпочтений, у него есть все права на удовлетворение этого запроса.(0.004)
+#4.
+Generated output (CTI > 0.136):  Американский путь(0.469), чтобы процитировать
+Burger King, это "иметь его свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.006):     My failure to procure myself a cup of sweet,
+green tea was not due to a simple misunderstanding(0.007). This was due to a
+fundamental difference in our ideas about choice(0.010). From my American
+perspective, when a paying(0.006) customer makes a reasonable request based on
+her preferences, she has every right to have that request met(0.008).(0.008)
+Output context (CCI > 0.005):    Моя неудача приобрести себе чашку сладкого
+зеленого чая не была причиной простого недоразумения. Это было связано с
+фундаментальным различием в наших мыслях о выборе. С моей американской точки
+зрения, когда оплачивающий клиент делает разумный запрос(0.011) на основе своих
+предпочтений, у него есть все права на удовлетворение этого
+запрос(0.006)а.(0.005)
+#5.
+Generated output (CTI > 0.136):  Американский путь, чтобы процитировать Burger
+King, это(0.463) "иметь его свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.002):     My failure to procure myself a cup of sweet,
+green(0.004) tea was not due to a simple misunderstanding. This was due to a
+fundamental difference in our ideas about choice. From my American perspective,
+when a paying customer makes a reasonable request based on her preferences, she
+has every right to have that request met.(0.002)
+Output context (CCI > 0.003):    Моя неудач(0.004)а приобрести(0.004) себе чашку
+сладкого зеленого чая не была причиной простого недоразумения. Это было связано
+с фундаментальным различием в наших мыслях о выборе. С моей американской точки
+зрения, когда оплачивающий клиент делает разумный запрос на основе своих
+предпочтений, у него есть все права на удовлетворение этого запроса.(0.004)
+#6.
+Generated output (CTI > 0.136):  Американский путь,(0.356) чтобы процитировать
+Burger King, это "иметь его свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.000):     My failure to(0.000) procure myself a cup of
+sweet, green tea was not due to a simple misunderstanding(0.000). This was due
+to a fundamental difference in our ideas about choice(0.000). From my American
+perspective, when a paying(0.000) customer makes a reasonable request based on
+her preferences, she has every right to have that request met(0.000).
+Output context (CCI > 0.000):    Моя неудача приобрести себе чашку сладкого
+зеленого чая не была причиной простого недоразумения. Это было связано с
+фундаментальным различием в наших мыслях о выборе. С моей американской точки
+зрения,(0.000) когда оплачивающий клиент делает разумный запрос на основе своих
+предпочтений, у него есть все права на удовлетворение этого запроса.(0.000)
+#7.
+Generated output (CTI > 0.136):  Американский путь, чтобы процитировать Burger
+King, это "(0.251)иметь его свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.002):     My failure to(0.002) procure myself a cup of
+sweet, green(0.002) tea was not due to a simple misunderstanding. This was due
+to a fundamental difference in our ideas about choice(0.002). From my American
+perspective, when a paying(0.002) customer makes a reasonable request based on
+her preferences, she has every right to have that request met.
+Output context (CCI > 0.001):    Моя неудач(0.002)а приобрести(0.002) себе чашку
+сладкого зеленого чая не была причиной простого недоразумения. Это было связано
+с фундаментальным различием в наших мыслях о выборе. С моей американской точки
+зрения, когда оплачивающий клиент делает разумный запрос на основе своих
+предпочтений, у него есть все права на удовлетворение этого запроса.(0.002)
+#8.
+Generated output (CTI > 0.136):  Американский путь, чтобы процитировать Burger
+King, это "име(0.197)ть его свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.002):     My failure to(0.004) procure myself a cup of
+sweet, green tea was not due to a simple misunderstanding(0.004). This was due
+to a fundamental difference in our ideas about choice(0.005). From my American
+perspective, when a paying(0.004) customer makes a reasonable request based on
+her(0.003) preferences, she has every right to have that request met.
+Output context (CCI > 0.002):    Моя неудача приобрести себе чашку сладкого
+зеленого чая не была причиной простого недоразумения. Это было связано с
+фундаментальным различием в наших мыслях о выборе. С моей американской точки
+зрения, когда оплачивающий клиент делает разумный запрос на основе своих
+предпочтений, у него есть все права на удовлетворение этого запроса.
+#9.
+Generated output (CTI > 0.136):  Американский путь, чтобы процитировать Burger
+King, это "иметь его свой(0.190) путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.005):     My failure to(0.005) procure myself a cup of
+sweet, green(0.010) tea was not due to a simple misunderstanding. This was due
+to a fundamental difference in our ideas about choice. From my American
+perspective, when a paying customer makes a reasonable request based on her
+preferences, she has every right to have that request met.
+Output context (CCI > 0.005):    Моя(0.005) неудач(0.007)а приобрести(0.007)
+себе чашку сладко(0.005)го зеленого чая не была причиной простого недоразумения.
+Это было связано с фундаментальным различием в наших мыслях о выборе. С моей
+американской точки зрения, когда оплачивающий клиент делает разумный запрос на
+основе своих предпочтений, у него есть все права на удовлетворение этого
+запроса.
+#10.
+Generated output (CTI > 0.136):  Американский путь, чтобы про(0.147)цитировать
+Burger King, это "иметь его свой путь", потому что, как говорит Starbucks,
+"счастье в ваших выборах."
+Input context (CCI > 0.002):     My failure to(0.004) procure myself a cup of
+sweet, green tea was not due to a simple misunderstanding(0.003). This was due
+to a fundamental difference in our ideas about choice(0.004). From my American
+perspective, when a paying(0.004) customer makes a reasonable request based on
+her preferences, she has every right to have that(0.002) request met.
+Output context (CCI > 0.002):    Моя неудача приобрести себе чашку сладкого
+зеленого чая не была причиной простого недоразумения. Это было связано с
+фундаментальным различием в наших мыслях о выборе. С моей американской точки
+зрения, когда оплачивающий клиент делает разумный запрос на основе своих
+предпочтений, у него есть все права на удовлетворение этого запроса.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And you know the reason why, of course. This is because of
+technology -- yeah. Any computer designers in the room?
+Input current: Yeah well, you guys are making my life miserable because track
+pads used to be round, a nice round shape.
+Output context: И вы, конечно, знаете причину этого. Это из-за технологий - да.
+Есть здесь компьютерные дизайнеры?
+Output current: Да, вы, ребята, делаете мою жизнь miserable, потому что track
+pads были круглыми, красивый круглый вид.
+
+#1.
+Generated output (CTI > 0.075):  Да(0.791), вы, ребята, делаете мою жизнь
+miserable, потому что track pads были круглыми, красивый круглый вид.
+Input context (CCI > 0.012):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?(0.022)
+Output context (CCI > 0.012):    И вы, конечно, знаете причину этого. Это из-за
+технологий - да(0.020). Есть здесь компьютерные дизайнеры?(0.016)
+#2.
+Generated output (CTI > 0.075):  Да, вы, ребята, делаете мою жизнь miserable,
+потому что track pads были круглыми, красивый(0.188) круглый вид.
+Input context (CCI > 0.019):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?
+Output context (CCI > 0.021):    И вы, конечно, знаете причину этого. Это из-за
+технологий - да. Есть(0.026) здесь(0.034) компьютерные дизайнеры?
+#3.
+Generated output (CTI > 0.075):  Да, вы(0.172), ребята, делаете мою жизнь
+miserable, потому что track pads были круглыми, красивый круглый вид.
+Input context (CCI > 0.016):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?(0.036)
+Output context (CCI > 0.014):    И вы, конечно, знаете причину этого. Это из-за
+технологий - да. Есть здесь компьютерные дизайнеры?
+#4.
+Generated output (CTI > 0.075):  Да, вы, ребята, делает(0.115)е мою жизнь
+miserable, потому что track pads были круглыми, красивый круглый вид.
+Input context (CCI > 0.007):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?
+Output context (CCI > 0.007):    И вы, конечно, знаете причину этого. Это из-за
+технологий - да. Есть(0.009) здесь(0.014) компьютерные дизайнеры?
+#5.
+Generated output (CTI > 0.075):  Да, вы,(0.092) ребята, делаете мою жизнь
+miserable, потому что track pads были круглыми, красивый круглый вид.
+Input context (CCI > 0.006):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?(0.007)
+Output context (CCI > 0.006):    И вы,(0.007) конечно(0.008), знаете причину
+этого. Это из-за технологий - да. Есть здесь компьютерные дизайнеры?
+#6.
+Generated output (CTI > 0.075):  Да,(0.087) вы, ребята, делаете мою жизнь
+miserable, потому что track pads были круглыми, красивый круглый вид.
+Input context (CCI > 0.006):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?(0.012)
+Output context (CCI > 0.006):    И вы, конечно, знаете причину этого. Это из-за
+технологий - да. Есть здесь(0.006) компьютерные дизайнеры?
+#7.
+Generated output (CTI > 0.075):  Да, вы, ребята, делаете(0.083) мою жизнь
+miserable, потому что track pads были круглыми, красивый круглый вид.
+Input context (CCI > 0.002):     And you know the reason why, of course. This is
+because of technology -- yeah. Any computer designers in the room?
+Output context (CCI > 0.002):    И вы, конечно, знаете причину этого. Это из-за
+технологий - да. Есть(0.003) здесь(0.002) компьютерные дизайнеры?
+#8.
+Generated output (CTI > 0.075):  Да, вы, ребята, делаете мою жизнь miserable,
+потому что track(0.078) pads были круглыми, красивый круглый вид.
+Input context (CCI > 0.005):     And you know the reason why, of course. This is
+because of technology -- yeah. Any(0.008) computer(0.008) designers in the room?
+Output context (CCI > 0.005):    И вы, конечно, знаете причину этого. Это из-за
+технологий - да. Есть здесь(0.007) компьютерные дизайнеры?
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  We do that in our personal lives. We do that corporate --
+whether it's a bailout, an oil spill ... a recall. We pretend like what we're
+doing doesn't have a huge impact on other people. I would say to companies, this
+is not our first rodeo, people.
+Input current: We just need you to be authentic and real and say ... "We're
+sorry. We'll fix it." But there's another way, and I'll leave you with this.
+Output context: Мы делаем это в нашей личной жизни. Мы занимаемся корпоративными
+делами - будь то спасение компании или разлив нефти... напоминаем. Мы
+притворяемся, что то, что мы делаем, не оказывает огромного влияния на других
+людей. Я бы сказал компаниям: это не первое наше родео, ребята.
+Output current: Мы просто нуждаемся в том, чтобы вы были подлинными и настоящими
+и говорили... "Мы сожалеем. Мы это исправим." Но есть другой способ, и я остану
+вас с этим.
+
+#1.
+Generated output (CTI > 0.069):  Мы(1.214) просто нуждаемся в том, чтобы вы были
+подлинными и настоящими и говорили... "Мы сожалеем. Мы это исправим." Но есть
+другой способ, и я остану вас с этим.
+Input context (CCI > 0.005):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first rodeo, people.(0.006)
+Output context (CCI > 0.006):    Мы делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение компании или разлив нефти...
+напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного
+влияния на других людей. Я бы сказал компаниям: это не первое наше родео,
+ребята(0.015).(0.017)
+#2.
+Generated output (CTI > 0.069):  Мы просто нуждаемся в том, чтобы вы(0.268) были
+подлинными и настоящими и говорили... "Мы сожалеем. Мы это исправим." Но есть
+другой способ, и я остану вас с этим.
+Input context (CCI > 0.002):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first rodeo, people.
+Output context (CCI > 0.002):    Мы делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение компании или разлив нефти...
+напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного
+влияния на других людей. Я бы сказал компания(0.003)м: это не первое наше родео,
+ребята(0.007).
+#3.
+Generated output (CTI > 0.069):  Мы просто(0.253) нуждаемся в том, чтобы вы были
+подлинными и настоящими и говорили... "Мы сожалеем. Мы это исправим." Но есть
+другой способ, и я остану вас с этим.
+Input context (CCI > 0.003):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first rodeo, people.(0.008)
+Output context (CCI > 0.003):    Мы делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение компании или разлив нефти...
+напоминаем. Мы притвор(0.004)яемся, что то, что мы делаем, не оказывает
+огромного влияния на других людей. Я бы сказал компаниям: это не первое наше
+родео, ребята(0.007).(0.004)
+#4.
+Generated output (CTI > 0.069):  Мы просто нуждаемся в том, чтобы вы были
+подлинными и настоящими и говорили... "Мы(0.214) сожалеем. Мы это исправим." Но
+есть другой способ, и я остану вас с этим.
+Input context (CCI > 0.002):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say
+to(0.003) companies, this is not our first rodeo, people.
+Output context (CCI > 0.002):    Мы делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение(0.003) компании или разлив
+нефти... напоминаем. Мы притвор(0.003)яемся, что то, что мы делаем, не оказывает
+огромного влияния на других людей. Я бы сказал компаниям: это не первое наше
+родео, ребята(0.007).
+#5.
+Generated output (CTI > 0.069):  Мы просто нуждаемся в том, чтобы вы были
+подлинными и настоящими и говорили...(0.118) "Мы сожалеем. Мы это исправим." Но
+есть другой способ, и я остану вас с этим.
+Input context (CCI > 0.007):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill(0.011) ... a(0.007) recall. We
+pretend like what we're doing doesn't have a huge impact on other people. I
+would say to companies, this is not our first rodeo, people.
+Output context (CCI > 0.007):    Мы делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение компании или разлив
+нефти...(0.016) напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает
+огромного влияния на других людей. Я бы сказал компаниям:(0.017) это не первое
+наше родео, ребята.
+#6.
+Generated output (CTI > 0.069):  Мы просто нуждаемся в том(0.112), чтобы вы были
+подлинными и настоящими и говорили... "Мы сожалеем. Мы это исправим." Но есть
+другой способ, и я остану вас с этим.
+Input context (CCI > 0.004):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a recall. We pretend like
+what we're doing doesn't have a huge impact on other people. I would say to
+companies, this is not our first(0.005) rodeo, people.(0.005)
+Output context (CCI > 0.004):    Мы делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение компании или разлив нефти...
+напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного
+влияния на других людей. Я бы сказал компаниям: это не первое наше родео,
+ребята(0.012).
+#7.
+Generated output (CTI > 0.069):  Мы просто нуждаемся в том, чтобы вы были
+подлинными и настоящими и говорили... "Мы сожалеем. Мы это исправим." Но(0.103)
+есть другой способ, и я остану вас с этим.
+Input context (CCI > 0.001):     We do that in our personal lives. We do that
+corporate(0.001) -- whether it's a bailout, an(0.001) oil spill ... a(0.001)
+recall. We pretend like what we're doing doesn't have a huge impact on other
+people(0.001). I would say to companies, this is not our first(0.001) rodeo,
+people.
+Output context (CCI > 0.001):    Мы(0.001) делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение компании или разлив нефти...
+напоминаем. Мы притвор(0.001)яемся, что то, что мы делаем, не оказывает
+огромного влияния на других людей. Я бы сказал компаниям: это не первое наше
+родео, ребята(0.001).
+#8.
+Generated output (CTI > 0.069):  Мы просто нуждаемся в том, чтобы вы были
+подлинными и настоящими и говорили... "Мы сожалеем. Мы это исправим." Но есть
+другой способ, и я оста(0.074)ну вас с этим.
+Input context (CCI > 0.001):     We do that in our personal lives. We do that
+corporate -- whether it's a bailout, an oil spill ... a(0.002) recall. We(0.001)
+pretend like what we're doing doesn't have a huge impact on other people. I
+would say to companies, this is not our first rodeo, people.
+Output context (CCI > 0.001):    Мы делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение компании или разлив нефти...
+напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного
+влияния на других людей. Я бы(0.001) сказал(0.004) компаниям: это не первое наше
+родео, ребята.
+#9.
+Generated output (CTI > 0.069):  Мы просто нуждаемся в том, чтобы вы были
+подлинными и настоящими и говорили... "Мы со(0.069)жалеем. Мы это исправим." Но
+есть другой способ, и я остану вас с этим.
+Input context (CCI > 0.001):     We do that in our personal lives. We do
+that(0.001) corporate -- whether it's a bailout, an oil(0.001) spill ... a
+recall. We(0.001) pretend like what we're doing doesn't have a huge(0.001)
+impact on other people. I would say to companies, this is not our first(0.002)
+rodeo, people.
+Output context (CCI > 0.001):    Мы делаем это в нашей личной жизни. Мы
+занимаемся корпоративными делами - будь то спасение компании или разлив нефти...
+напоминаем. Мы притворяемся, что то, что мы делаем, не оказывает огромного
+влияния на других людей. Я бы сказал компаниям: это не первое наше родео,
+ребята(0.001).
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And after the trial had been running for a little while, he
+gathered together all his colleagues around his table, and he said, "Well,
+gentlemen, we have some preliminary results. They're not statistically
+significant. But we have something.
+Input current: And it turns out that you're right and I'm wrong.
+Output context: И после того, как судебный процесс продолжался некоторое время,
+он собрал всех своих коллег за своим столом и сказал: "Итак, джентльмены, у нас
+есть некоторые предварительные результаты. Они не являются статистически
+значимыми. Но у нас есть что-то.
+Output current: И оказалось, что вы правы, а я ошибаюсь.
+
+#1.
+Generated output (CTI > 0.113):  И(0.783) оказалось, что вы правы, а я ошибаюсь.
+Input context (CCI > 0.006):     And after the trial had been running for a
+little while, he gathered together all his colleagues around his table, and he
+said, "Well, gentlemen, we have some preliminary results. They're not
+statistically significant. But we have something.(0.008)
+Output context (CCI > 0.006):    И после того, как судебны(0.011)й процесс
+продолжался некоторое время, он собрал всех своих коллег за своим столом и
+сказал: "Итак, джентльмены, у нас есть некоторые предварительные результаты. Они
+не являются статистически значимыми. Но у нас есть что-то.(0.018)
+#2.
+Generated output (CTI > 0.113):  И оказалось, что вы(0.254) правы, а я ошибаюсь.
+Input context (CCI > 0.002):     And after the trial had been running for a
+little while, he gathered together all his colleagues around his table, and he
+said, "Well, gentlemen, we have some preliminary results. They're not
+statistically significant. But we have something.
+Output context (CCI > 0.002):    И после того, как судебны(0.006)й
+процесс(0.002) продолжался некоторое время, он собрал всех своих коллег за своим
+столом и сказал: "Итак, джентльмены, у нас есть некоторые предварительные
+результаты. Они не являются статистически значимыми. Но у нас есть что-то.
+#3.
+Generated output (CTI > 0.113):  И оказалось(0.172), что вы правы, а я ошибаюсь.
+Input context (CCI > 0.002):     And after the trial had been running for a
+little while, he gathered together all his colleagues around his table, and he
+said, "Well, gentlemen, we have some preliminary results. They're not
+statistically significant. But we have something.
+Output context (CCI > 0.002):    И после того, как судебный процесс продолжался
+некоторое время, он собрал всех своих коллег за своим столом и сказал(0.002):
+"И(0.004)так(0.004), джентльмены, у нас есть некоторые предварительные
+результаты. Они не являются статистически значимыми. Но у нас есть(0.003)
+что-то.(0.003)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  One of the weird things that's happened is, after the TED
+explosion, I got a lot of offers to speak all over the country -- everyone from
+schools and parent meetings to Fortune 500 companies. And so many of the calls
+went like this, "Dr. Brown, we loved your TED talk. We'd like you to come in and
+speak.
+Input current: We'd appreciate it if you wouldn't mention vulnerability or
+shame."
+Output context: Одна из странных вещей, которая произошла, заключается в том,
+что после громкого выступления на TED я получил множество предложений выступить
+по всей стране - от всех, от школ и родительских собраний до компаний из списка
+Fortune 500. И очень многие звонки были примерно такими: "Доктор Браун, нам
+очень понравилось ваше выступление на TED. Мы бы хотели, чтобы вы пришли и
+выступили.
+Output current: Мы будем рады, если бы вы не упоминали уязвимость или стыд."
+
+#1.
+Generated output (CTI > 0.337):  Мы будем рады, если бы вы не упоминали
+уязвимость или стыд."(2.550)
+Input context (CCI > 0.002):     One of the weird things that's happened is,
+after the TED explosion, I got a lot of offers to speak all over the country --
+everyone from schools and parent meetings to Fortune 500 companies. And so many
+of the calls went like this, "(0.002)Dr. Brown, we loved your TED talk. We'd
+like you to come in and speak.
+Output context (CCI > 0.002):    Одна из странных вещей, которая произошла,
+заключается в том, что после(0.006) громко(0.003)го выступления на TED я получил
+множество предложений выступить по всей стране - от всех, от школ и родительских
+собраний до компаний из списка Fortune 500. И очень многие звонки были примерно
+такими: "(0.005)Доктор Браун, нам очень понравилось ваше выступление на TED. Мы
+бы хотели, чтобы вы пришли и выступили.
+#2.
+Generated output (CTI > 0.337):  Мы будем рады, если бы(1.147) вы не упоминали
+уязвимость или стыд."
+Input context (CCI > 0.021):     One of the weird things that's happened is,
+after the TED explosion, I got a lot of offers to speak all over the country --
+everyone from schools and parent meetings to Fortune 500 companies. And so many
+of the calls went like this, "Dr. Brown, we loved your TED talk. We'd like you
+to come in and speak.
+Output context (CCI > 0.024):    Одна из странных вещей, которая произошла,
+заключается в том, что после громкого выступления на TED я получил множество
+предложений выступить по всей стране - от всех, от школ и родительских собраний
+до компаний из списка Fortune 500. И очень многие звонки были примерно такими:
+"Доктор Браун, нам очень понравилось(0.032) ваше выступление на TED. Мы(0.026)
+бы(0.086) хотели, чтобы вы пришли и выступил(0.024)и.
+#3.
+Generated output (CTI > 0.337):  Мы(1.060) будем рады, если бы вы не упоминали
+уязвимость или стыд."
+Input context (CCI > 0.005):     One of the weird things that's happened is,
+after the TED explosion, I got a lot of offers to speak all over the country --
+everyone from schools and parent meetings to Fortune 500 companies. And so many
+of the calls went like this, "Dr. Brown, we loved your TED talk. We'd like you
+to come in and speak.
+Output context (CCI > 0.005):    Одна из странных вещей, которая произошла,
+заключается в том, что после громкого выступления на TED я получил множество
+предложений выступить по всей стране - от всех, от школ и родительских собраний
+до компаний из списка Fortune 500. И очень многие звонки были примерно такими:
+"Доктор Браун, нам очень понравилось ваше выступление на TED. Мы(0.006) бы
+хотели, чтобы вы пришли и выступил(0.011)и.(0.019)
+#4.
+Generated output (CTI > 0.337):  Мы будем рады, если бы вы(0.599) не упоминали
+уязвимость или стыд."
+Input context (CCI > 0.003):     One of the weird things that's happened is,
+after the TED explosion, I got a lot of offers to speak all over the country --
+everyone from schools and parent meetings to Fortune 500 companies. And so many
+of the calls went like this, "(0.004)Dr. Brown, we loved your TED talk. We'd
+like you to come in and speak.
+Output context (CCI > 0.003):    Одна из странных вещей, которая произошла,
+заключается в том, что после громко(0.003)го выступления на TED я получил
+множество предложений выступить по всей стране - от всех, от школ и родительских
+собраний до компаний из списка Fortune 500. И очень многие звонки были
+примерно(0.004) такими: "Доктор Браун, нам очень понравилось(0.004) ваше(0.004)
+выступление на TED. Мы бы хотели, чтобы вы(0.005) пришли и выступили.
+#5.
+Generated output (CTI > 0.337):  Мы будем(0.348) рады, если бы вы не упоминали
+уязвимость или стыд."
+Input context (CCI > 0.005):     One of the weird things that's happened is,
+after the TED explosion, I got a lot of offers to speak all over the country --
+everyone from schools and parent meetings to Fortune 500 companies. And so many
+of the calls went like this, "Dr. Brown, we loved your TED talk. We'd like you
+to come in and speak.(0.007)
+Output context (CCI > 0.005):    Одна из странных вещей, которая произошла,
+заключается в том, что после громкого выступления на TED я получил множество
+предложений выступить по всей стране - от всех, от школ и родительских собраний
+до компаний из списка Fortune 500. И очень многие звонки были примерно такими:
+"Доктор Браун, нам очень понравилось(0.007) ваше выступление на TED. Мы(0.006)
+бы(0.016) хотели(0.006), чтобы вы пришли и выступил(0.007)и.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  Not based upon the quality of your work, how long you've been
+there, if you stink, just if you're gay, lesbian, bisexual or transgendered. All
+of which flies in the face of the gay agenda, also known as the U.S.
+Constitution. Specifically, this little amendment right here: "No state shall
+make or enforce any law which shall abridge the privileges or immunities of
+citizens of the United States." I'm looking at you, North Carolina.
+Input current: But you're not looking at the U.S. Constitution.
+Output context: Не зависит от качества вашей работы, от того, как долго вы там
+работаете, воняете ли вы, просто от того, являетесь ли вы геем, лесбиянкой,
+бисексуалом или трансгендером. Все это противоречит гей-программе, также
+известной как Конституция США. В частности, вот эта небольшая поправка: "Ни один
+штат не должен издавать или обеспечивать соблюдение законов, которые
+ограничивают привилегии или иммунитеты граждан Соединенных Штатов". Я смотрю на
+тебя, Северная Каролина.
+Output current: Но вы не смотрите на Конституцию США.
+
+#1.
+Generated output (CTI > 0.136):  Но вы(0.656) не смотрите на Конституцию США.
+Input context (CCI > 0.015):     Not based upon the quality of your work, how
+long you've been there, if you stink, just if you're gay, lesbian, bisexual or
+transgendered. All of which flies in the face of the gay agenda, also known as
+the U.S. Constitution. Specifically, this little amendment right here: "No state
+shall make or enforce any law which shall abridge the privileges or immunities
+of citizens of the United States." I'm looking at you, North Carolina.
+Output context (CCI > 0.017):    Не зависит от качества вашей работы, от того,
+как долго вы там работаете, воняете ли вы, просто от того, являетесь ли вы геем,
+лесбиянкой, бисексуалом или трансгендером. Все это противоречит гей-программе,
+также известной как Конституция США. В частности, вот эта небольшая поправка:
+"Ни один штат не должен издавать или обеспечивать соблюдение законов, которые
+ограничивают привилегии или иммунитеты граждан Соединенных Штатов". Я смотрю на
+тебя(0.087), Северная Каролина.
+#2.
+Generated output (CTI > 0.136):  Но(0.318) вы не смотрите на Конституцию США.
+Input context (CCI > 0.003):     Not based upon the quality of your work, how
+long you've been there, if you stink, just if you're gay, lesbian, bisexual or
+transgendered. All of which flies in the face of the gay agenda, also known as
+the U.S. Constitution. Specifically, this little amendment right here: "No state
+shall make or enforce any law which shall abridge the privileges or immunities
+of citizens of the United States." I'm looking at you, North(0.004)
+Carolina(0.007).(0.010)
+Output context (CCI > 0.003):    Не зависит(0.004) от качества вашей работы, от
+того, как долго вы там работаете, воняете ли вы, просто от того, являетесь ли вы
+геем, лесбиянкой, бисексуалом или трансгендером. Все это противоречит
+гей-программе, также известной как Конституция США. В частности, вот эта
+небольшая поправка: "Ни один штат не должен издавать или обеспечив(0.004)ать
+соблюдение законов, которые ограничивают привилегии или иммунитеты граждан
+Соединенных Штатов". Я смотрю на тебя, Северная Каролина.(0.013)
+#3.
+Generated output (CTI > 0.136):  Но вы не смотрите на Конститу(0.136)цию США.
+Input context (CCI > 0.006):     Not based upon the quality of your work, how
+long you've been there, if you stink, just if you're gay, lesbian, bisexual or
+transgendered. All of which flies in the face of the gay agenda, also known as
+the U.S. Constitution. Specifically, this little amendment right here: "No state
+shall make or enforce any law which shall abridge the privileges or immunities
+of citizens of the United States." I'm looking at you, North Carolina.
+Output context (CCI > 0.007):    Не зависит от качества вашей работы, от того,
+как долго вы там работаете, воняете ли вы, просто от того, являетесь ли вы геем,
+лесбиянкой, бисексуалом или трансгендером. Все это противоречит
+гей(0.012)-программе, также известной как Конституция(0.037) США. В частности,
+вот эта небольшая поправка: "Ни один штат не должен издавать или обеспечивать
+соблюдение законов, которые ограничивают привилегии или иммунитеты граждан
+Соединенных Штатов". Я смотрю на тебя, Северная Каролина.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  CA: How cool is that?  Elon, how have you done this? These
+projects are so -- Paypal, SolarCity, Tesla, SpaceX, they're so spectacularly
+different, they're such ambitious projects at scale. How on Earth has one person
+been able to innovate in this way?
+Input current: What is it about you?
+Output context: КА: Насколько это здорово? Элон, как вы это сделали? Эти проекты
+такие — Paypal, SolarCity, Tesla, SpaceX, они настолько впечатляюще разные, они
+такие амбициозные проекты по масштабу. Как это возможно чтобы один человек смог
+внедрить инновации таким образом?
+Output current: Что это о вас?
+
+#1.
+Generated output (CTI > 0.175):  Что(0.360) это о вас?
+Input context (CCI > 0.005):     CA: How cool is that? Elon, how have you done
+this? These projects are so --(0.005) Paypal, SolarCity, Tesla, SpaceX, they're
+so spectacularly different, they're such ambitious projects at scale. How on
+Earth has one person been able to innovate in this way?(0.008)
+Output context (CCI > 0.005):    КА: Насколько это здорово? Элон, как вы это
+сделали? Эти проекты такие — Paypal, SolarCity, Tesla, SpaceX, они настолько
+впечатляюще разные, они такие амбициозные проекты по масштабу. Как это возможно
+чтобы один человек смог внедрить инновации таким образом?(0.017)
+#2.
+Generated output (CTI > 0.175):  Что это о(0.261) вас?
+Input context (CCI > 0.005):     CA: How cool is that? Elon, how have you done
+this? These projects are so --(0.010) Paypal, SolarCity, Tesla, SpaceX, they're
+so spectacularly different, they're such ambitious projects at scale. How on
+Earth has one person been able to innovate in this way(0.007)?(0.010)
+Output context (CCI > 0.004):    КА: Насколько это здорово? Элон, как вы это
+сделали? Эти проекты такие — Paypal, SolarCity, Tesla, SpaceX, они настолько
+впечатляюще разные, они такие амбициозные проекты по масштабу. Как это возможно
+чтобы один человек смог вне(0.004)дрить инновации таким образом?(0.006)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  And the week before I showed up, the CEO of this big software
+company went to that group, 200 engineers, and canceled the project. And I stood
+there in front of 200 of the most depressed people I've ever talked to. And I
+described to them some of these Lego experiments, and they said they felt like
+they had just been through that experiment.
+Input current: And I asked them, I said, "How many of you now show up to work
+later than you used to?"
+Output context: И за неделю до того, как я появился, генеральный директор этой
+крупной программной компании пошел в эту группу, 200 инженеров, и отменил
+проект. И я стоял там перед 200 наиболее депрессивными людьми, с которыми я
+когда-либо разговаривал. И я описал им некоторые из этих LEGO экспериментов, и
+они сказали, что они чувствовали, что они только что прошли этот эксперимент.
+Output current: И я спросил их, я сказал, "Кто из вас теперь приезжает работать
+позже, чем раньше?"
+
+#1.
+Generated output (CTI > 0.176):  И(1.137) я спросил их, я сказал, "Кто из вас
+теперь приезжает работать позже, чем раньше?"
+Input context (CCI > 0.006):     And the week before I showed up, the CEO of
+this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these Lego experiments, and they
+said they felt like they had just been through that experiment(0.009).(0.012)
+Output context (CCI > 0.006):    И за неделю до того, как я появился,
+генеральный директор этой крупной программной компании пошел в эту группу, 200
+инженеров, и отменил проект. И я стоял там перед 200 наиболее депрессивными
+людьми, с которыми я когда-либо разговаривал. И(0.007) я описал им некоторые из
+этих LEGO экспериментов, и они сказали, что они чувствовали, что они только что
+прошли этот эксперимент.(0.021)
+#2.
+Generated output (CTI > 0.176):  И я спросил их, я(0.413) сказал, "Кто из вас
+теперь приезжает работать позже, чем раньше?"
+Input context (CCI > 0.002):     And the week before I showed up, the CEO of
+this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I(0.003) described to them some of these(0.003) Lego
+experiments, and they said they felt like they had just been through that
+experiment.
+Output context (CCI > 0.003):    И за неделю до того, как я появился,
+генеральный директор этой крупной программной компании пошел в эту группу, 200
+инженеров, и отменил проект. И я стоял там перед 200 наиболее депрессивными
+людьми, с которыми я когда-либо разговаривал. И я описа(0.003)л им некоторые из
+этих LEGO экспериментов, и они сказали, что они чувствовал(0.003)и, что они
+только что прошли(0.004) этот(0.003) эксперимент.(0.003)
+#3.
+Generated output (CTI > 0.176):  И я(0.398) спросил их, я сказал, "Кто из вас
+теперь приезжает работать позже, чем раньше?"
+Input context (CCI > 0.001):     And the week before I showed up, the CEO of
+this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these Lego experiments, and they
+said they felt like they had just been through that experiment(0.002).(0.003)
+Output context (CCI > 0.002):    И за неделю до того, как я появился,
+генеральный директор этой крупной программной компании пошел в эту группу, 200
+инженеров, и отменил проект. И я стоял там перед 200 наиболее депрессивными
+людьми, с которыми я когда-либо разговаривал. И я(0.002) описа(0.003)л им
+некоторые из этих LEGO экспериментов, и они сказали(0.002), что они
+чувствовал(0.002)и, что они только что прошли этот эксперимент.(0.002)
+#4.
+Generated output (CTI > 0.176):  И я спросил их(0.382), я сказал, "Кто из вас
+теперь приезжает работать позже, чем раньше?"
+Input context (CCI > 0.002):     And the week before I showed up, the CEO of
+this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these(0.002) Lego experiments,
+and they said they felt like they had just been through that experiment.
+Output context (CCI > 0.002):    И за неделю до того, как я появился(0.004),
+генеральный директор этой крупной программной компании пошел в эту группу, 200
+инженеров, и отменил проект. И я стоял там перед 200 наиболее депрессивными
+людьми, с которыми я когда-либо разговаривал. И я описа(0.003)л им некоторые из
+этих LEGO экспериментов, и они сказали(0.003), что они чувствовали, что они
+только что(0.003) прошли(0.004) этот эксперимент.
+#5.
+Generated output (CTI > 0.176):  И я спросил их, я сказал, "Кто из вас
+теперь(0.324) приезжает работать позже, чем раньше?"
+Input context (CCI > 0.002):     And the week before I showed up, the(0.002) CEO
+of this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these(0.002) Lego experiments,
+and they said they felt like they had just been through that experiment.
+Output context (CCI > 0.002):    И за неделю(0.002) до того, как я
+появился(0.002), генеральный директор этой крупной программной компании пошел в
+эту группу, 200 инженеров, и отменил проект. И я стоял там перед 200 наиболее
+депрессивными людьми, с которыми я когда-либо разговаривал. И я описа(0.002)л им
+некоторые из этих LEGO экспериментов, и они сказали, что они чувствовал(0.002)и,
+что они только что прошли(0.002) этот эксперимент.
+#6.
+Generated output (CTI > 0.176):  И я спросил их, я сказал, "(0.218)Кто из вас
+теперь приезжает работать позже, чем раньше?"
+Input context (CCI > 0.003):     And the week before I showed up, the CEO of
+this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these(0.004) Lego experiments,
+and they said they felt like they had just been through that experiment.
+Output context (CCI > 0.004):    И за неделю(0.004) до того, как я
+появился(0.004), генеральный директор этой крупной программной компании пошел в
+эту группу, 200 инженеров, и отменил проект. И я стоял там перед 200 наиболее
+депрессивными людьми, с которыми я когда-либо разговаривал. И я описал им
+некоторые из этих LEGO экспериментов, и они сказали, что они чувствовал(0.004)и,
+что они только что прошли(0.005) этот эксперимент.(0.005)
+#7.
+Generated output (CTI > 0.176):  И я спросил их, я сказал, "Кто из вас теперь
+приезж(0.209)ает работать позже, чем раньше?"
+Input context (CCI > 0.002):     And the week before I(0.003) showed up,
+the(0.003) CEO of this big software company went to that group, 200 engineers,
+and canceled the project. And I stood there in front of 200 of the most
+depressed people I've ever talked to. And I described to them some of
+these(0.004) Lego experiments, and they said they felt like they had just been
+through that experiment.
+Output context (CCI > 0.003):    И за неделю до того, как я появился(0.007),
+генеральный директор этой крупной программной компании пошел в эту группу, 200
+инженеров, и отменил проект. И я стоял там перед 200 наиболее депрессивными
+людьми, с которыми я когда-либо разговаривал. И я описал им некоторые из этих
+LEGO экспериментов, и они сказали, что они чувствовал(0.003)и, что они только
+что прошли(0.003) этот эксперимент.
+#8.
+Generated output (CTI > 0.176):  И я спросил их,(0.190) я сказал, "Кто из вас
+теперь приезжает работать позже, чем раньше?"
+Input context (CCI > 0.002):     And the week before I showed up, the CEO of
+this big software company went to that group, 200 engineers, and canceled the
+project. And I stood there in front of 200 of the most depressed people I've
+ever talked to. And I described to them some of these(0.003) Lego experiments,
+and they said they felt like they had just been through that experiment.(0.002)
+Output context (CCI > 0.002):    И за неделю(0.003) до того, как я
+появился(0.003), генеральный директор этой крупной программной компании пошел в
+эту группу, 200 инженеров, и отменил проект. И я стоял там перед 200 наиболее
+депрессивными людьми, с которыми я когда-либо разговаривал. И я описал им
+некоторые из этих LEGO экспериментов, и они сказали, что они чувствовал(0.003)и,
+что они только что прошли(0.003) этот эксперимент.(0.003)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  Sometimes Brian and I walk through the park with Scarlett, and
+she rolls through the grass, and we just look at her and then we look at each
+other and we feel gratitude. We forget about all of our new middle-class
+frustrations and disappointments, and we feel like millionaires.
+Input current: Thank you.
+Output context: Иногда Брайан и я ходим по парку вместе со Скарлетт, и она
+катается по траве, и мы просто смотрим на нее, а потом смотрим друг на друга и
+чувствуем благодарность. Мы забываем обо всех наших новых разочарованиях
+среднего класса и чувствуем себя миллионерами.
+Output current: Спасибо.
+
+#1.
+Generated output (CTI > 0.520):  Спасибо(0.882).
+Input context (CCI > 0.005):     Sometimes Brian and I walk through the park
+with Scarlett, and she rolls through the grass, and we just look at her and then
+we look at each other and we feel gratitude. We forget about all of our new
+middle-class frustrations and disappointments, and we feel like
+millionaires.(0.016)
+Output context (CCI > 0.006):    Иногда Брайан и я ходим по парку вместе со
+Скарлетт, и она катается по траве, и мы просто смотрим на нее, а потом смотрим
+друг на друга и чувствуем благодарность. Мы забываем обо всех наших новых
+разочарованиях среднего класса и чувствуем себя миллионерами.(0.018)
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  Hi, sir, could you stand up, please? Just right where you are.
+You're married, you follow directions well. Nice to meet you, sir.
+Input current: You don't have a lot in your pockets. Anything down here?
+Output context: Здравствуйте, сэр, не могли бы вы встать, пожалуйста?
+Оставайтесь на месте. Вы женаты, вы хорошо следуете инструкциям. Приятно
+познакомиться, сэр.
+Output current: У вас не много в кармане.
+
+#1.
+Generated output (CTI > 0.483):  У(2.316) вас не много в кармане.
+Input context (CCI > 0.011):     Hi, sir, could you stand up, please? Just right
+where you are. You're married, you follow directions well. Nice to meet you,
+sir.
+Output context (CCI > 0.013):    Здравствуйте(0.019), сэр, не могли бы вы
+встать, пожалуйста? Оставайтесь на месте. Вы женаты, вы хорошо следуете
+инструкциям. Приятно познакомиться, сэр(0.015).(0.028)
+#2.
+Generated output (CTI > 0.483):  У вас(0.582) не много в кармане.
+Input context (CCI > 0.004):     Hi, sir, could you stand up, please? Just right
+where you are. You're married, you follow directions well. Nice to meet you,
+sir.
+Output context (CCI > 0.004):    Здравствуйте(0.010), сэр, не могли бы вы
+встать, пожалуйста? Оставайтесь(0.005) на месте. Вы(0.005) женаты, вы хорошо
+следуете инструкциям. Приятно познакомиться, сэр.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  there's one more thing, there's one final piece of the puzzle.
+Gwen, I am so grateful for your choices
+Input current: because if we take a look at the first letters of your
+combinations, we get "C-H-A-O-S" for chaos and "O-R-D-E-R" for order.
+Output context: Есть еще одна вещь, есть еще один, последний кусочек
+головоломки. Гвен, я так благодарна за ваш выбор
+Output current: , потому что если мы посмотрим на первые буквы ваших комбинаций,
+мы получим "C-H-A-O-S" для хаоса и "O-R-D-E-R" для порядка.
+
+#1.
+Generated output (CTI > 0.095):  (3.030), потому что если мы посмотрим на первые
+буквы ваших комбинаций, мы получим "C-H-A-O-S" для хаоса и "O-R-D-E-R" для
+порядка.
+Input context (CCI > 0.000):     there(0.000)'(0.000)s(0.000) one(0.000)
+more(0.000) thing, there's one final piece of the puzzle. Gwen, I am so grateful
+for your choices
+Output context (CCI > 0.000):    Есть(0.000) еще(0.000) одна(0.000)
+вещь(0.000),(0.000) есть еще один, последний кусочек головоломки. Гвен, я так
+благодарна за ваш выбор
+#2.
+Generated output (CTI > 0.095):  , потому(0.664) что если мы посмотрим на первые
+буквы ваших комбинаций, мы получим "C-H-A-O-S" для хаоса и "O-R-D-E-R" для
+порядка.
+Input context (CCI > 0.003):     there's one more thing, there's one final piece
+of the puzzle.(0.005) Gwen, I am so grateful for your choices(0.006)
+Output context (CCI > 0.003):    Есть еще одна вещь(0.004), есть еще один,
+последний кусочек головоломки. Гвен, я так благодарна за ваш выбор
+#3.
+Generated output (CTI > 0.095):  ,(0.388) потому что если мы посмотрим на первые
+буквы ваших комбинаций, мы получим "C-H-A-O-S" для хаоса и "O-R-D-E-R" для
+порядка.
+Input context (CCI > 0.005):     there's one more thing, there's one final piece
+of the puzzle.(0.008) Gwen, I am so grateful for your choices
+Output context (CCI > 0.005):    Есть еще одна вещь(0.006), есть еще один,
+последний кусочек головоломки. Гвен, я так благодарна за ваш выбор(0.008)
+#4.
+Generated output (CTI > 0.095):  , потому что если мы(0.141) посмотрим на первые
+буквы ваших комбинаций, мы получим "C-H-A-O-S" для хаоса и "O-R-D-E-R" для
+порядка.
+Input context (CCI > 0.005):     there's one more thing, there's one final piece
+of the puzzle.(0.010) Gwen, I am so grateful for your choices
+Output context (CCI > 0.005):    Есть еще одна вещь(0.009), есть еще один,
+последний кусочек головоломки. Гвен, я так благодарна за ваш выбор
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  We truly do all understand it, and we have this global digital
+fireplace, don't we, but I want to share you with the world, because you are
+also a tribe. You are the TED tribe, yeah? But you have to remember that
+compliment.
+Input current: You have to stand tall, breathe in through your nose, and I'm
+going to photograph you. Okay?
+Output context: Мы действительно все это понимаем, и у нас есть этот глобальный
+цифровой камин, не так ли, но я хочу поделиться вами со всем миром, потому что
+вы тоже принадлежите к племени. Вы из племени TED, да? Но вы должны помнить этот
+комплимент.
+Output current: Вы должны подняться в высоту, вдыхаться носом, и я буду
+фотографировать вас.
+
+#1.
+Generated output (CTI > 0.112):  Вы(1.110) должны подняться в высоту, вдыхаться
+носом, и я буду фотографировать вас.
+Input context (CCI > 0.007):     We truly do all understand it, and we have this
+global digital fireplace, don't we, but I want to share you with the world,
+because you are also a tribe. You are the TED tribe, yeah? But you have to
+remember that compliment.
+Output context (CCI > 0.008):    Мы действительно все это понимаем, и у нас есть
+этот глобальный цифровой камин, не так ли, но я хочу поделиться вами со всем
+миром, потому что вы тоже принадлежите к племени. Вы из племени TED, да? Но вы
+должны помнить(0.010) этот комп(0.009)лимент.(0.027)
+#2.
+Generated output (CTI > 0.112):  Вы должны(0.488) подняться в высоту, вдыхаться
+носом, и я буду фотографировать вас.
+Input context (CCI > 0.001):     We truly do all understand it, and we have this
+global digital fireplace, don't we, but I want to share you with the world,
+because you are also a tribe. You are the TED tribe, yeah? But you have to
+remember that compliment.
+Output context (CCI > 0.002):    Мы действительно все это понимаем, и у нас есть
+этот глобальный цифровой камин, не так ли, но я хочу поделиться вами со всем
+миром, потому что вы тоже принадлежит(0.005)е к племени. Вы из племени TED, да?
+Но вы должны(0.004) помнить этот комплимент.
+#3.
+Generated output (CTI > 0.112):  Вы должны подняться в высоту, вдыхаться носом,
+и я буду(0.356) фотографировать вас.
+Input context (CCI > 0.004):     We truly do all understand it, and we have this
+global digital fireplace, don't we, but I want to share you with the world,
+because you are also a tribe. You are the TED tribe, yeah? But you have to
+remember that(0.005) compliment.
+Output context (CCI > 0.004):    Мы действительно все это понимаем, и у нас есть
+этот глобальный цифровой камин, не так ли, но я хочу поделиться вами со всем
+миром, потому что вы тоже принадлежит(0.011)е к племени. Вы из племени TED, да?
+Но вы должны помнить(0.004) этот комплимент.
+#4.
+Generated output (CTI > 0.112):  Вы должны поднять(0.118)ся в высоту, вдыхаться
+носом, и я буду фотографировать вас.
+Input context (CCI > 0.002):     We truly do all understand it, and we have this
+global digital fireplace, don't we, but I want to share you with the world,
+because you are also a tribe. You are the TED tribe, yeah? But you have to
+remember that(0.004) compliment.
+Output context (CCI > 0.002):    Мы действительно все это понимаем, и у нас есть
+этот глобальный цифровой камин, не так ли, но я хочу поделиться вами со всем
+миром, потому что вы тоже принадлежит(0.003)е к племени. Вы из племени TED, да?
+Но вы должны(0.002) помнить(0.003) этот комплимент.
+#5.
+Generated output (CTI > 0.112):  Вы должны подняться в высоту, вдыхаться
+нос(0.115)ом, и я буду фотографировать вас.
+Input context (CCI > 0.004):     We truly do all understand it, and we have this
+global(0.005) digital fireplace, don't we, but I want to share you with the
+world, because you are also a tribe. You are the TED tribe, yeah? But you have
+to remember that(0.008) compliment.
+Output context (CCI > 0.004):    Мы действительно все это понимаем, и у нас есть
+этот глобальный цифровой камин, не так ли, но я хочу поделиться вами со всем
+миром, потому что вы тоже принадлежит(0.008)е к племени. Вы из племени TED, да?
+Но вы должны помнить(0.009) этот(0.005) комплимент.
+
+
+Context with contextual cues (std λ=2.00, top 5) followed by output sentence
+with context-sensitive target spans (all)
+(CTI = "kl_divergence", CCI = "saliency" w/ "contrast_prob_diff" target)
+
+Input context:  LT:  JF: No, it's true. I exist because I have my women friends.
+They -- You're one of them.
+Input current: I don't know about you. But anyway --
+Output context: ЛТ: ДФ: Нет, это правда. Я существую, потому что у меня есть
+подруги. Они -- ты одна из них.
+Output current: Я не знаю о тебе.
+
+#1.
+Generated output (CTI > 0.698):  Я не знаю о тебе(2.875).
+Input context (CCI > 0.002):     LT: JF: No, it's true. I exist because I have
+my women friends. They -- You're one of them.
+Output context (CCI > 0.002):    ЛТ(0.003): ДФ: Нет, это правда. Я существую,
+потому что у меня есть подруги. Они -- ты(0.005) одна из них.
+#2.
+Generated output (CTI > 0.698):  Я(0.940) не знаю о тебе.
+Input context (CCI > 0.007):     LT: JF: No, it's true. I exist because I have
+my women friends. They -- You're one of them.
+Output context (CCI > 0.008):    ЛТ(0.009): ДФ: Нет, это правда. Я существую,
+потому что у меня есть подруги. Они -- ты одна из них.(0.018)
+
+
+Process finished with exit code 0
