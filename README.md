@@ -16,6 +16,41 @@ context : context sentences in English and one of three languages: Dutch/Russian
 
 ## Code usage instructions
 
+Clone the repository
+
+```
+git clonehttps://github.com/bbjoverbeek/machine-translation-context.git
+```
+You should run all scripts from the root directory
+
+```
+cd machine-translation-context
+```
+Install all the necessary libraries
+
+```
+pip install -r requirements.txt 
+```
+
+### Find formality:
+
+```
+Some commands here
+```
+
+### Run the translation script:
+Parameters:
+- lang: the language to translate the context into
+- save_path: the path to save created dataset
+```
+python3 translate.py --lang your_lang --save_path your_save_path
+```
+
+### PECoRe: context-sensitive words and their context detection:
+
+```
+Some commands here
+```
 
 ## Useful links
 - [Project page](https://sites.google.com/rug.nl/ik-nlp-2024/projects-description/understanding-context-usage-in-machine-translation?authuser=0)
