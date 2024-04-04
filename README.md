@@ -68,6 +68,10 @@ python translate.py --lang your_lang --save_path your_save_path
 Some commands here
 ```
 
+### Dataset statistics
+
+The statistics mentioned in the paper about the dataset can be found by running the code in the [dataset_exploration notebook](./dataset_exploration.ipynb). For ease of use the output has been saved.
+
 ## Useful links
 
 - [Project page](https://sites.google.com/rug.nl/ik-nlp-2024/projects-description/understanding-context-usage-in-machine-translation?authuser=0)
