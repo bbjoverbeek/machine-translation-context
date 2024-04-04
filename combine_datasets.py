@@ -28,11 +28,14 @@ for nl, ru, de in zip(data_nl, data_ru, data_de):
         lan: ' '.join(context) for lan, context in new_item['context'].items()
     }
 
-
+    # Something went wrong with the data, do a cleanup of '[' and ']'
+    # Also remove all double spaces in all strings, as this can cause problems with the inseq library
+    # - I think the problem arises when providing output context and using template '{context} {current}'
+    #   inseq removes double spaces but then crashes at:
+    #   inseq/commands/attribute_context/attribute_context_helpers.py:136
+    #   (it performs output_gen.startswith(prefix), but in output_gen the prefix is stripped of double spaces)
     def do_clean(string):
-        """# something went wrong with the data, do a cleanup of '[' and ']' and double spaces in all strings"""
         return string.replace('[', '').replace(']', '').replace('  ', ' ')
-
 
     for k, v in new_item.items():
         if isinstance(v, dict):
@@ -44,6 +47,7 @@ for nl, ru, de in zip(data_nl, data_ru, data_de):
         elif isinstance(v, str):
             new_item[k] = do_clean(v)
 
+    # Append the combined and cleaned item to the new dataset.
     combined_set.append(new_item)
 
 new_set = datasets.Dataset.from_list(combined_set)

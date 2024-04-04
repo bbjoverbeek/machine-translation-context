@@ -63,10 +63,10 @@ python translate.py --lang your_lang --save_path your_save_path
 ```
 
 ### PECoRe: context-sensitive words and their context detection:
+The `run_pecore.py` script runs PECoRe analysis on a dataset and stores the results for each language in the `output` folder. It is configured to be used on the `combined_and_sorted` dataset, which includes the English target sentences and contexts in Dutch, English, German, and Russian.
 
-```
-Some commands here
-```
+If one would like to add a new language, the `combine_datasets.py` script can be adapted to include the new language after following the translation instructions.
+
 
 ### Dataset statistics
 

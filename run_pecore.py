@@ -11,9 +11,10 @@ print(f'nrows: {data.num_rows}')
 
 languages_to_run = ['de', 'nl', 'ru']
 
-# name of the MBART model language
+# name of the MBART model 'tgt_lang' language identifier
 language_to_tgt_lang = {'de': 'de_DE', 'nl': 'nl_XX', 'ru': 'ru_RU'}
 
+# create output folders
 for _, folder in language_to_tgt_lang.items():
     if not os.path.isdir(f'./output/{folder}'):
         os.mkdir(f'./output/{folder}')
@@ -25,7 +26,6 @@ def get_pecore_args(
         input_current_text,
         output_context_text,
         sample_index
-
 ):
     return AttributeContextArgs(
         model_name_or_path="facebook/mbart-large-50-one-to-many-mmt",
